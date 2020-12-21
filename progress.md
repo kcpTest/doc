@@ -81,6 +81,3 @@
         * :last_quarter_moon: [/g3doc/tutorials/wide_and_deep/index.md](/g3doc/tutorials/wide_and_deep/index.md) (1632/3646) [44%]
       * :last_quarter_moon: [/g3doc/tutorials/word2vec](/g3doc/tutorials/word2vec) (4522/9629) [46%]
         * :last_quarter_moon: [/g3doc/tutorials/word2vec/index.md](/g3doc/tutorials/word2vec/index.md) (4522/9629) [46%]
-
----
-Powered by [Translation Coverage](https://github.com/hunkim/translation_coverage)
