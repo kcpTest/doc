@@ -1,6 +1,6 @@
 # Table of contents
 
-* [머리말](README.md)
+* [소개 및 연동 전 준비사항](README.md)
 * [소개](index.md)
 * [시작하기](index-1/README.md)
   * [다운로드 및 설치](index-1/os_setup.md)
