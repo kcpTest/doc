@@ -72,15 +72,15 @@ This method is thread-safe.
 
 **Args:**
 
-* **`from_version`**: Optional.  If this is set, returns a `GraphDef`
+* **`from_version`**: Optional. If this is set, returns a `GraphDef`
 
-   containing only the nodes that were added to this graph since
+  containing only the nodes that were added to this graph since
 
-   its `version` property had the given value.
+  its `version` property had the given value.
 
 * **`add_shapes`**: If true, adds an "\_output\_shapes" list attr to each
 
-   node with the inferred shapes of each of its outputs.
+  node with the inferred shapes of each of its outputs.
 
 **Returns:**
 
@@ -157,11 +157,11 @@ def my_func(pred, tensor):
 
 * **`control_inputs`**: A list of `Operation` or `Tensor` objects which
 
-   must be executed or computed before running the operations
+  must be executed or computed before running the operations
 
-   defined in the context.  Can also be `None` to clear the control
+  defined in the context. Can also be `None` to clear the control
 
-   dependencies.
+  dependencies.
 
 **Returns:**
 
@@ -171,7 +171,7 @@ A context manager that specifies control dependencies for all operations constru
 
 * **`TypeError`**: If `control_inputs` is not a list of `Operation` or
 
-   `Tensor` objects.
+  `Tensor` objects.
 
 #### `tf.Graph.device(device_name_or_function)` <a id="Graph.device"></a>
 
@@ -228,7 +228,7 @@ with g.device(matmul_on_gpu):
 
 * **`device_name_or_function`**: The device name or function to use in
 
-   the context.
+  the context.
 
 **Returns:**
 
@@ -326,7 +326,7 @@ Note that collections are not sets, so it is possible to add a value to a collec
 
 * **`name`**: The key for the collection. The `GraphKeys` class
 
-   contains many standard names for collections.
+  contains many standard names for collections.
 
 * **`value`**: The value to add to the collection.
 
@@ -342,7 +342,7 @@ Note that collections are not sets, so it is possible to add a value to a collec
 
 * **`names`**: The keys for the collections to add to. The `GraphKeys` class
 
-   contains many standard names for collections.
+  contains many standard names for collections.
 
 * **`value`**: The value to add to the collections.
 
@@ -356,17 +356,17 @@ This is different from `get_collection_ref()` which always returns the actual co
 
 * **`name`**: The key for the collection. For example, the `GraphKeys` class
 
-   contains many standard names for collections.
+  contains many standard names for collections.
 
 * **`scope`**: \(Optional.\) If supplied, the resulting list is filtered to include
 
-   only items whose `name` attribute matches using `re.match`. Items
+  only items whose `name` attribute matches using `re.match`. Items
 
-   without a `name` attribute are never returned if a scope is supplied and
+  without a `name` attribute are never returned if a scope is supplied and
 
-   the choice or `re.match` means that a `scope` without special tokens
+  the choice or `re.match` means that a `scope` without special tokens
 
-   filters by prefix.
+  filters by prefix.
 
 **Returns:**
 
@@ -384,7 +384,7 @@ This is different from `get_collection()` which always returns a copy of the col
 
 * **`name`**: The key for the collection. For example, the `GraphKeys` class
 
-   contains many standard names for collections.
+  contains many standard names for collections.
 
 **Returns:**
 
@@ -404,9 +404,9 @@ This method may be called concurrently from multiple threads.
 
 * **`obj`**: A `Tensor`, an `Operation`, or the name of a tensor or operation.
 
-   Can also be any object with an `_as_graph_element()` method that returns
+  Can also be any object with an `_as_graph_element()` method that returns
 
-   a value of one of these types.
+  a value of one of these types.
 
 * **`allow_tensor`**: If true, `obj` may refer to a `Tensor`.
 * **`allow_operation`**: If true, `obj` may refer to an `Operation`.
@@ -419,11 +419,11 @@ The `Tensor` or `Operation` in the Graph corresponding to `obj`.
 
 * **`TypeError`**: If `obj` is not a type we support attempting to convert
 
-   to types.
+  to types.
 
 * **`ValueError`**: If `obj` is of an appropriate type but invalid. For
 
-   example, an invalid string.
+  example, an invalid string.
 
 * **`KeyError`**: If `obj` is not an object in the graph.
 
@@ -526,44 +526,44 @@ This is a low-level interface for creating an `Operation`. Most programs will no
 
 * **`op_type`**: The `Operation` type to create. This corresponds to the
 
-   `OpDef.name` field for the proto that defines the operation.
+  `OpDef.name` field for the proto that defines the operation.
 
 * **`inputs`**: A list of `Tensor` objects that will be inputs to the `Operation`.
 * **`dtypes`**: A list of `DType` objects that will be the types of the tensors
 
-   that the operation produces.
+  that the operation produces.
 
 * **`input_types`**: \(Optional.\) A list of `DType`s that will be the types of
 
-   the tensors that the operation consumes. By default, uses the base
+  the tensors that the operation consumes. By default, uses the base
 
-   `DType` of each input in `inputs`. Operations that expect
+  `DType` of each input in `inputs`. Operations that expect
 
-   reference-typed inputs must specify `input_types` explicitly.
+  reference-typed inputs must specify `input_types` explicitly.
 
 * **`name`**: \(Optional.\) A string name for the operation. If not specified, a
 
-   name is generated based on `op_type`.
+  name is generated based on `op_type`.
 
 * **`attrs`**: \(Optional.\) A dictionary where the key is the attribute name \(a
 
-   string\) and the value is the respective `attr` attribute of the
+  string\) and the value is the respective `attr` attribute of the
 
-   `NodeDef` proto that will represent the operation \(an `AttrValue`
+  `NodeDef` proto that will represent the operation \(an `AttrValue`
 
-   proto\).
+  proto\).
 
 * **`op_def`**: \(Optional.\) The `OpDef` proto that describes the `op_type` that
 
-   the operation will have.
+  the operation will have.
 
 * **`compute_shapes`**: \(Optional.\) If True, shape inference will be performed
 
-   to compute the shapes of the outputs.
+  to compute the shapes of the outputs.
 
 * **`compute_device`**: \(Optional.\) If True, device functions will be executed
 
-   to compute the device property of the Operation.
+  to compute the device property of the Operation.
 
 **Raises:**
 
@@ -599,7 +599,7 @@ with tf.Graph().as_default() as g:
 
 * **`op_type_map`**: A dictionary mapping op type strings to alternative op
 
-   type strings.
+  type strings.
 
 **Returns:**
 
@@ -609,7 +609,7 @@ A context manager that sets the alternative op type to be used for one or more o
 
 * **`TypeError`**: If `op_type_map` is not a dictionary mapping strings to
 
-   strings.
+  strings.
 
 #### Other Methods
 
@@ -635,9 +635,9 @@ with g.colocate_with(a):
 * **`op`**: The op to colocate all created ops with.
 * **`ignore_existing`**: If true, only applies colocation of this op within
 
-   the context, rather than applying all colocation properties
+  the context, rather than applying all colocation properties
 
-   on the stack.
+  on the stack.
 
 **Raises:**
 
@@ -727,13 +727,13 @@ _N.B._ Before invoking `Operation.run()`, its graph must have been launched in a
 
 * **`feed_dict`**: A dictionary that maps `Tensor` objects to feed values.
 
-   See [`Session.run()`](client.md#Session.run)
+  See [`Session.run()`](client.md#Session.run)
 
-   for a description of the valid feed values.
+  for a description of the valid feed values.
 
 * **`session`**: \(Optional.\) The `Session` to be used to run to this operation. If
 
-   none, the default session will be used.
+  none, the default session will be used.
 
 #### `tf.Operation.get_attr(name)` <a id="Operation.get_attr"></a>
 
@@ -769,55 +769,55 @@ NOTE: This constructor validates the name of the `Operation` \(passed as `node_d
 
 **Args:**
 
-* **`node_def`**: `graph_pb2.NodeDef`.  `NodeDef` for the `Operation`.
+* **`node_def`**: `graph_pb2.NodeDef`. `NodeDef` for the `Operation`.
 
-   Used for attributes of `graph_pb2.NodeDef`, typically `name`,
+  Used for attributes of `graph_pb2.NodeDef`, typically `name`,
 
-   `op`, and `device`.  The `input` attribute is irrelevant here
+  `op`, and `device`. The `input` attribute is irrelevant here
 
-   as it will be computed when generating the model.
+  as it will be computed when generating the model.
 
 * **`g`**: `Graph`. The parent graph.
 * **`inputs`**: list of `Tensor` objects. The inputs to this `Operation`.
-* **`output_types`**: list of `DType` objects.  List of the types of the
+* **`output_types`**: list of `DType` objects. List of the types of the
 
-   `Tensors` computed by this operation.  The length of this list indicates
+  `Tensors` computed by this operation. The length of this list indicates
 
-   the number of output endpoints of the `Operation`.
+  the number of output endpoints of the `Operation`.
 
 * **`control_inputs`**: list of operations or tensors from which to have a
 
-   control dependency.
+  control dependency.
 
 * **`input_types`**: List of `DType` objects representing the
 
-   types of the tensors accepted by the `Operation`.  By default
+  types of the tensors accepted by the `Operation`. By default
 
-   uses `[x.dtype.base_dtype for x in inputs]`.  Operations that expect
+  uses `[x.dtype.base_dtype for x in inputs]`. Operations that expect
 
-   reference-typed inputs must specify these explicitly.
+  reference-typed inputs must specify these explicitly.
 
 * **`original_op`**: Optional. Used to associate the new `Operation` with an
 
-   existing `Operation` \(for example, a replica with the op that was
+  existing `Operation` \(for example, a replica with the op that was
 
-   replicated\).
+  replicated\).
 
 * **`op_def`**: Optional. The `op_def_pb2.OpDef` proto that describes the
 
-   op type that this `Operation` represents.
+  op type that this `Operation` represents.
 
 **Raises:**
 
 * **`TypeError`**: if control inputs are not Operations or Tensors,
 
-   or if `node_def` is not a `NodeDef`,
+  or if `node_def` is not a `NodeDef`,
 
-   or if `g` is not a `Graph`,
+  or if `g` is not a `Graph`,
 
-   or if `inputs` are not tensors,
+  or if `inputs` are not tensors,
 
-   or if `inputs` and `input_types` are incompatible.
+  or if `inputs` and `input_types` are incompatible.
 
 * **`ValueError`**: if the `node_def` name is not valid.
 
@@ -911,13 +911,13 @@ _N.B._ Before invoking `Tensor.eval()`, its graph must have been launched in a s
 
 * **`feed_dict`**: A dictionary that maps `Tensor` objects to feed values.
 
-   See [`Session.run()`](client.md#Session.run) for a
+  See [`Session.run()`](client.md#Session.run) for a
 
-   description of the valid feed values.
+  description of the valid feed values.
 
 * **`session`**: \(Optional.\) The `Session` to be used to evaluate this tensor. If
 
-   none, the default session will be used.
+  none, the default session will be used.
 
 **Returns:**
 
@@ -987,7 +987,7 @@ print(image.get_shape())
 
 * **`ValueError`**: If `shape` is not compatible with the current shape of
 
-   this tensor.
+  this tensor.
 
 #### Other Methods
 
@@ -1000,7 +1000,7 @@ Creates a new `Tensor`.
 * **`op`**: An `Operation`. `Operation` that computes this tensor.
 * **`value_index`**: An `int`. Index of the operation's endpoint that produces
 
-   this tensor.
+  this tensor.
 
 * **`dtype`**: A `DType`. Type of elements stored in this tensor.
 
@@ -1161,11 +1161,11 @@ Converts the given `type_value` to a `DType`.
 
 * **`type_value`**: A value that can be converted to a `tf.DType`
 
-   object. This may currently be a `tf.DType` object, a
+  object. This may currently be a `tf.DType` object, a
 
-   [`DataType` enum](https://www.tensorflow.org/code/tensorflow/core/framework/types.proto),
+  [`DataType` enum](https://www.tensorflow.org/code/tensorflow/core/framework/types.proto),
 
-   a string type name, or a `numpy.dtype`.
+  a string type name, or a `numpy.dtype`.
 
 **Returns:**
 
@@ -1187,7 +1187,7 @@ See [`Graph.device()`](framework.md#Graph.device) for more details.
 
 * **`device_name_or_function`**: The device name or function to use in
 
-   the context.
+  the context.
 
 **Returns:**
 
@@ -1217,11 +1217,11 @@ See [`Graph.control_dependencies()`](framework.md#Graph.control_dependencies) fo
 
 * **`control_inputs`**: A list of `Operation` or `Tensor` objects which
 
-   must be executed or computed before running the operations
+  must be executed or computed before running the operations
 
-   defined in the context.  Can also be `None` to clear the control
+  defined in the context. Can also be `None` to clear the control
 
-   dependencies.
+  dependencies.
 
 **Returns:**
 
@@ -1253,12 +1253,12 @@ This function can be useful when composing a new operation in Python \(such as `
 * **`value`**: An object whose type has a registered `Tensor` conversion function.
 * **`dtype`**: Optional element type for the returned tensor. If missing, the
 
-   type is inferred from the type of `value`.
+  type is inferred from the type of `value`.
 
 * **`name`**: Optional name to use if a new `Tensor` is created.
 * **`as_ref`**: True if we want the result as a ref tensor. Only used if a new
 
-   `Tensor` is created.
+  `Tensor` is created.
 
 **Returns:**
 
@@ -1279,11 +1279,11 @@ If `value` is an `IndexedSlices` or `SparseTensor` it is returned unmodified. Ot
 
 * **`value`**: An `IndexedSlices`, `SparseTensor`, or an object that can be consumed
 
-   by `convert_to_tensor()`.
+  by `convert_to_tensor()`.
 
 * **`dtype`**: \(Optional.\) The required `DType` of the returned `Tensor` or
 
-   `IndexedSlices`.
+  `IndexedSlices`.
 
 * **`name`**: \(Optional.\) A name to use if a new `Tensor` is created.
 * **`as_ref`**: True if the caller wants the results as ref tensors.
@@ -1324,41 +1324,41 @@ This function provides a way to import a serialized TensorFlow [`GraphDef`](http
 
 * **`graph_def`**: A `GraphDef` proto containing operations to be imported into
 
-   the default graph.
+  the default graph.
 
 * **`input_map`**: A dictionary mapping input names \(as strings\) in `graph_def`
 
-   to `Tensor` objects. The values of the named input tensors in the
+  to `Tensor` objects. The values of the named input tensors in the
 
-   imported graph will be re-mapped to the respective `Tensor` values.
+  imported graph will be re-mapped to the respective `Tensor` values.
 
 * **`return_elements`**: A list of strings containing operation names in
 
-   `graph_def` that will be returned as `Operation` objects; and/or
+  `graph_def` that will be returned as `Operation` objects; and/or
 
-   tensor names in `graph_def` that will be returned as `Tensor` objects.
+  tensor names in `graph_def` that will be returned as `Tensor` objects.
 
 * **`name`**: \(Optional.\) A prefix that will be prepended to the names in
 
-   `graph_def`. Defaults to `"import"`.
+  `graph_def`. Defaults to `"import"`.
 
 * **`op_dict`**: \(Optional.\) A dictionary mapping op type names to `OpDef` protos.
 
-   Must contain an `OpDef` proto for each op type named in `graph_def`.
+  Must contain an `OpDef` proto for each op type named in `graph_def`.
 
-   If omitted, uses the `OpDef` protos registered in the global registry.
+  If omitted, uses the `OpDef` protos registered in the global registry.
 
 * **`producer_op_list`**: \(Optional.\) An `OpList` proto with the \(possibly stripped\)
 
-   list of `OpDef`s used by the producer of the graph. If provided, attrs
+  list of `OpDef`s used by the producer of the graph. If provided, attrs
 
-   for ops in `graph_def` that are not in `op_dict` that have their default
+  for ops in `graph_def` that are not in `op_dict` that have their default
 
-   value according to `producer_op_list` will be removed. This will allow
+  value according to `producer_op_list` will be removed. This will allow
 
-   some more `GraphDef`s produced by later binaries to be accepted by
+  some more `GraphDef`s produced by later binaries to be accepted by
 
-   earlier binaries.
+  earlier binaries.
 
 **Returns:**
 
@@ -1368,15 +1368,15 @@ A list of `Operation` and/or `Tensor` objects from the imported graph, correspon
 
 * **`TypeError`**: If `graph_def` is not a `GraphDef` proto,
 
-   `input_map` is not a dictionary mapping strings to `Tensor` objects,
+  `input_map` is not a dictionary mapping strings to `Tensor` objects,
 
-   or `return_elements` is not a list of strings.
+  or `return_elements` is not a list of strings.
 
 * **`ValueError`**: If `input_map`, or `return_elements` contains names that
 
-   do not appear in `graph_def`, or `graph_def` is not well-formed \(e.g.
+  do not appear in `graph_def`, or `graph_def` is not well-formed \(e.g.
 
-   it refers to an unknown tensor\).
+  it refers to an unknown tensor\).
 
 ### `tf.load_file_system_library(library_filename)` <a id="load_file_system_library"></a>
 
@@ -1388,7 +1388,7 @@ Pass `library_filename` to a platform-specific mechanism for dynamically loading
 
 * **`library_filename`**: Path to the plugin.
 
-   Relative or absolute filesystem path to a dynamic library file.
+  Relative or absolute filesystem path to a dynamic library file.
 
 **Returns:**
 
@@ -1408,7 +1408,7 @@ Pass "library\_filename" to a platform-specific mechanism for dynamically loadin
 
 * **`library_filename`**: Path to the plugin.
 
-   Relative or absolute filesystem path to a dynamic library file.
+  Relative or absolute filesystem path to a dynamic library file.
 
 **Returns:**
 
@@ -1430,7 +1430,7 @@ See [`Graph.add_to_collection()`](framework.md#Graph.add_to_collection) for more
 
 * **`name`**: The key for the collection. For example, the `GraphKeys` class
 
-   contains many standard names for collections.
+  contains many standard names for collections.
 
 * **`value`**: The value to add to the collection.
 
@@ -1444,17 +1444,17 @@ See [`Graph.get_collection()`](framework.md#Graph.get_collection) for more detai
 
 * **`key`**: The key for the collection. For example, the `GraphKeys` class
 
-   contains many standard names for collections.
+  contains many standard names for collections.
 
 * **`scope`**: \(Optional.\) If supplied, the resulting list is filtered to include
 
-   only items whose `name` attribute matches using `re.match`. Items
+  only items whose `name` attribute matches using `re.match`. Items
 
-   without a `name` attribute are never returned if a scope is supplied and
+  without a `name` attribute are never returned if a scope is supplied and
 
-   the choice or `re.match` means that a `scope` without special tokens
+  the choice or `re.match` means that a `scope` without special tokens
 
-   filters by prefix.
+  filters by prefix.
 
 **Returns:**
 
@@ -1470,7 +1470,7 @@ See [`Graph.get_collection_ref()`](framework.md#Graph.get_collection_ref) for mo
 
 * **`key`**: The key for the collection. For example, the `GraphKeys` class
 
-   contains many standard names for collections.
+  contains many standard names for collections.
 
 **Returns:**
 
@@ -1518,7 +1518,7 @@ The following standard keys are defined:
 
 * `MOVING_AVERAGE_VARIABLES`: the subset of `Variable` objects that will also
 
-  keep moving averages.  See
+  keep moving averages. See
 
   [`tf.moving_average_variables()`](state_ops.md#moving_average_variables)
 
@@ -1558,7 +1558,7 @@ Creates a new decorator with `op_type` as the Operation type.
 
 * **`op_type`**: The string type of an operation. This corresponds to the
 
-   `OpDef.name` field for the proto that defines the operation.
+  `OpDef.name` field for the proto that defines the operation.
 
 ### `tf.NoGradient(op_type)` <a id="NoGradient"></a>
 
@@ -1574,7 +1574,7 @@ tf.NoGradient("Size")
 
 * **`op_type`**: The string type of an operation. This corresponds to the
 
-   `OpDef.name` field for the proto that defines the operation.
+  `OpDef.name` field for the proto that defines the operation.
 
 **Raises:**
 
@@ -1731,7 +1731,7 @@ A shape that is at least as specific as `self` with at least the given rank.
 
 * **`ValueError`**: If `self` does not represent a shape with at least the given
 
-   `rank`.
+  `rank`.
 
 #### `tf.TensorShape.with_rank_at_most(rank)` <a id="TensorShape.with_rank_at_most"></a>
 
@@ -1749,7 +1749,7 @@ A shape that is at least as specific as `self` with at most the given rank.
 
 * **`ValueError`**: If `self` does not represent a shape with at most the given
 
-   `rank`.
+  `rank`.
 
 #### `tf.TensorShape.assert_has_rank(rank)` <a id="TensorShape.assert_has_rank"></a>
 
@@ -1775,7 +1775,7 @@ Raises an exception if `self` and `other` do not have compatible ranks.
 
 * **`ValueError`**: If `self` and `other` do not represent shapes with the
 
-   same rank.
+  same rank.
 
 #### `tf.TensorShape.assert_is_compatible_with(other)` <a id="TensorShape.assert_is_compatible_with"></a>
 
@@ -1838,7 +1838,7 @@ Raises an exception if `other` is not compatible with this Dimension.
 
 * **`ValueError`**: If `self` and `other` are not compatible \(see
 
-   is\_compatible\_with\).
+  is\_compatible\_with\).
 
 #### `tf.Dimension.is_compatible_with(other)` <a id="Dimension.is_compatible_with"></a>
 
@@ -1880,7 +1880,7 @@ A Dimension containing the combined information of `self` and `other`.
 
 * **`ValueError`**: If `self` and `other` are not compatible \(see
 
-   is\_compatible\_with\).
+  is\_compatible\_with\).
 
 #### `tf.Dimension.value` <a id="Dimension.value"></a>
 
@@ -1959,19 +1959,19 @@ NOTE: The conversion functions will execute in order of priority, followed by or
 
 * **`base_type`**: The base type or tuple of base types for all objects that
 
-   `conversion_func` accepts.
+  `conversion_func` accepts.
 
 * **`conversion_func`**: A function that converts instances of `base_type` to
 
-   `Tensor`.
+  `Tensor`.
 
 * **`priority`**: Optional integer that indicates the priority for applying this
 
-   conversion function. Conversion functions with smaller priority values
+  conversion function. Conversion functions with smaller priority values
 
-   run earlier than conversion functions with larger priority values.
+  run earlier than conversion functions with larger priority values.
 
-   Defaults to 100.
+  Defaults to 100.
 
 **Raises:**
 
@@ -2024,9 +2024,9 @@ Create a new `DeviceSpec` object.
 * **`replica`**: int.  Optional replica index.
 * **`task`**: int.  Optional task index.
 * **`device_type`**: Optional device type string \(e.g. "CPU" or "GPU"\)
-* **`device_index`**: int.  Optional device index.  If left
+* **`device_index`**: int. Optional device index. If left
 
-   unspecified, device represents 'any' device\_index.
+  unspecified, device represents 'any' device\_index.
 
 #### `tf.DeviceSpec.from_string(spec)` <a id="DeviceSpec.from_string"></a>
 

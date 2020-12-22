@@ -31,7 +31,7 @@ Computes Rectified Linear 6: `min(max(features, 0), 6)`.
 
 * **`features`**: A `Tensor` with type `float`, `double`, `int32`, `int64`, `uint8`,
 
-   `int16`, or `int8`.
+  `int16`, or `int8`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -93,17 +93,17 @@ By default, each element is kept or dropped independently. If `noise_shape` is s
 * **`x`**: A tensor.
 * **`keep_prob`**: A scalar `Tensor` with the same type as x. The probability
 
-   that each element is kept.
+  that each element is kept.
 
 * **`noise_shape`**: A 1-D `Tensor` of type `int32`, representing the
 
-   shape for randomly generated keep/drop flags.
+  shape for randomly generated keep/drop flags.
 
 * **`seed`**: A Python integer. Used to create random seeds. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 * **`name`**: A name for this operation \(optional\).
 
@@ -125,13 +125,13 @@ This is \(mostly\) a special case of `tf.add` where `bias` is restricted to 1-D.
 
 * **`value`**: A `Tensor` with type `float`, `double`, `int64`, `int32`, `uint8`,
 
-   `int16`, `int8`, `complex64`, or `complex128`.
+  `int16`, `int8`, `complex64`, or `complex128`.
 
 * **`bias`**: A 1-D `Tensor` with size matching the last dimension of `value`.
 
-   Must be the same type as `value` unless `value` is a quantized type,
+  Must be the same type as `value` unless `value` is a quantized type,
 
-   in which case a different quantized type may be used.
+  in which case a different quantized type may be used.
 
 * **`data_format`**: A string. 'NHWC' and 'NCHW' are supported.
 * **`name`**: A name for the operation \(optional\).
@@ -150,7 +150,7 @@ Specifically, `y = 1 / (1 + exp(-x))`.
 
 * **`x`**: A Tensor with type `float`, `double`, `int32`, `complex64`, `int64`,
 
-   or `qint32`.
+  or `qint32`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -166,7 +166,7 @@ Computes hyperbolic tangent of `x` element-wise.
 
 * **`x`**: A Tensor with type `float`, `double`, `int32`, `complex64`, `int64`,
 
-   or `qint32`.
+  or `qint32`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -240,7 +240,7 @@ Given an input tensor of shape `[batch, in_height, in_width, in_channels]` and a
 
    tensor of shape \`\[batch, out\_height, out\_width,
 
-   filter\_height  _filter\_width_  in\_channels\]\`.
+   filter\_height _filter\_width_ in\_channels\]\`.
 
 3. For each patch, right-multiplies the filter matrix and the image patch
 
@@ -262,26 +262,26 @@ Must have `strides[0] = strides[3] = 1`. For the most common case of the same ho
 * **`filter`**: A `Tensor`. Must have the same type as `input`.
 * **`strides`**: A list of `ints`.
 
-   1-D of length 4.  The stride of the sliding window for each dimension
+  1-D of length 4. The stride of the sliding window for each dimension
 
-   of `input`. Must be in the same order as the dimension specified with format.
+  of `input`. Must be in the same order as the dimension specified with format.
 
 * **`padding`**: A `string` from: `"SAME", "VALID"`.
 
-   The type of padding algorithm to use.
+  The type of padding algorithm to use.
 
 * **`use_cudnn_on_gpu`**: An optional `bool`. Defaults to `True`.
 * **`data_format`**: An optional `string` from: `"NHWC", "NCHW"`. Defaults to `"NHWC"`.
 
-   Specify the data format of the input and output data. With the
+  Specify the data format of the input and output data. With the
 
-   default format "NHWC", the data is stored in the order of:
+  default format "NHWC", the data is stored in the order of:
 
   ```text
    [batch, in_height, in_width, in_channels].
   ```
 
-   Alternatively, the format could be "NCHW", the data storage order of:
+  Alternatively, the format could be "NCHW", the data storage order of:
 
   ```text
    [batch, in_channels, in_height, in_width].
@@ -314,15 +314,15 @@ Must have `strides[0] = strides[3] = 1`. For the most common case of the same ho
 * **`input`**: 4-D with shape `[batch, in_height, in_width, in_channels]`.
 * **`filter`**: 4-D with shape
 
-   `[filter_height, filter_width, in_channels, channel_multiplier]`.
+  `[filter_height, filter_width, in_channels, channel_multiplier]`.
 
-* **`strides`**: 1-D of size 4.  The stride of the sliding window for each
+* **`strides`**: 1-D of size 4. The stride of the sliding window for each
 
-   dimension of `input`.
+  dimension of `input`.
 
-* **`padding`**: A string, either `'VALID'` or `'SAME'`.  The padding algorithm.
+* **`padding`**: A string, either `'VALID'` or `'SAME'`. The padding algorithm.
 
-   See the [comment here](https://www.tensorflow.org/api_docs/python/nn.html#convolution)
+  See the [comment here](https://www.tensorflow.org/api_docs/python/nn.html#convolution)
 
 * **`name`**: A name for this operation \(optional\).
 
@@ -352,23 +352,23 @@ output[b, i, j, k] = sum_{di, dj, q, r]
 * **`input`**: 4-D `Tensor` with shape `[batch, in_height, in_width, in_channels]`.
 * **`depthwise_filter`**: 4-D `Tensor` with shape
 
-   `[filter_height, filter_width, in_channels, channel_multiplier]`.
+  `[filter_height, filter_width, in_channels, channel_multiplier]`.
 
-   Contains `in_channels` convolutional filters of depth 1.
+  Contains `in_channels` convolutional filters of depth 1.
 
 * **`pointwise_filter`**: 4-D `Tensor` with shape
 
-   `[1, 1, channel_multiplier * in_channels, out_channels]`.  Pointwise
+  `[1, 1, channel_multiplier * in_channels, out_channels]`. Pointwise
 
-   filter to mix channels after `depthwise_filter` has convolved spatially.
+  filter to mix channels after `depthwise_filter` has convolved spatially.
 
-* **`strides`**: 1-D of size 4.  The strides for the depthwise convolution for
+* **`strides`**: 1-D of size 4. The strides for the depthwise convolution for
 
-   each dimension of `input`.
+  each dimension of `input`.
 
-* **`padding`**: A string, either `'VALID'` or `'SAME'`.  The padding algorithm.
+* **`padding`**: A string, either `'VALID'` or `'SAME'`. The padding algorithm.
 
-   See the [comment here](https://www.tensorflow.org/api_docs/python/nn.html#convolution)
+  See the [comment here](https://www.tensorflow.org/api_docs/python/nn.html#convolution)
 
 * **`name`**: A name for this operation \(optional\).
 
@@ -380,7 +380,7 @@ A 4-D `Tensor` of shape `[batch, out_height, out_width, out_channels]`.
 
 * **`ValueError`**: If channel\_multiplier \* in\_channels &gt; out\_channels,
 
-   which means that the separable convolution is overparameterized.
+  which means that the separable convolution is overparameterized.
 
 ### `tf.nn.atrous_conv2d(value, filters, rate, padding, name=None)` <a id="atrous_conv2d"></a>
 
@@ -442,33 +442,33 @@ because a pair of consecutive `space_to_batch` and `batch_to_space` ops with the
 
 * **`value`**: A 4-D `Tensor` of type `float`. It needs to be in the default "NHWC"
 
-   format. Its shape is `[batch, in_height, in_width, in_channels]`.
+  format. Its shape is `[batch, in_height, in_width, in_channels]`.
 
 * **`filters`**: A 4-D `Tensor` with the same type as `value` and shape
 
-   `[filter_height, filter_width, in_channels, out_channels]`. `filters`'
+  `[filter_height, filter_width, in_channels, out_channels]`. `filters`'
 
-   `in_channels` dimension must match that of `value`. Atrous convolution is
+  `in_channels` dimension must match that of `value`. Atrous convolution is
 
-   equivalent to standard convolution with upsampled filters with effective
+  equivalent to standard convolution with upsampled filters with effective
 
-   height `filter_height + (filter_height - 1) * (rate - 1)` and effective
+  height `filter_height + (filter_height - 1) * (rate - 1)` and effective
 
-   width `filter_width + (filter_width - 1) * (rate - 1)`, produced by
+  width `filter_width + (filter_width - 1) * (rate - 1)`, produced by
 
-   inserting `rate - 1` zeros along consecutive elements across the
+  inserting `rate - 1` zeros along consecutive elements across the
 
-   `filters`' spatial dimensions.
+  `filters`' spatial dimensions.
 
 * **`rate`**: A positive int32. The stride with which we sample input values across
 
-   the `height` and `width` dimensions. Equivalently, the rate by which we
+  the `height` and `width` dimensions. Equivalently, the rate by which we
 
-   upsample the filter values by inserting zeros across the `height` and
+  upsample the filter values by inserting zeros across the `height` and
 
-   `width` dimensions. In the literature, the same parameter is sometimes
+  `width` dimensions. In the literature, the same parameter is sometimes
 
-   called `input stride` or `dilation`.
+  called `input stride` or `dilation`.
 
 * **`padding`**: A string, either `'VALID'` or `'SAME'`. The padding algorithm.
 * **`name`**: Optional name for the returned tensor.
@@ -481,7 +481,7 @@ A `Tensor` with the same type as `value`.
 
 * **`ValueError`**: If input/output depth does not match `filters`' shape, or if
 
-   padding is other than `'VALID'` or `'SAME'`.
+  padding is other than `'VALID'` or `'SAME'`.
 
 ### `tf.nn.conv2d_transpose(value, filter, output_shape, strides, padding='SAME', name=None)` <a id="conv2d_transpose"></a>
 
@@ -493,25 +493,25 @@ This operation is sometimes called "deconvolution" after [Deconvolutional Networ
 
 * **`value`**: A 4-D `Tensor` of type `float` and shape
 
-   `[batch, height, width, in_channels]`.
+  `[batch, height, width, in_channels]`.
 
 * **`filter`**: A 4-D `Tensor` with the same type as `value` and shape
 
-   `[height, width, output_channels, in_channels]`.  `filter`'s
+  `[height, width, output_channels, in_channels]`. `filter`'s
 
-   `in_channels` dimension must match that of `value`.
+  `in_channels` dimension must match that of `value`.
 
 * **`output_shape`**: A 1-D `Tensor` representing the output shape of the
 
-   deconvolution op.
+  deconvolution op.
 
 * **`strides`**: A list of ints. The stride of the sliding window for each
 
-   dimension of the input tensor.
+  dimension of the input tensor.
 
 * **`padding`**: A string, either `'VALID'` or `'SAME'`. The padding algorithm.
 
-   See the [comment here](https://www.tensorflow.org/api_docs/python/nn.html#convolution)
+  See the [comment here](https://www.tensorflow.org/api_docs/python/nn.html#convolution)
 
 * **`name`**: Optional name for the returned tensor.
 
@@ -523,7 +523,7 @@ A `Tensor` with the same type as `value`.
 
 * **`ValueError`**: If input/output depth does not match `filter`'s shape, or if
 
-   padding is other than `'VALID'` or `'SAME'`.
+  padding is other than `'VALID'` or `'SAME'`.
 
 ### `tf.nn.conv3d(input, filter, strides, padding, name=None)` <a id="conv3d"></a>
 
@@ -537,23 +537,23 @@ Our Conv3D implements a form of cross-correlation.
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 
-   Shape `[batch, in_depth, in_height, in_width, in_channels]`.
+  Shape `[batch, in_depth, in_height, in_width, in_channels]`.
 
 * **`filter`**: A `Tensor`. Must have the same type as `input`.
 
-   Shape `[filter_depth, filter_height, filter_width, in_channels, out_channels]`.
+  Shape `[filter_depth, filter_height, filter_width, in_channels, out_channels]`.
 
-   `in_channels` must match between `input` and `filter`.
+  `in_channels` must match between `input` and `filter`.
 
 * **`strides`**: A list of `ints` that has length `>= 5`.
 
-   1-D tensor of length 5. The stride of the sliding window for each
+  1-D tensor of length 5. The stride of the sliding window for each
 
-   dimension of `input`. Must have `strides[0] = strides[4] = 1`.
+  dimension of `input`. Must have `strides[0] = strides[4] = 1`.
 
 * **`padding`**: A `string` from: `"SAME", "VALID"`.
 
-   The type of padding algorithm to use.
+  The type of padding algorithm to use.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -583,21 +583,21 @@ Each entry in `output` is the mean of the corresponding size `ksize` window in `
 
 * **`value`**: A 4-D `Tensor` of shape `[batch, height, width, channels]` and type
 
-   `float32`, `float64`, `qint8`, `quint8`, or `qint32`.
+  `float32`, `float64`, `qint8`, `quint8`, or `qint32`.
 
 * **`ksize`**: A list of ints that has length &gt;= 4.
 
-   The size of the window for each dimension of the input tensor.
+  The size of the window for each dimension of the input tensor.
 
 * **`strides`**: A list of ints that has length &gt;= 4.
 
-   The stride of the sliding window for each dimension of the
+  The stride of the sliding window for each dimension of the
 
-   input tensor.
+  input tensor.
 
 * **`padding`**: A string, either `'VALID'` or `'SAME'`. The padding algorithm.
 
-   See the [comment here](https://www.tensorflow.org/api_docs/python/nn.html#convolution)
+  See the [comment here](https://www.tensorflow.org/api_docs/python/nn.html#convolution)
 
 * **`data_format`**: A string. 'NHWC' and 'NCHW' are supported.
 * **`name`**: Optional name for the operation.
@@ -614,19 +614,19 @@ Performs the max pooling on the input.
 
 * **`value`**: A 4-D `Tensor` with shape `[batch, height, width, channels]` and
 
-   type `tf.float32`.
+  type `tf.float32`.
 
-* **`ksize`**: A list of ints that has length &gt;= 4.  The size of the window for
+* **`ksize`**: A list of ints that has length &gt;= 4. The size of the window for
 
-   each dimension of the input tensor.
+  each dimension of the input tensor.
 
-* **`strides`**: A list of ints that has length &gt;= 4.  The stride of the sliding
+* **`strides`**: A list of ints that has length &gt;= 4. The stride of the sliding
 
-   window for each dimension of the input tensor.
+  window for each dimension of the input tensor.
 
 * **`padding`**: A string, either `'VALID'` or `'SAME'`. The padding algorithm.
 
-   See the [comment here](https://www.tensorflow.org/api_docs/python/nn.html#convolution)
+  See the [comment here](https://www.tensorflow.org/api_docs/python/nn.html#convolution)
 
 * **`data_format`**: A string. 'NHWC' and 'NCHW' are supported.
 * **`name`**: Optional name for the operation.
@@ -645,21 +645,21 @@ The indices in `argmax` are flattened, so that a maximum value at position `[b, 
 
 * **`input`**: A `Tensor` of type `float32`.
 
-   4-D with shape `[batch, height, width, channels]`.  Input to pool over.
+  4-D with shape `[batch, height, width, channels]`. Input to pool over.
 
 * **`ksize`**: A list of `ints` that has length `>= 4`.
 
-   The size of the window for each dimension of the input tensor.
+  The size of the window for each dimension of the input tensor.
 
 * **`strides`**: A list of `ints` that has length `>= 4`.
 
-   The stride of the sliding window for each dimension of the
+  The stride of the sliding window for each dimension of the
 
-   input tensor.
+  input tensor.
 
 * **`padding`**: A `string` from: `"SAME", "VALID"`.
 
-   The type of padding algorithm to use.
+  The type of padding algorithm to use.
 
 * **`Targmax`**: An optional `tf.DType` from: `tf.int32, tf.int64`. Defaults to `tf.int64`.
 * **`name`**: A name for the operation \(optional\).
@@ -679,23 +679,23 @@ Performs 3D average pooling on the input.
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 
-   Shape `[batch, depth, rows, cols, channels]` tensor to pool over.
+  Shape `[batch, depth, rows, cols, channels]` tensor to pool over.
 
 * **`ksize`**: A list of `ints` that has length `>= 5`.
 
-   1-D tensor of length 5. The size of the window for each dimension of
+  1-D tensor of length 5. The size of the window for each dimension of
 
-   the input tensor. Must have `ksize[0] = ksize[1] = 1`.
+  the input tensor. Must have `ksize[0] = ksize[1] = 1`.
 
 * **`strides`**: A list of `ints` that has length `>= 5`.
 
-   1-D tensor of length 5. The stride of the sliding window for each
+  1-D tensor of length 5. The stride of the sliding window for each
 
-   dimension of `input`. Must have `strides[0] = strides[4] = 1`.
+  dimension of `input`. Must have `strides[0] = strides[4] = 1`.
 
 * **`padding`**: A `string` from: `"SAME", "VALID"`.
 
-   The type of padding algorithm to use.
+  The type of padding algorithm to use.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -711,23 +711,23 @@ Performs 3D max pooling on the input.
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 
-   Shape `[batch, depth, rows, cols, channels]` tensor to pool over.
+  Shape `[batch, depth, rows, cols, channels]` tensor to pool over.
 
 * **`ksize`**: A list of `ints` that has length `>= 5`.
 
-   1-D tensor of length 5. The size of the window for each dimension of
+  1-D tensor of length 5. The size of the window for each dimension of
 
-   the input tensor. Must have `ksize[0] = ksize[1] = 1`.
+  the input tensor. Must have `ksize[0] = ksize[1] = 1`.
 
 * **`strides`**: A list of `ints` that has length `>= 5`.
 
-   1-D tensor of length 5. The stride of the sliding window for each
+  1-D tensor of length 5. The stride of the sliding window for each
 
-   dimension of `input`. Must have `strides[0] = strides[4] = 1`.
+  dimension of `input`. Must have `strides[0] = strides[4] = 1`.
 
 * **`padding`**: A `string` from: `"SAME", "VALID"`.
 
-   The type of padding algorithm to use.
+  The type of padding algorithm to use.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -823,27 +823,27 @@ Duality: The erosion of `value` by the `kernel` is equal to the negation of the 
 * **`value`**: A `Tensor`. 4-D with shape `[batch, in_height, in_width, depth]`.
 * **`kernel`**: A `Tensor`. Must have the same type as `value`.
 
-   3-D with shape `[kernel_height, kernel_width, depth]`.
+  3-D with shape `[kernel_height, kernel_width, depth]`.
 
 * **`strides`**: A list of `ints` that has length `>= 4`.
 
-   1-D of length 4. The stride of the sliding window for each dimension of
+  1-D of length 4. The stride of the sliding window for each dimension of
 
-   the input tensor. Must be: `[1, stride_height, stride_width, 1]`.
+  the input tensor. Must be: `[1, stride_height, stride_width, 1]`.
 
 * **`rates`**: A list of `ints` that has length `>= 4`.
 
-   1-D of length 4. The input stride for atrous morphological dilation.
+  1-D of length 4. The input stride for atrous morphological dilation.
 
-   Must be: `[1, rate_height, rate_width, 1]`.
+  Must be: `[1, rate_height, rate_width, 1]`.
 
 * **`padding`**: A `string` from: `"SAME", "VALID"`.
 
-   The type of padding algorithm to use.
+  The type of padding algorithm to use.
 
 * **`name`**: A name for the operation \(optional\). If not specified "erosion2d"
 
-   is used.
+  is used.
 
 #### Returns:
 
@@ -853,7 +853,7 @@ A `Tensor`. Has the same type as `value`. 4-D with shape `[batch, out_height, ou
 
 * **`ValueError`**: If the `value` depth does not match `kernel`' shape, or if
 
-   padding is other than `'VALID'` or `'SAME'`.
+  padding is other than `'VALID'` or `'SAME'`.
 
 ## Normalization
 
@@ -877,7 +877,7 @@ For `x` with more dimensions, independently normalizes each 1-D slice along dime
 * **`dim`**: Dimension along which to normalize.
 * **`epsilon`**: A lower bound value for the norm. Will use `sqrt(epsilon)` as the
 
-   divisor if `norm < sqrt(epsilon)`.
+  divisor if `norm < sqrt(epsilon)`.
 
 * **`name`**: A name for this operation \(optional\).
 
@@ -904,15 +904,15 @@ For details, see \[Krizhevsky et al., ImageNet classification with deep convolut
 * **`input`**: A `Tensor` of type `float32`. 4-D.
 * **`depth_radius`**: An optional `int`. Defaults to `5`.
 
-   0-D.  Half-width of the 1-D normalization window.
+  0-D. Half-width of the 1-D normalization window.
 
 * **`bias`**: An optional `float`. Defaults to `1`.
 
-   An offset \(usually positive to avoid dividing by 0\).
+  An offset \(usually positive to avoid dividing by 0\).
 
 * **`alpha`**: An optional `float`. Defaults to `1`.
 
-   A scale factor, usually positive.
+  A scale factor, usually positive.
 
 * **`beta`**: An optional `float`. Defaults to `0.5`. An exponent.
 * **`name`**: A name for the operation \(optional\).
@@ -933,9 +933,9 @@ These sufficient statistics are computed using the one pass algorithm on an inpu
 * **`axes`**: Array of ints. Axes along which to compute mean and variance.
 * **`shift`**: A `Tensor` containing the value by which to shift the data for
 
-   numerical stability, or `None` if no shift is to be performed. A shift
+  numerical stability, or `None` if no shift is to be performed. A shift
 
-   close to the true mean provides the most numerically stable results.
+  close to the true mean provides the most numerically stable results.
 
 * **`keep_dims`**: produce statistics with the same dimensionality as the input.
 * **`name`**: Name used to scope the operations that compute the sufficient stats.
@@ -958,15 +958,15 @@ Calculate the mean and variance of based on the sufficient statistics.
 * **`counts`**: A `Tensor` containing a the total count of the data \(one value\).
 * **`mean_ss`**: A `Tensor` containing the mean sufficient statistics: the \(possibly
 
-   shifted\) sum of the elements to average over.
+  shifted\) sum of the elements to average over.
 
 * **`variance_ss`**: A `Tensor` containing the variance sufficient statistics: the
 
-   \(possibly shifted\) squared sum of the data to compute the variance over.
+  \(possibly shifted\) squared sum of the data to compute the variance over.
 
 * **`shift`**: A `Tensor` containing the value by which the data is shifted for
 
-   numerical stability, or `None` if no shift was performed.
+  numerical stability, or `None` if no shift was performed.
 
 * **`name`**: Name used to scope the operations that compute the moments.
 
@@ -991,15 +991,15 @@ When using these moments for batch normalization \(see `tf.nn.batch_normalizatio
 #### Args:
 
 * **`x`**: A `Tensor`.
-* **`axes`**: array of ints.  Axes along which to compute mean and
+* **`axes`**: array of ints. Axes along which to compute mean and
 
-   variance.
+  variance.
 
 * **`shift`**: A `Tensor` containing the value by which to shift the data for
 
-   numerical stability, or `None` if no shift is to be performed. A shift
+  numerical stability, or `None` if no shift is to be performed. A shift
 
-   close to the true mean provides the most numerically stable results.
+  close to the true mean provides the most numerically stable results.
 
 * **`keep_dims`**: produce moments with the same dimensionality as the input.
 * **`name`**: Name used to scope the operations that compute the moments.
@@ -1026,7 +1026,7 @@ output = sum(t ** 2) / 2
 
 * **`t`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 
-   Typically 2-D, but may have any dimensions.
+  Typically 2-D, but may have any dimensions.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1099,7 +1099,7 @@ softmax[i, j] = exp(logits[i, j]) / sum(exp(logits[i]))
 
 * **`logits`**: A `Tensor`. Must be one of the following types: `half`, `float32`, `float64`.
 
-   2-D with shape `[batch_size, num_classes]`.
+  2-D with shape `[batch_size, num_classes]`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1121,7 +1121,7 @@ logsoftmax[i, j] = logits[i, j] - log(sum(exp(logits[i])))
 
 * **`logits`**: A `Tensor`. Must be one of the following types: `half`, `float32`, `float64`.
 
-   2-D with shape `[batch_size, num_classes]`.
+  2-D with shape `[batch_size, num_classes]`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1172,7 +1172,7 @@ Measures the probability error in discrete classification tasks in which the cla
 * **`logits`**: Unscaled log probabilities.
 * **`labels`**: Each entry `labels[i]` must be an index in `[0, num_classes)`. Other
 
-   values will result in a loss of 0, but incorrect gradient computations.
+  values will result in a loss of 0, but incorrect gradient computations.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1188,11 +1188,11 @@ This is like `sigmoid_cross_entropy_with_logits()` except that `pos_weight`, all
 
 The usual cross-entropy cost is defined as:
 
-targets  _-log\(sigmoid\(logits\)\) + \(1 - targets\)_  -log\(1 - sigmoid\(logits\)\)
+targets _-log\(sigmoid\(logits\)\) + \(1 - targets\)_ -log\(1 - sigmoid\(logits\)\)
 
 The argument `pos_weight` is used as a multiplier for the positive targets:
 
-targets  _-log\(sigmoid\(logits\)\)_  pos\_weight + \(1 - targets\) \* -log\(1 - sigmoid\(logits\)\)
+targets _-log\(sigmoid\(logits\)\)_ pos\_weight + \(1 - targets\) \* -log\(1 - sigmoid\(logits\)\)
 
 For brevity, let `x = logits`, `z = targets`, `q = pos_weight`. The loss is:
 
@@ -1250,19 +1250,19 @@ The results of the lookup are concatenated into a dense tensor. The returned ten
 
 * **`params`**: A list of tensors with the same type and which can be concatenated
 
-   along dimension 0. Each `Tensor` must be appropriately sized for the given
+  along dimension 0. Each `Tensor` must be appropriately sized for the given
 
-   `partition_strategy`.
+  `partition_strategy`.
 
 * **`ids`**: A `Tensor` with type `int32` or `int64` containing the ids to be looked
 
-   up in `params`.
+  up in `params`.
 
 * **`partition_strategy`**: A string specifying the partitioning strategy, relevant
 
-   if `len(params) > 1`. Currently `"div"` and `"mod"` are supported. Default
+  if `len(params) > 1`. Currently `"div"` and `"mod"` are supported. Default
 
-   is `"mod"`.
+  is `"mod"`.
 
 * **`name`**: A name for the operation \(optional\).
 * **`validate_indices`**: Whether or not to validate gather indices.
@@ -1287,38 +1287,38 @@ It also assumes that all id values lie in the range \[0, p0\), where p0 is the s
 
 * **`params`**: A single tensor representing the complete embedding tensor,
 
-   or a list of P tensors all of same shape except for the first dimension,
+  or a list of P tensors all of same shape except for the first dimension,
 
-   representing sharded embedding tensors.
+  representing sharded embedding tensors.
 
 * **`sp_ids`**: N x M SparseTensor of int64 ids \(typically from FeatureValueToId\),
 
-   where N is typically batch size and M is arbitrary.
+  where N is typically batch size and M is arbitrary.
 
 * **`sp_weights`**: either a SparseTensor of float / double weights, or None to
 
-   indicate all weights should be taken to be 1. If specified, sp\_weights
+  indicate all weights should be taken to be 1. If specified, sp\_weights
 
-   must have exactly the same shape and indices as sp\_ids.
+  must have exactly the same shape and indices as sp\_ids.
 
 * **`partition_strategy`**: A string specifying the partitioning strategy, relevant
 
-   if `len(params) > 1`. Currently `"div"` and `"mod"` are supported. Default
+  if `len(params) > 1`. Currently `"div"` and `"mod"` are supported. Default
 
-   is `"mod"`. See `tf.nn.embedding_lookup` for more details.
+  is `"mod"`. See `tf.nn.embedding_lookup` for more details.
 
 * **`name`**: Optional name for the op.
 * **`combiner`**: A string specifying the reduction op. Currently "mean", "sqrtn"
 
-   and "sum" are supported.
+  and "sum" are supported.
 
-   "sum" computes the weighted sum of the embedding results for each row.
+  "sum" computes the weighted sum of the embedding results for each row.
 
-   "mean" is the weighted sum divided by the total weight.
+  "mean" is the weighted sum divided by the total weight.
 
-   "sqrtn" is the weighted sum divided by the square root of the sum of the
+  "sqrtn" is the weighted sum divided by the square root of the sum of the
 
-   squares of the weights.
+  squares of the weights.
 
 #### Returns:
 
@@ -1335,13 +1335,13 @@ For instance, if params is a 10x20 matrix, and sp\_ids / sp\_weights are
 [2, 3]: id 1, weight 3.0
 ```
 
-with combiner="mean", then the output will be a 3x20 matrix where output\[0, :\] = \(params\[1, :\]  _2.0 + params\[3, :\]_  0.5\) / \(2.0 + 0.5\) output\[1, :\] = params\[0, :\]  _1.0 output\[2, :\] = params\[1, :\]_  3.0
+with combiner="mean", then the output will be a 3x20 matrix where output\[0, :\] = \(params\[1, :\] _2.0 + params\[3, :\]_ 0.5\) / \(2.0 + 0.5\) output\[1, :\] = params\[0, :\] _1.0 output\[2, :\] = params\[1, :\]_ 3.0
 
 #### Raises:
 
 * **`TypeError`**: If sp\_ids is not a SparseTensor, or if sp\_weights is neither
 
-   None nor SparseTensor.
+  None nor SparseTensor.
 
 * **`ValueError`**: If combiner is not one of {"mean", "sqrtn", "sum"}.
 
@@ -1364,60 +1364,60 @@ The parameter `sequence_length` is required and dynamic calculation is automatic
 * **`cell`**: An instance of RNNCell.
 * **`inputs`**: The RNN inputs.
 
-   If time\_major == False \(default\), this must be a tensor of shape:
+  If time\_major == False \(default\), this must be a tensor of shape:
 
-     `[batch_size, max_time, input_size]`.
+  `[batch_size, max_time, input_size]`.
 
-   If time\_major == True, this must be a tensor of shape:
+  If time\_major == True, this must be a tensor of shape:
 
-     `[max_time, batch_size, input_size]`.
+  `[max_time, batch_size, input_size]`.
 
 * **`sequence_length`**: \(optional\) An int32/int64 vector sized `[batch_size]`.
 * **`initial_state`**: \(optional\) An initial state for the RNN.
 
-   If `cell.state_size` is an integer, this must be
+  If `cell.state_size` is an integer, this must be
 
-   a tensor of appropriate type and shape `[batch_size x cell.state_size]`.
+  a tensor of appropriate type and shape `[batch_size x cell.state_size]`.
 
-   If `cell.state_size` is a tuple, this should be a tuple of
+  If `cell.state_size` is a tuple, this should be a tuple of
 
-   tensors having shapes `[batch_size, s] for s in cell.state_size`.
+  tensors having shapes `[batch_size, s] for s in cell.state_size`.
 
-* **`dtype`**: \(optional\) The data type for the initial state.  Required if
+* **`dtype`**: \(optional\) The data type for the initial state. Required if
 
-   initial\_state is not provided.
+  initial\_state is not provided.
 
-* **`parallel_iterations`**: \(Default: 32\).  The number of iterations to run in
+* **`parallel_iterations`**: \(Default: 32\). The number of iterations to run in
 
-   parallel.  Those operations which do not have any temporal dependency
+  parallel. Those operations which do not have any temporal dependency
 
-   and can be run in parallel, will be.  This parameter trades off
+  and can be run in parallel, will be. This parameter trades off
 
-   time for space.  Values &gt;&gt; 1 use more memory but take less time,
+  time for space. Values &gt;&gt; 1 use more memory but take less time,
 
-   while smaller values use less memory but computations take longer.
+  while smaller values use less memory but computations take longer.
 
 * **`swap_memory`**: Transparently swap the tensors produced in forward inference
 
-   but needed for back prop from GPU to CPU.  This allows training RNNs
+  but needed for back prop from GPU to CPU. This allows training RNNs
 
-   which would typically not fit on a single GPU, with very minimal \(or no\)
+  which would typically not fit on a single GPU, with very minimal \(or no\)
 
-   performance penalty.
+  performance penalty.
 
 * **`time_major`**: The shape format of the `inputs` and `outputs` Tensors.
 
-   If true, these `Tensors` must be shaped `[max_time, batch_size, depth]`.
+  If true, these `Tensors` must be shaped `[max_time, batch_size, depth]`.
 
-   If false, these `Tensors` must be shaped `[batch_size, max_time, depth]`.
+  If false, these `Tensors` must be shaped `[batch_size, max_time, depth]`.
 
-   Using `time_major = True` is a bit more efficient because it avoids
+  Using `time_major = True` is a bit more efficient because it avoids
 
-   transposes at the beginning and end of the RNN calculation.  However,
+  transposes at the beginning and end of the RNN calculation. However,
 
-   most TensorFlow data is batch-major, so by default this function
+  most TensorFlow data is batch-major, so by default this function
 
-   accepts input and emits output in batch-major form.
+  accepts input and emits output in batch-major form.
 
 * **`scope`**: VariableScope for the created subgraph; defaults to "RNN".
 
@@ -1427,23 +1427,23 @@ A pair \(outputs, state\) where:
 
 * **`outputs`**: The RNN output `Tensor`.
 
-     If time\_major == False \(default\), this will be a `Tensor` shaped:
+  If time\_major == False \(default\), this will be a `Tensor` shaped:
 
   ```text
    `[batch_size, max_time, cell.output_size]`.
   ```
 
-     If time\_major == True, this will be a `Tensor` shaped:
+  If time\_major == True, this will be a `Tensor` shaped:
 
   ```text
    `[max_time, batch_size, cell.output_size]`.
   ```
 
-* **`state`**: The final state.  If `cell.state_size` is a `Tensor`, this
+* **`state`**: The final state. If `cell.state_size` is a `Tensor`, this
 
-     will be shaped `[batch_size, cell.state_size]`.  If it is a tuple,
+  will be shaped `[batch_size, cell.state_size]`. If it is a tuple,
 
-     this be a tuple with shapes `[batch_size, s] for s in cell.state_size`.
+  this be a tuple with shapes `[batch_size, s] for s in cell.state_size`.
 
 #### Raises:
 
@@ -1469,25 +1469,25 @@ The dynamic calculation performed is, at time t for batch row b, \(output, state
 * **`cell`**: An instance of RNNCell.
 * **`inputs`**: A length T list of inputs, each a tensor of shape
 
-   \[batch\_size, input\_size\].
+  \[batch\_size, input\_size\].
 
 * **`initial_state`**: \(optional\) An initial state for the RNN.
 
-   If `cell.state_size` is an integer, this must be
+  If `cell.state_size` is an integer, this must be
 
-   a tensor of appropriate type and shape `[batch_size x cell.state_size]`.
+  a tensor of appropriate type and shape `[batch_size x cell.state_size]`.
 
-   If `cell.state_size` is a tuple, this should be a tuple of
+  If `cell.state_size` is a tuple, this should be a tuple of
 
-   tensors having shapes `[batch_size, s] for s in cell.state_size`.
+  tensors having shapes `[batch_size, s] for s in cell.state_size`.
 
-* **`dtype`**: \(optional\) The data type for the initial state.  Required if
+* **`dtype`**: \(optional\) The data type for the initial state. Required if
 
-   initial\_state is not provided.
+  initial\_state is not provided.
 
 * **`sequence_length`**: Specifies the length of each sequence in inputs.
 
-   An int32 or int64 vector \(tensor\) size `[batch_size]`, values in `[0, T)`.
+  An int32 or int64 vector \(tensor\) size `[batch_size]`, values in `[0, T)`.
 
 * **`scope`**: VariableScope for the created subgraph; defaults to "RNN".
 
@@ -1503,7 +1503,7 @@ A pair \(outputs, state\) where:
 * **`TypeError`**: If `cell` is not an instance of RNNCell.
 * **`ValueError`**: If `inputs` is `None` or an empty list, or if the input depth
 
-   \(column size\) cannot be inferred from inputs via shape inference.
+  \(column size\) cannot be inferred from inputs via shape inference.
 
 ### `tf.nn.state_saving_rnn(cell, inputs, state_saver, state_name, sequence_length=None, scope=None)` <a id="state_saving_rnn"></a>
 
@@ -1514,22 +1514,22 @@ RNN that accepts a state saver for time-truncated RNN calculation.
 * **`cell`**: An instance of `RNNCell`.
 * **`inputs`**: A length T list of inputs, each a tensor of shape
 
-   `[batch_size, input_size]`.
+  `[batch_size, input_size]`.
 
 * **`state_saver`**: A state saver object with methods `state` and `save_state`.
-* **`state_name`**: Python string or tuple of strings.  The name to use with the
+* **`state_name`**: Python string or tuple of strings. The name to use with the
 
-   state\_saver. If the cell returns tuples of states \(i.e.,
+  state\_saver. If the cell returns tuples of states \(i.e.,
 
-   `cell.state_size` is a tuple\) then `state_name` should be a tuple of
+  `cell.state_size` is a tuple\) then `state_name` should be a tuple of
 
-   strings having the same length as `cell.state_size`.  Otherwise it should
+  strings having the same length as `cell.state_size`. Otherwise it should
 
-   be a single string.
+  be a single string.
 
 * **`sequence_length`**: \(optional\) An int32/int64 vector size \[batch\_size\].
 
-   See the documentation for rnn\(\) for more details about sequence\_length.
+  See the documentation for rnn\(\) for more details about sequence\_length.
 
 * **`scope`**: VariableScope for the created subgraph; defaults to "RNN".
 
@@ -1556,29 +1556,29 @@ Similar to the unidirectional case above \(rnn\) but takes input and builds inde
 * **`cell_bw`**: An instance of RNNCell, to be used for backward direction.
 * **`inputs`**: A length T list of inputs, each a tensor of shape
 
-   \[batch\_size, input\_size\].
+  \[batch\_size, input\_size\].
 
 * **`initial_state_fw`**: \(optional\) An initial state for the forward RNN.
 
-   This must be a tensor of appropriate type and shape
+  This must be a tensor of appropriate type and shape
 
-   `[batch_size x cell_fw.state_size]`.
+  `[batch_size x cell_fw.state_size]`.
 
-   If `cell_fw.state_size` is a tuple, this should be a tuple of
+  If `cell_fw.state_size` is a tuple, this should be a tuple of
 
-   tensors having shapes `[batch_size, s] for s in cell_fw.state_size`.
+  tensors having shapes `[batch_size, s] for s in cell_fw.state_size`.
 
 * **`initial_state_bw`**: \(optional\) Same as for `initial_state_fw`, but using
 
-   the corresponding properties of `cell_bw`.
+  the corresponding properties of `cell_bw`.
 
-* **`dtype`**: \(optional\) The data type for the initial state.  Required if
+* **`dtype`**: \(optional\) The data type for the initial state. Required if
 
-   either of the initial states are not provided.
+  either of the initial states are not provided.
 
 * **`sequence_length`**: \(optional\) An int32/int64 vector, size `[batch_size]`,
 
-   containing the actual lengths for each of the sequences.
+  containing the actual lengths for each of the sequences.
 
 * **`scope`**: VariableScope for the created subgraph; defaults to "BiRNN"
 
@@ -1612,13 +1612,13 @@ If two elements are equal, the lower-index element appears first.
 #### Args:
 
 * **`input`**: 1-D or higher `Tensor` with last dimension at least `k`.
-* **`k`**: 0-D `int32` `Tensor`.  Number of top elements to look for along the last
+* **`k`**: 0-D `int32` `Tensor`. Number of top elements to look for along the last
 
-   dimension \(along each row for matrices\).
+  dimension \(along each row for matrices\).
 
 * **`sorted`**: If true the resulting `k` elements will be sorted by the values in
 
-   descending order.
+  descending order.
 
 * **`name`**: Optional name for the operation.
 
@@ -1643,11 +1643,11 @@ $$out_i = predictions_{i, targets_i} \in TopKIncludingTies(predictions_i)$$
 
 * **`predictions`**: A `Tensor` of type `float32`.
 
-   A `batch_size` x `classes` tensor.
+  A `batch_size` x `classes` tensor.
 
 * **`targets`**: A `Tensor`. Must be one of the following types: `int32`, `int64`.
 
-   A `batch_size` vector of class ids.
+  A `batch_size` vector of class ids.
 
 * **`k`**: An `int`. Number of top elements to look at for computing precision.
 * **`name`**: A name for the operation \(optional\).
@@ -1680,47 +1680,47 @@ Note: It would be useful to allow a variable number of target classes per exampl
 
 * **`weights`**: A `Tensor` of shape `[num_classes, dim]`, or a list of `Tensor`
 
-     objects whose concatenation along dimension 0 has shape
+  objects whose concatenation along dimension 0 has shape
 
-     \[num\_classes, dim\].  The \(possibly-partitioned\) class embeddings.
+  \[num\_classes, dim\]. The \(possibly-partitioned\) class embeddings.
 
-* **`biases`**: A `Tensor` of shape `[num_classes]`.  The class biases.
-* **`inputs`**: A `Tensor` of shape `[batch_size, dim]`.  The forward
+* **`biases`**: A `Tensor` of shape `[num_classes]`. The class biases.
+* **`inputs`**: A `Tensor` of shape `[batch_size, dim]`. The forward
 
-     activations of the input network.
+  activations of the input network.
 
 * **`labels`**: A `Tensor` of type `int64` and shape \`\[batch\_size,
 
-     num\_true\]\`. The target classes.
+  num\_true\]\`. The target classes.
 
-* **`num_sampled`**: An `int`.  The number of classes to randomly sample per batch.
+* **`num_sampled`**: An `int`. The number of classes to randomly sample per batch.
 * **`num_classes`**: An `int`. The number of possible classes.
 * **`num_true`**: An `int`.  The number of target classes per training example.
 * **`sampled_values`**: a tuple of \(`sampled_candidates`, `true_expected_count`,
 
-     `sampled_expected_count`\) returned by a `*_candidate_sampler` function.
+  `sampled_expected_count`\) returned by a `*_candidate_sampler` function.
 
-     \(if None, we default to `log_uniform_candidate_sampler`\)
+  \(if None, we default to `log_uniform_candidate_sampler`\)
 
-* **`remove_accidental_hits`**: A `bool`.  Whether to remove "accidental hits"
+* **`remove_accidental_hits`**: A `bool`. Whether to remove "accidental hits"
 
-     where a sampled class equals one of the target classes.  If set to
+  where a sampled class equals one of the target classes. If set to
 
-     `True`, this is a "Sampled Logistic" loss instead of NCE, and we are
+  `True`, this is a "Sampled Logistic" loss instead of NCE, and we are
 
-     learning to generate log-odds instead of log probabilities.  See
+  learning to generate log-odds instead of log probabilities. See
 
-     our \[Candidate Sampling Algorithms Reference\]
+  our \[Candidate Sampling Algorithms Reference\]
 
-     \(../../extras/candidate\_sampling.pdf\).
+  \(../../extras/candidate\_sampling.pdf\).
 
-     Default is False.
+  Default is False.
 
 * **`partition_strategy`**: A string specifying the partitioning strategy, relevant
 
-     if `len(weights) > 1`. Currently `"div"` and `"mod"` are supported.
+  if `len(weights) > 1`. Currently `"div"` and `"mod"` are supported.
 
-     Default is `"mod"`. See `tf.nn.embedding_lookup` for more details.
+  Default is `"mod"`. See `tf.nn.embedding_lookup` for more details.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1746,41 +1746,41 @@ Also see Section 3 of [Jean et al., 2014](http://arxiv.org/abs/1412.2007) \([pdf
 
 * **`weights`**: A `Tensor` of shape `[num_classes, dim]`, or a list of `Tensor`
 
-     objects whose concatenation along dimension 0 has shape
+  objects whose concatenation along dimension 0 has shape
 
-     \[num\_classes, dim\].  The \(possibly-sharded\) class embeddings.
+  \[num\_classes, dim\]. The \(possibly-sharded\) class embeddings.
 
-* **`biases`**: A `Tensor` of shape `[num_classes]`.  The class biases.
-* **`inputs`**: A `Tensor` of shape `[batch_size, dim]`.  The forward
+* **`biases`**: A `Tensor` of shape `[num_classes]`. The class biases.
+* **`inputs`**: A `Tensor` of shape `[batch_size, dim]`. The forward
 
-     activations of the input network.
+  activations of the input network.
 
 * **`labels`**: A `Tensor` of type `int64` and shape \`\[batch\_size,
 
-     num\_true\]\`. The target classes.  Note that this format differs from
+  num\_true\]\`. The target classes. Note that this format differs from
 
-     the `labels` argument of `nn.softmax_cross_entropy_with_logits`.
+  the `labels` argument of `nn.softmax_cross_entropy_with_logits`.
 
-* **`num_sampled`**: An `int`.  The number of classes to randomly sample per batch.
+* **`num_sampled`**: An `int`. The number of classes to randomly sample per batch.
 * **`num_classes`**: An `int`. The number of possible classes.
 * **`num_true`**: An `int`.  The number of target classes per training example.
 * **`sampled_values`**: a tuple of \(`sampled_candidates`, `true_expected_count`,
 
-     `sampled_expected_count`\) returned by a `*_candidate_sampler` function.
+  `sampled_expected_count`\) returned by a `*_candidate_sampler` function.
 
-     \(if None, we default to `log_uniform_candidate_sampler`\)
+  \(if None, we default to `log_uniform_candidate_sampler`\)
 
-* **`remove_accidental_hits`**: A `bool`.  whether to remove "accidental hits"
+* **`remove_accidental_hits`**: A `bool`. whether to remove "accidental hits"
 
-     where a sampled class equals one of the target classes.  Default is
+  where a sampled class equals one of the target classes. Default is
 
-     True.
+  True.
 
 * **`partition_strategy`**: A string specifying the partitioning strategy, relevant
 
-     if `len(weights) > 1`. Currently `"div"` and `"mod"` are supported.
+  if `len(weights) > 1`. Currently `"div"` and `"mod"` are supported.
 
-     Default is `"mod"`. See `tf.nn.embedding_lookup` for more details.
+  Default is `"mod"`. See `tf.nn.embedding_lookup` for more details.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1808,13 +1808,13 @@ In addition, this operation returns tensors `true_expected_count` and `sampled_e
 
 * **`true_classes`**: A `Tensor` of type `int64` and shape \`\[batch\_size,
 
-   num\_true\]\`. The target classes.
+  num\_true\]\`. The target classes.
 
-* **`num_true`**: An `int`.  The number of target classes per training example.
+* **`num_true`**: An `int`. The number of target classes per training example.
 * **`num_sampled`**: An `int`.  The number of classes to randomly sample per batch.
 * **`unique`**: A `bool`. Determines whether all sampled classes in a batch are
 
-   unique.
+  unique.
 
 * **`range_max`**: An `int`. The number of possible classes.
 * **`seed`**: An `int`. An operation-specific seed. Default is 0.
@@ -1824,19 +1824,19 @@ In addition, this operation returns tensors `true_expected_count` and `sampled_e
 
 * **`sampled_candidates`**: A tensor of type `int64` and shape `[num_sampled]`.
 
-   The sampled classes.
+  The sampled classes.
 
-* **`true_expected_count`**: A tensor of type `float`.  Same shape as
+* **`true_expected_count`**: A tensor of type `float`. Same shape as
 
-   `true_classes`. The expected counts under the sampling distribution
+  `true_classes`. The expected counts under the sampling distribution
 
-   of each of `true_classes`.
+  of each of `true_classes`.
 
 * **`sampled_expected_count`**: A tensor of type `float`. Same shape as
 
-   `sampled_candidates`. The expected counts under the sampling distribution
+  `sampled_candidates`. The expected counts under the sampling distribution
 
-   of each of `sampled_candidates`.
+  of each of `sampled_candidates`.
 
 ### `tf.nn.log_uniform_candidate_sampler(true_classes, num_true, num_sampled, unique, range_max, seed=None, name=None)` <a id="log_uniform_candidate_sampler"></a>
 
@@ -1858,13 +1858,13 @@ In addition, this operation returns tensors `true_expected_count` and `sampled_e
 
 * **`true_classes`**: A `Tensor` of type `int64` and shape \`\[batch\_size,
 
-   num\_true\]\`. The target classes.
+  num\_true\]\`. The target classes.
 
-* **`num_true`**: An `int`.  The number of target classes per training example.
+* **`num_true`**: An `int`. The number of target classes per training example.
 * **`num_sampled`**: An `int`.  The number of classes to randomly sample per batch.
 * **`unique`**: A `bool`. Determines whether all sampled classes in a batch are
 
-   unique.
+  unique.
 
 * **`range_max`**: An `int`. The number of possible classes.
 * **`seed`**: An `int`. An operation-specific seed. Default is 0.
@@ -1874,19 +1874,19 @@ In addition, this operation returns tensors `true_expected_count` and `sampled_e
 
 * **`sampled_candidates`**: A tensor of type `int64` and shape `[num_sampled]`.
 
-   The sampled classes.
+  The sampled classes.
 
-* **`true_expected_count`**: A tensor of type `float`.  Same shape as
+* **`true_expected_count`**: A tensor of type `float`. Same shape as
 
-   `true_classes`. The expected counts under the sampling distribution
+  `true_classes`. The expected counts under the sampling distribution
 
-   of each of `true_classes`.
+  of each of `true_classes`.
 
 * **`sampled_expected_count`**: A tensor of type `float`. Same shape as
 
-   `sampled_candidates`. The expected counts under the sampling distribution
+  `sampled_candidates`. The expected counts under the sampling distribution
 
-   of each of `sampled_candidates`.
+  of each of `sampled_candidates`.
 
 ### `tf.nn.learned_unigram_candidate_sampler(true_classes, num_true, num_sampled, unique, range_max, seed=None, name=None)` <a id="learned_unigram_candidate_sampler"></a>
 
@@ -1904,13 +1904,13 @@ In addition, this operation returns tensors `true_expected_count` and `sampled_e
 
 * **`true_classes`**: A `Tensor` of type `int64` and shape \`\[batch\_size,
 
-   num\_true\]\`. The target classes.
+  num\_true\]\`. The target classes.
 
-* **`num_true`**: An `int`.  The number of target classes per training example.
+* **`num_true`**: An `int`. The number of target classes per training example.
 * **`num_sampled`**: An `int`.  The number of classes to randomly sample per batch.
 * **`unique`**: A `bool`. Determines whether all sampled classes in a batch are
 
-   unique.
+  unique.
 
 * **`range_max`**: An `int`. The number of possible classes.
 * **`seed`**: An `int`. An operation-specific seed. Default is 0.
@@ -1920,19 +1920,19 @@ In addition, this operation returns tensors `true_expected_count` and `sampled_e
 
 * **`sampled_candidates`**: A tensor of type `int64` and shape `[num_sampled]`.
 
-   The sampled classes.
+  The sampled classes.
 
-* **`true_expected_count`**: A tensor of type `float`.  Same shape as
+* **`true_expected_count`**: A tensor of type `float`. Same shape as
 
-   `true_classes`. The expected counts under the sampling distribution
+  `true_classes`. The expected counts under the sampling distribution
 
-   of each of `true_classes`.
+  of each of `true_classes`.
 
 * **`sampled_expected_count`**: A tensor of type `float`. Same shape as
 
-   `sampled_candidates`. The expected counts under the sampling distribution
+  `sampled_candidates`. The expected counts under the sampling distribution
 
-   of each of `sampled_candidates`.
+  of each of `sampled_candidates`.
 
 ### `tf.nn.fixed_unigram_candidate_sampler(true_classes, num_true, num_sampled, unique, range_max, vocab_file='', distortion=1.0, num_reserved_ids=0, num_shards=1, shard=0, unigrams=(), seed=None, name=None)` <a id="fixed_unigram_candidate_sampler"></a>
 
@@ -1950,64 +1950,64 @@ In addition, this operation returns tensors `true_expected_count` and `sampled_e
 
 * **`true_classes`**: A `Tensor` of type `int64` and shape \`\[batch\_size,
 
-   num\_true\]\`. The target classes.
+  num\_true\]\`. The target classes.
 
-* **`num_true`**: An `int`.  The number of target classes per training example.
+* **`num_true`**: An `int`. The number of target classes per training example.
 * **`num_sampled`**: An `int`.  The number of classes to randomly sample per batch.
 * **`unique`**: A `bool`. Determines whether all sampled classes in a batch are
 
-   unique.
+  unique.
 
 * **`range_max`**: An `int`. The number of possible classes.
 * **`vocab_file`**: Each valid line in this file \(which should have a CSV-like
 
-   format\) corresponds to a valid word ID. IDs are in sequential order,
+  format\) corresponds to a valid word ID. IDs are in sequential order,
 
-   starting from num\_reserved\_ids. The last entry in each line is expected
+  starting from num\_reserved\_ids. The last entry in each line is expected
 
-   to be a value corresponding to the count or relative probability. Exactly
+  to be a value corresponding to the count or relative probability. Exactly
 
-   one of `vocab_file` and `unigrams` needs to be passed to this operation.
+  one of `vocab_file` and `unigrams` needs to be passed to this operation.
 
 * **`distortion`**: The distortion is used to skew the unigram probability
 
-   distribution.  Each weight is first raised to the distortion's power
+  distribution. Each weight is first raised to the distortion's power
 
-   before adding to the internal unigram distribution. As a result,
+  before adding to the internal unigram distribution. As a result,
 
-   `distortion = 1.0` gives regular unigram sampling \(as defined by the vocab
+  `distortion = 1.0` gives regular unigram sampling \(as defined by the vocab
 
-   file\), and `distortion = 0.0` gives a uniform distribution.
+  file\), and `distortion = 0.0` gives a uniform distribution.
 
 * **`num_reserved_ids`**: Optionally some reserved IDs can be added in the range
 
-   `[0, num_reserved_ids]` by the users. One use case is that a special
+  `[0, num_reserved_ids]` by the users. One use case is that a special
 
-   unknown word token is used as ID 0. These IDs will have a sampling
+  unknown word token is used as ID 0. These IDs will have a sampling
 
-   probability of 0.
+  probability of 0.
 
 * **`num_shards`**: A sampler can be used to sample from a subset of the original
 
-   range in order to speed up the whole computation through parallelism. This
+  range in order to speed up the whole computation through parallelism. This
 
-   parameter \(together with `shard`\) indicates the number of partitions that
+  parameter \(together with `shard`\) indicates the number of partitions that
 
-   are being used in the overall computation.
+  are being used in the overall computation.
 
 * **`shard`**: A sampler can be used to sample from a subset of the original range
 
-   in order to speed up the whole computation through parallelism. This
+  in order to speed up the whole computation through parallelism. This
 
-   parameter \(together with `num_shards`\) indicates the particular partition
+  parameter \(together with `num_shards`\) indicates the particular partition
 
-   number of the operation, when partitioning is being used.
+  number of the operation, when partitioning is being used.
 
 * **`unigrams`**: A list of unigram counts or probabilities, one per ID in
 
-   sequential order. Exactly one of `vocab_file` and `unigrams` should be
+  sequential order. Exactly one of `vocab_file` and `unigrams` should be
 
-   passed to this operation.
+  passed to this operation.
 
 * **`seed`**: An `int`. An operation-specific seed. Default is 0.
 * **`name`**: A name for the operation \(optional\).
@@ -2016,19 +2016,19 @@ In addition, this operation returns tensors `true_expected_count` and `sampled_e
 
 * **`sampled_candidates`**: A tensor of type `int64` and shape `[num_sampled]`.
 
-   The sampled classes.
+  The sampled classes.
 
-* **`true_expected_count`**: A tensor of type `float`.  Same shape as
+* **`true_expected_count`**: A tensor of type `float`. Same shape as
 
-   `true_classes`. The expected counts under the sampling distribution
+  `true_classes`. The expected counts under the sampling distribution
 
-   of each of `true_classes`.
+  of each of `true_classes`.
 
 * **`sampled_expected_count`**: A tensor of type `float`. Same shape as
 
-   `sampled_candidates`. The expected counts under the sampling distribution
+  `sampled_candidates`. The expected counts under the sampling distribution
 
-   of each of `sampled_candidates`.
+  of each of `sampled_candidates`.
 
 ### Miscellaneous candidate sampling utilities
 
@@ -2050,13 +2050,13 @@ The result of this op should be passed through a `sparse_to_dense` operation, th
 
 * **`true_classes`**: A `Tensor` of type `int64` and shape \`\[batch\_size,
 
-   num\_true\]\`. The target classes.
+  num\_true\]\`. The target classes.
 
 * **`sampled_candidates`**: A tensor of type `int64` and shape `[num_sampled]`.
 
-   The sampled\_candidates output of CandidateSampler.
+  The sampled\_candidates output of CandidateSampler.
 
-* **`num_true`**: An `int`.  The number of target classes per training example.
+* **`num_true`**: An `int`. The number of target classes per training example.
 * **`seed`**: An `int`. An operation-specific seed. Default is 0.
 * **`name`**: A name for the operation \(optional\).
 
@@ -2064,15 +2064,15 @@ The result of this op should be passed through a `sparse_to_dense` operation, th
 
 * **`indices`**: A `Tensor` of type `int32` and shape `[num_accidental_hits]`.
 
-   Values indicate rows in `true_classes`.
+  Values indicate rows in `true_classes`.
 
 * **`ids`**: A `Tensor` of type `int64` and shape `[num_accidental_hits]`.
 
-   Values indicate positions in `sampled_candidates`.
+  Values indicate positions in `sampled_candidates`.
 
 * **`weights`**: A `Tensor` of type `float` and shape `[num_accidental_hits]`.
 
-   Each value is `-FLOAT_MAX`.
+  Each value is `-FLOAT_MAX`.
 
 ## Other Functions and Classes
 
@@ -2125,11 +2125,11 @@ As described in [http://arxiv.org/abs/1502.03167](http://arxiv.org/abs/1502.0316
 * **`variance`**: A variance `Tensor`.
 * **`offset`**: An offset `Tensor`, often denoted \\(\beta\\) in equations, or
 
-   None. If present, will be added to the normalized tensor.
+  None. If present, will be added to the normalized tensor.
 
 * **`scale`**: A scale `Tensor`, often denoted \\(\gamma\\) in equations, or
 
-   `None`. If present, the scale is applied to the normalized tensor.
+  `None`. If present, the scale is applied to the normalized tensor.
 
 * **`variance_epsilon`**: A small float number to avoid dividing by 0.
 * **`name`**: A name for this operation \(optional\).
@@ -2144,7 +2144,7 @@ Computes a 2-D depthwise convolution given 4-D `input` and `filter` tensors.
 
 Given an input tensor of shape `[batch, in_height, in_width, in_channels]` and a filter / kernel tensor of shape `[filter_height, filter_width, in_channels, channel_multiplier]`, containing `in_channels` convolutional filters of depth 1, `depthwise_conv2d` applies a different filter to each input channel \(expanding from 1 channel to `channel_multiplier` channels for each\), then concatenates the results together. Thus, the output has `in_channels * channel_multiplier` channels.
 
-for k in 0..in_channels-1 for q in 0..channel\_multiplier-1 output\[b, i, j, k \* channel\_multiplier + q\] = sum_{di, dj} input\[b, strides\[1\]  _i + di, strides\[2\]_  j + dj, k\] \* filter\[di, dj, k, q\]
+for k in 0..in_channels-1 for q in 0..channel\_multiplier-1 output\[b, i, j, k \* channel\_multiplier + q\] = sum_{di, dj} input\[b, strides\[1\] _i + di, strides\[2\]_ j + dj, k\] \* filter\[di, dj, k, q\]
 
 Must have `strides[0] = strides[3] = 1`. For the most common case of the same horizontal and vertices strides, `strides = [1, stride, stride, 1]`.
 
@@ -2154,13 +2154,13 @@ Must have `strides[0] = strides[3] = 1`. For the most common case of the same ho
 * **`filter`**: A `Tensor`. Must have the same type as `input`.
 * **`strides`**: A list of `ints`.
 
-   1-D of length 4.  The stride of the sliding window for each dimension
+  1-D of length 4. The stride of the sliding window for each dimension
 
-   of `input`.
+  of `input`.
 
 * **`padding`**: A `string` from: `"SAME", "VALID"`.
 
-   The type of padding algorithm to use.
+  The type of padding algorithm to use.
 
 * **`name`**: A name for the operation \(optional\).
 

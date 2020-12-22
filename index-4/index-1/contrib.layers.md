@@ -20,21 +20,21 @@ Adds a 2D convolution followed by an optional batch\_norm layer.
 * **`num_outputs`**: integer, the number of output filters.
 * **`kernel_size`**: a list of length 2 `[kernel_height, kernel_width]` of
 
-   of the filters. Can be an int if both values are the same.
+  of the filters. Can be an int if both values are the same.
 
 * **`stride`**: a list of length 2 `[stride_height, stride_width]`.
 
-   Can be an int if both strides are the same. Note that presently
+  Can be an int if both strides are the same. Note that presently
 
-   both strides must have the same value.
+  both strides must have the same value.
 
 * **`padding`**: one of `VALID` or `SAME`.
 * **`activation_fn`**: activation function.
 * **`normalizer_fn`**: normalization function to use instead of `biases`. If
 
-   `normalize_fn` is provided then `biases_initializer` and
+  `normalize_fn` is provided then `biases_initializer` and
 
-   `biases_regularizer` are ignored and `biases` are not created nor added.
+  `biases_regularizer` are ignored and `biases` are not created nor added.
 
 * **`normalizer_params`**: normalization function parameters.
 * **`weights_initializer`**: An initializer for the weights.
@@ -43,16 +43,16 @@ Adds a 2D convolution followed by an optional batch\_norm layer.
 * **`biases_regularizer`**: Optional regularizer for the biases.
 * **`reuse`**: whether or not the layer and its variables should be reused. To be
 
-   able to reuse the layer scope must be given.
+  able to reuse the layer scope must be given.
 
 * **`variables_collections`**: optional list of collections for all the variables or
 
-   a dictionay containing a different list of collection per variable.
+  a dictionay containing a different list of collection per variable.
 
 * **`outputs_collections`**: collection to add the outputs.
 * **`trainable`**: If `True` also add variables to the graph collection
 
-   `GraphKeys.TRAINABLE_VARIABLES` \(see tf.Variable\).
+  `GraphKeys.TRAINABLE_VARIABLES` \(see tf.Variable\).
 
 * **`scope`**: Optional scope for `variable_op_scope`.
 
@@ -72,15 +72,15 @@ Note: that if `inputs` have a rank greater than 2, then `inputs` is flattened pr
 
 * **`inputs`**: A tensor of with at least rank 2 and value for the last dimension,
 
-   i.e. `[batch_size, depth]`, `[None, None, None, channels]`.
+  i.e. `[batch_size, depth]`, `[None, None, None, channels]`.
 
 * **`num_outputs`**: Integer, the number of output units in the layer.
 * **`activation_fn`**: activation function.
 * **`normalizer_fn`**: normalization function to use instead of `biases`. If
 
-   `normalize_fn` is provided then `biases_initializer` and
+  `normalize_fn` is provided then `biases_initializer` and
 
-   `biases_regularizer` are ignored and `biases` are not created nor added.
+  `biases_regularizer` are ignored and `biases` are not created nor added.
 
 * **`normalizer_params`**: normalization function parameters.
 * **`weights_initializer`**: An initializer for the weights.
@@ -89,16 +89,16 @@ Note: that if `inputs` have a rank greater than 2, then `inputs` is flattened pr
 * **`biases_regularizer`**: Optional regularizer for the biases.
 * **`reuse`**: whether or not the layer and its variables should be reused. To be
 
-   able to reuse the layer scope must be given.
+  able to reuse the layer scope must be given.
 
 * **`variables_collections`**: Optional list of collections for all the variables or
 
-   a dictionary containing a different list of collections per variable.
+  a dictionary containing a different list of collections per variable.
 
 * **`outputs_collections`**: collection to add the outputs.
 * **`trainable`**: If `True` also add variables to the graph collection
 
-   `GraphKeys.TRAINABLE_VARIABLES` \(see tf.Variable\).
+  `GraphKeys.TRAINABLE_VARIABLES` \(see tf.Variable\).
 
 * **`scope`**: Optional scope for variable\_op\_scope.
 
@@ -126,13 +126,13 @@ Adding a regularization penalty over the layer weights and embedding weights can
 
 * **`regularizer`**: A function that takes a single `Tensor` argument and returns
 
-   a scalar `Tensor` output.
+  a scalar `Tensor` output.
 
 * **`weights_list`**: List of weights `Tensors` or `Variables` to apply
 
-   `regularizer` over. Defaults to the `GraphKeys.WEIGHTS` collection if
+  `regularizer` over. Defaults to the `GraphKeys.WEIGHTS` collection if
 
-   `None`.
+  `None`.
 
 #### Returns:
 
@@ -213,9 +213,9 @@ This initializer is designed to keep the scale of the gradients roughly the same
 * **`uniform`**: Whether to use uniform or normal distributed random initialization.
 * **`seed`**: A Python integer. Used to create random seeds. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 * **`dtype`**: The data type. Only floating point types are supported.
 
@@ -238,9 +238,9 @@ This initializer is designed to keep the scale of the gradients roughly the same
 * **`uniform`**: Whether to use uniform or normal distributed random initialization.
 * **`seed`**: A Python integer. Used to create random seeds. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 * **`dtype`**: The data type. Only floating point types are supported.
 
@@ -282,9 +282,9 @@ To get [http://arxiv.org/pdf/1502.01852v1.pdf](http://arxiv.org/pdf/1502.01852v1
 * **`uniform`**: Whether to use uniform or normal distributed random initialization.
 * **`seed`**: A Python integer. Used to create random seeds. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 * **`dtype`**: The data type. Only floating point types are supported.
 

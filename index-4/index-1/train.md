@@ -69,11 +69,11 @@ This must be called by the constructors of subclasses.
 
 * **`use_locking`**: Bool. If True apply use locks to prevent concurrent updates
 
-   to variables.
+  to variables.
 
-* **`name`**: A non-empty string.  The name to use for accumulators created
+* **`name`**: A non-empty string. The name to use for accumulators created
 
-   for the optimizer.
+  for the optimizer.
 
 **Raises:**
 
@@ -90,25 +90,25 @@ This method simply combines calls `compute_gradients()` and `apply_gradients()`.
 * **`loss`**: A `Tensor` containing the value to minimize.
 * **`global_step`**: Optional `Variable` to increment by one after the
 
-   variables have been updated.
+  variables have been updated.
 
 * **`var_list`**: Optional list of `Variable` objects to update to minimize
 
-   `loss`.  Defaults to the list of variables collected in the graph
+  `loss`. Defaults to the list of variables collected in the graph
 
-   under the key `GraphKeys.TRAINABLE_VARIABLES`.
+  under the key `GraphKeys.TRAINABLE_VARIABLES`.
 
-* **`gate_gradients`**: How to gate the computation of gradients.  Can be
+* **`gate_gradients`**: How to gate the computation of gradients. Can be
 
-   `GATE_NONE`, `GATE_OP`, or  `GATE_GRAPH`.
+  `GATE_NONE`, `GATE_OP`, or `GATE_GRAPH`.
 
 * **`aggregation_method`**: Specifies the method used to combine gradient terms.
 
-   Valid values are defined in the class `AggregationMethod`.
+  Valid values are defined in the class `AggregationMethod`.
 
 * **`colocate_gradients_with_ops`**: If True, try colocating gradients with
 
-   the corresponding op.
+  the corresponding op.
 
 * **`name`**: Optional name for the returned operation.
 * **`grad_loss`**: Optional. A `Tensor` holding the gradient computed for `loss`.
@@ -132,21 +132,21 @@ This is the first part of `minimize()`. It returns a list of \(gradient, variabl
 * **`loss`**: A Tensor containing the value to minimize.
 * **`var_list`**: Optional list of tf.Variable to update to minimize
 
-   `loss`.  Defaults to the list of variables collected in the graph
+  `loss`. Defaults to the list of variables collected in the graph
 
-   under the key `GraphKey.TRAINABLE_VARIABLES`.
+  under the key `GraphKey.TRAINABLE_VARIABLES`.
 
-* **`gate_gradients`**: How to gate the computation of gradients.  Can be
+* **`gate_gradients`**: How to gate the computation of gradients. Can be
 
-   `GATE_NONE`, `GATE_OP`, or `GATE_GRAPH`.
+  `GATE_NONE`, `GATE_OP`, or `GATE_GRAPH`.
 
 * **`aggregation_method`**: Specifies the method used to combine gradient terms.
 
-   Valid values are defined in the class `AggregationMethod`.
+  Valid values are defined in the class `AggregationMethod`.
 
 * **`colocate_gradients_with_ops`**: If True, try colocating gradients with
 
-   the corresponding op.
+  the corresponding op.
 
 * **`grad_loss`**: Optional. A `Tensor` holding the gradient computed for `loss`.
 
@@ -169,15 +169,15 @@ This is the second part of `minimize()`. It returns an `Operation` that applies 
 
 * **`grads_and_vars`**: List of \(gradient, variable\) pairs as returned by
 
-   `compute_gradients()`.
+  `compute_gradients()`.
 
 * **`global_step`**: Optional `Variable` to increment by one after the
 
-   variables have been updated.
+  variables have been updated.
 
-* **`name`**: Optional name for the returned operation.  Default to the
+* **`name`**: Optional name for the returned operation. Default to the
 
-   name passed to the `Optimizer` constructor.
+  name passed to the `Optimizer` constructor.
 
 **Returns:**
 
@@ -243,14 +243,14 @@ Construct a new gradient descent optimizer.
 
 **Args:**
 
-* **`learning_rate`**: A Tensor or a floating point value.  The learning
+* **`learning_rate`**: A Tensor or a floating point value. The learning
 
-   rate to use.
+  rate to use.
 
 * **`use_locking`**: If True use locks for update operations.
 * **`name`**: Optional name prefix for the operations created when applying
 
-   gradients. Defaults to "GradientDescent".
+  gradients. Defaults to "GradientDescent".
 
 ### `class tf.train.AdadeltaOptimizer` <a id="AdadeltaOptimizer"></a>
 
@@ -266,7 +266,7 @@ Construct a new Adadelta optimizer.
 
 * **`learning_rate`**: A `Tensor` or a floating point value. The learning rate.
 * **`rho`**: A `Tensor` or a floating point value. The decay rate.
-* **`epsilon`**: A `Tensor` or a floating point value.  A constant epsilon used
+* **`epsilon`**: A `Tensor` or a floating point value. A constant epsilon used
 
   ```text
       to better conditioning the grad update.
@@ -275,7 +275,7 @@ Construct a new Adadelta optimizer.
 * **`use_locking`**: If `True` use locks for update operations.
 * **`name`**: Optional name prefix for the operations created when applying
 
-   gradients.  Defaults to "Adadelta".
+  gradients. Defaults to "Adadelta".
 
 ### `class tf.train.AdagradOptimizer` <a id="AdagradOptimizer"></a>
 
@@ -292,12 +292,12 @@ Construct a new Adagrad optimizer.
 * **`learning_rate`**: A `Tensor` or a floating point value.  The learning rate.
 * **`initial_accumulator_value`**: A floating point value.
 
-   Starting value for the accumulators, must be positive.
+  Starting value for the accumulators, must be positive.
 
 * **`use_locking`**: If `True` use locks for update operations.
 * **`name`**: Optional name prefix for the operations created when applying
 
-   gradients.  Defaults to "Adagrad".
+  gradients. Defaults to "Adagrad".
 
 **Raises:**
 
@@ -318,7 +318,7 @@ Construct a new Momentum optimizer.
 * **`use_locking`**: If `True` use locks for update operations.
 * **`name`**: Optional name prefix for the operations created when applying
 
-   gradients.  Defaults to "Momentum".
+  gradients. Defaults to "Momentum".
 
 ### `class tf.train.AdamOptimizer` <a id="AdamOptimizer"></a>
 
@@ -356,17 +356,17 @@ The default value of 1e-8 for epsilon might not be a good default in general. Fo
 * **`learning_rate`**: A Tensor or a floating point value.  The learning rate.
 * **`beta1`**: A float value or a constant float tensor.
 
-   The exponential decay rate for the 1st moment estimates.
+  The exponential decay rate for the 1st moment estimates.
 
 * **`beta2`**: A float value or a constant float tensor.
 
-   The exponential decay rate for the 2nd moment estimates.
+  The exponential decay rate for the 2nd moment estimates.
 
 * **`epsilon`**: A small constant for numerical stability.
 * **`use_locking`**: If True use locks for update operations.
 * **`name`**: Optional name for the operations created when applying gradients.
 
-   Defaults to "Adam".
+  Defaults to "Adam".
 
 ### `class tf.train.FtrlOptimizer` <a id="FtrlOptimizer"></a>
 
@@ -384,20 +384,20 @@ Construct a new FTRL optimizer.
 * **`learning_rate_power`**: A float value, must be less or equal to zero.
 * **`initial_accumulator_value`**: The starting value for accumulators.
 
-   Only positive values are allowed.
+  Only positive values are allowed.
 
 * **`l1_regularization_strength`**: A float value, must be greater than or
 
-   equal to zero.
+  equal to zero.
 
 * **`l2_regularization_strength`**: A float value, must be greater than or
 
-   equal to zero.
+  equal to zero.
 
 * **`use_locking`**: If `True` use locks for update operations.
 * **`name`**: Optional name prefix for the operations created when applying
 
-   gradients.  Defaults to "Ftrl".
+  gradients. Defaults to "Ftrl".
 
 **Raises:**
 
@@ -422,7 +422,7 @@ Construct a new RMSProp optimizer.
 * **`use_locking`**: If True use locks for update operation.
 * **`name`**: Optional name prefix for the operations created when applying
 
-   gradients. Defaults to "RMSProp".
+  gradients. Defaults to "RMSProp".
 
 ## Gradient Computation
 
@@ -444,23 +444,23 @@ Constructs symbolic partial derivatives of sum of `ys` w.r.t. x in `xs`.
 * **`xs`**: A `Tensor` or list of tensors to be used for differentiation.
 * **`grad_ys`**: Optional. A `Tensor` or list of tensors the same size as
 
-   `ys` and holding the gradients computed for each y in `ys`.
+  `ys` and holding the gradients computed for each y in `ys`.
 
 * **`name`**: Optional name to use for grouping all the gradient ops together.
 
-   defaults to 'gradients'.
+  defaults to 'gradients'.
 
 * **`colocate_gradients_with_ops`**: If True, try colocating gradients with
 
-   the corresponding op.
+  the corresponding op.
 
 * **`gate_gradients`**: If True, add a tuple around the gradients returned
 
-   for an operations.  This avoids some race conditions.
+  for an operations. This avoids some race conditions.
 
 * **`aggregation_method`**: Specifies the method used to combine gradient terms.
 
-   Accepted values are constants defined in the class `AggregationMethod`.
+  Accepted values are constants defined in the class `AggregationMethod`.
 
 **Returns:**
 
@@ -470,7 +470,7 @@ A list of `sum(dy/dx)` for each x in `xs`.
 
 * **`LookupError`**: if one of the operations between `x` and `y` does not
 
-   have a registered gradient function.
+  have a registered gradient function.
 
 * **`ValueError`**: if the arguments are invalid.
 
@@ -618,7 +618,7 @@ However, it is slower than `clip_by_norm()` because all the parameters must be r
 * **`clip_norm`**: A 0-D \(scalar\) `Tensor` &gt; 0. The clipping ratio.
 * **`use_norm`**: A 0-D \(scalar\) `Tensor` of type `float` \(optional\). The global
 
-   norm to use. If not provided, `global_norm()` is used to compute the norm.
+  norm to use. If not provided, `global_norm()` is used to compute the norm.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -690,21 +690,21 @@ learning_step = (
 
 * **`learning_rate`**: A scalar `float32` or `float64` `Tensor` or a
 
-   Python number.  The initial learning rate.
+  Python number. The initial learning rate.
 
 * **`global_step`**: A scalar `int32` or `int64` `Tensor` or a Python number.
 
-   Global step to use for the decay computation.  Must not be negative.
+  Global step to use for the decay computation. Must not be negative.
 
 * **`decay_steps`**: A scalar `int32` or `int64` `Tensor` or a Python number.
 
-   Must be positive.  See the decay computation above.
+  Must be positive. See the decay computation above.
 
 * **`decay_rate`**: A scalar `float32` or `float64` `Tensor` or a
 
-   Python number.  The decay rate.
+  Python number. The decay rate.
 
-* **`staircase`**: Boolean.  It `True` decay the learning rate at discrete intervals.
+* **`staircase`**: Boolean. It `True` decay the learning rate at discrete intervals.
 * **`name`**: String.  Optional name of the operation.  Defaults to 'ExponentialDecay'
 
 **Returns:**
@@ -770,7 +770,7 @@ There are two ways to use the moving averages for evaluations:
 
 * Build a model normally but load the checkpoint files to evaluate by using
 
-  the shadow variable names.  For this use the `average_name()` method.  See
+  the shadow variable names. For this use the `average_name()` method. See
 
   the [Saver class](train.md#Saver) for more
 
@@ -803,7 +803,7 @@ The optional `num_updates` parameter allows one to tweak the decay rate dynamica
 * **`num_updates`**: Optional count of number of updates applied to variables.
 * **`name`**: String. Optional prefix name to use for the name of ops added in
 
-   `apply()`.
+  `apply()`.
 
 #### `tf.train.ExponentialMovingAverage.apply(var_list=None)` <a id="ExponentialMovingAverage.apply"></a>
 
@@ -821,7 +821,7 @@ Note that `apply()` can be called multiple times with different lists of variabl
 
 * **`var_list`**: A list of Variable or Tensor objects. The variables
 
-   and Tensors must be of types float32 or float64.
+  and Tensors must be of types float32 or float64.
 
 **Returns:**
 
@@ -832,7 +832,7 @@ An Operation that updates the moving averages.
 * **`TypeError`**: If the arguments are not all float32 or float64.
 * **`ValueError`**: If the moving average of one of the variables is already
 
-   being computed.
+  being computed.
 
 #### `tf.train.ExponentialMovingAverage.average_name(var)` <a id="ExponentialMovingAverage.average_name"></a>
 
@@ -889,9 +889,9 @@ Below is an example of such mapping:
 
 * **`moving_avg_variables`**: a list of variables that require to use of the
 
-   moving variable name to be restored. If None, it will default to
+  moving variable name to be restored. If None, it will default to
 
-   variables.moving\_average\_variables\(\) + variables.trainable\_variables\(\)
+  variables.moving\_average\_variables\(\) + variables.trainable\_variables\(\)
 
 **Returns:**
 
@@ -1010,13 +1010,13 @@ Grace period handling: When `request_stop()` is called, threads are given 'stop\
 * **`threads`**: List of `threading.Threads`. The started threads to join.
 * **`stop_grace_period_secs`**: Number of seconds given to threads to stop after
 
-   `request_stop()` has been called.
+  `request_stop()` has been called.
 
 **Raises:**
 
 * **`RuntimeError`**: If any thread is still alive after `request_stop()`
 
-   is called and the grace period expires.
+  is called and the grace period expires.
 
 #### `tf.train.Coordinator.request_stop(ex=None)` <a id="Coordinator.request_stop"></a>
 
@@ -1030,9 +1030,9 @@ Note: If an exception is being passed in, in must be in the context of handling 
 
 * **`ex`**: Optional `Exception`, or Python `exc_info` tuple as returned by
 
-   `sys.exc_info()`.  If this is the first call to `request_stop()` the
+  `sys.exc_info()`. If this is the first call to `request_stop()` the
 
-   corresponding exception is recorded and re-raised from `join()`.
+  corresponding exception is recorded and re-raised from `join()`.
 
 #### `tf.train.Coordinator.should_stop()` <a id="Coordinator.should_stop"></a>
 
@@ -1077,9 +1077,9 @@ Wait till the Coordinator is told to stop.
 
 **Args:**
 
-* **`timeout`**: Float.  Sleep for up to that many seconds waiting for
+* **`timeout`**: Float. Sleep for up to that many seconds waiting for
 
-   should\_stop\(\) to become True.
+  should\_stop\(\) to become True.
 
 **Returns:**
 
@@ -1111,16 +1111,16 @@ When you later call the `create_threads()` method, the `QueueRunner` will create
 * **`cancel_op`**: Op to close the queue and cancel pending enqueue ops.
 * **`queue_runner_def`**: Optional `QueueRunnerDef` protocol buffer. If specified,
 
-   recreates the QueueRunner from its contents. `queue_runner_def` and the
+  recreates the QueueRunner from its contents. `queue_runner_def` and the
 
-   other arguments are mutually exclusive.
+  other arguments are mutually exclusive.
 
 **Raises:**
 
 * **`ValueError`**: If both `queue_runner_def` and `queue` are both specified.
 * **`ValueError`**: If `queue` or `enqueue_ops` are not provided when not
 
-   restoring from `queue_runner_def`.
+  restoring from `queue_runner_def`.
 
 #### `tf.train.QueueRunner.cancel_op` <a id="QueueRunner.cancel_op"></a>
 
@@ -1141,12 +1141,12 @@ This method may be called again as long as all threads from a previous call have
 * **`sess`**: A `Session`.
 * **`coord`**: Optional `Coordinator` object for reporting errors and checking
 
-   stop conditions.
+  stop conditions.
 
-* **`daemon`**: Boolean.  If `True` make the threads daemon threads.
-* **`start`**: Boolean.  If `True` starts the threads.  If `False` the
+* **`daemon`**: Boolean. If `True` make the threads daemon threads.
+* **`start`**: Boolean. If `True` starts the threads. If `False` the
 
-   caller must call the `start()` method of the returned threads.
+  caller must call the `start()` method of the returned threads.
 
 **Returns:**
 
@@ -1209,7 +1209,7 @@ The companion method `start_queue_runners()` can be used to start threads for al
 * **`qr`**: A `QueueRunner`.
 * **`collection`**: A `GraphKey` specifying the graph collection to add
 
-   the queue runner to.  Defaults to `GraphKeys.QUEUE_RUNNERS`.
+  the queue runner to. Defaults to `GraphKeys.QUEUE_RUNNERS`.
 
 ### `tf.train.start_queue_runners(sess=None, coord=None, daemon=True, start=True, collection='queue_runners')` <a id="start_queue_runners"></a>
 
@@ -1219,19 +1219,19 @@ This is a companion method to `add_queue_runner()`. It just starts threads for a
 
 **Args:**
 
-* **`sess`**: `Session` used to run the queue ops.  Defaults to the
+* **`sess`**: `Session` used to run the queue ops. Defaults to the
 
-   default session.
+  default session.
 
 * **`coord`**: Optional `Coordinator` for coordinating the started threads.
 * **`daemon`**: Whether the threads should be marked as `daemons`, meaning
 
-   they don't block program exit.
+  they don't block program exit.
 
 * **`start`**: Set to `False` to only create the threads, not start them.
 * **`collection`**: A `GraphKey` specifying the graph collection to
 
-   get the queue runners from.  Defaults to `GraphKeys.QUEUE_RUNNERS`.
+  get the queue runners from. Defaults to `GraphKeys.QUEUE_RUNNERS`.
 
 **Returns:**
 
@@ -1257,33 +1257,33 @@ The `job_name`, `task_index`, and `protocol` arguments are optional, and overrid
 
 * **`server_or_cluster_def`**: A `tf.train.ServerDef` or
 
-   `tf.train.ClusterDef` protocol buffer, or a
+  `tf.train.ClusterDef` protocol buffer, or a
 
-   `tf.train.ClusterSpec` object, describing the server to be
+  `tf.train.ClusterSpec` object, describing the server to be
 
-   created and/or the cluster of which it is a member.
+  created and/or the cluster of which it is a member.
 
 * **`job_name`**: \(Optional.\) Specifies the name of the job of which the server
 
-   is a member. Defaults to the value in `server_or_cluster_def`, if
+  is a member. Defaults to the value in `server_or_cluster_def`, if
 
-   specified.
+  specified.
 
 * **`task_index`**: \(Optional.\) Specifies the task index of the server in its
 
-   job. Defaults to the value in `server_or_cluster_def`, if specified.
+  job. Defaults to the value in `server_or_cluster_def`, if specified.
 
-   Otherwise defaults to 0 if the server's job has only one task.
+  Otherwise defaults to 0 if the server's job has only one task.
 
 * **`protocol`**: \(Optional.\) Specifies the protocol to be used by the server.
 
-   Acceptable values include `"grpc"`. Defaults to the value in
+  Acceptable values include `"grpc"`. Defaults to the value in
 
-   `server_or_cluster_def`, if specified. Otherwise defaults to `"grpc"`.
+  `server_or_cluster_def`, if specified. Otherwise defaults to `"grpc"`.
 
 * **`start`**: \(Optional.\) Boolean, indicating whether to start the server
 
-   after creating it. Defaults to `True`.
+  after creating it. Defaults to `True`.
 
 **Raises:**
 
@@ -1299,7 +1299,7 @@ This method is a convenience wrapper for creating a `tf.train.Server` with a `tf
 
 * **`start`**: \(Optional.\) Boolean, indicating whether to start the server after
 
-   creating it. Defaults to `True`.
+  creating it. Defaults to `True`.
 
 **Returns:**
 
@@ -1456,120 +1456,120 @@ Create a `Supervisor`.
 
 **Args:**
 
-* **`graph`**: A `Graph`.  The graph that the model will use.  Defaults to the
+* **`graph`**: A `Graph`. The graph that the model will use. Defaults to the
 
-   default `Graph`.  The supervisor may add operations to the graph before
+  default `Graph`. The supervisor may add operations to the graph before
 
-   creating a session, but the graph should not be modified by the caller
+  creating a session, but the graph should not be modified by the caller
 
-   after passing it to the supervisor.
+  after passing it to the supervisor.
 
-* **`ready_op`**: 1-D string `Tensor`.  This tensor is evaluated by supervisors in
+* **`ready_op`**: 1-D string `Tensor`. This tensor is evaluated by supervisors in
 
-   `prepare_or_wait_for_session()` to check if the model is ready to use.
+  `prepare_or_wait_for_session()` to check if the model is ready to use.
 
-   The model is considered ready if it returns an empty array.  Defaults to
+  The model is considered ready if it returns an empty array. Defaults to
 
-   the tensor returned from `tf.report_uninitialized_variables()`  If
+  the tensor returned from `tf.report_uninitialized_variables()` If
 
-   `None`, the model is not checked for readiness.
+  `None`, the model is not checked for readiness.
 
 * **`is_chief`**: If True, create a chief supervisor in charge of initializing
 
-   and restoring the model.  If False, create a supervisor that relies
+  and restoring the model. If False, create a supervisor that relies
 
-   on a chief supervisor for inits and restore.
+  on a chief supervisor for inits and restore.
 
-* **`init_op`**: `Operation`.  Used by chief supervisors to initialize the model
+* **`init_op`**: `Operation`. Used by chief supervisors to initialize the model
 
-   when it can not be recovered.  Defaults to an `Operation` that
+  when it can not be recovered. Defaults to an `Operation` that
 
-   initializes all variables.  If `None`, no initialization is done
+  initializes all variables. If `None`, no initialization is done
 
-   automatically unless you pass a value for `init_fn`, see below.
+  automatically unless you pass a value for `init_fn`, see below.
 
 * **`init_feed_dict`**: A dictionary that maps `Tensor` objects to feed values.
 
-   This feed dictionary will be used when `init_op` is evaluated.
+  This feed dictionary will be used when `init_op` is evaluated.
 
 * **`local_init_op`**: `Operation`. Used by all supervisors to run initializations
 
-   that should run for every new supervisor instance. By default these
+  that should run for every new supervisor instance. By default these
 
-   are table initializers and initializers for local variables.
+  are table initializers and initializers for local variables.
 
-   If `None`, no further per supervisor-instance initialization is
+  If `None`, no further per supervisor-instance initialization is
 
-   done automatically.
+  done automatically.
 
-* **`logdir`**: A string.  Optional path to a directory where to checkpoint the
+* **`logdir`**: A string. Optional path to a directory where to checkpoint the
 
-   model and log events for the visualizer.  Used by chief supervisors.
+  model and log events for the visualizer. Used by chief supervisors.
 
-   The directory will be created if it does not exist.
+  The directory will be created if it does not exist.
 
 * **`summary_op`**: An `Operation` that returns a Summary for the event logs.
 
-   Used by chief supervisors if a `logdir` was specified.  Defaults to the
+  Used by chief supervisors if a `logdir` was specified. Defaults to the
 
-   operation returned from merge\_all\_summaries\(\).  If `None`, summaries are
+  operation returned from merge\_all\_summaries\(\). If `None`, summaries are
 
-   not computed automatically.
+  not computed automatically.
 
-* **`saver`**: A Saver object.  Used by chief supervisors if a `logdir` was
+* **`saver`**: A Saver object. Used by chief supervisors if a `logdir` was
 
-   specified.  Defaults to the saved returned by Saver\(\).
+  specified. Defaults to the saved returned by Saver\(\).
 
-   If `None`, the model is not saved automatically.
+  If `None`, the model is not saved automatically.
 
-* **`global_step`**: An integer Tensor of size 1 that counts steps.  The value
+* **`global_step`**: An integer Tensor of size 1 that counts steps. The value
 
-   from 'global\_step' is used in summaries and checkpoint filenames.
+  from 'global\_step' is used in summaries and checkpoint filenames.
 
-   Default to the op named 'global\_step' in the graph if it exists, is of
+  Default to the op named 'global\_step' in the graph if it exists, is of
 
-   rank 1, size 1, and of type tf.int32 ot tf.int64.  If `None` the global
+  rank 1, size 1, and of type tf.int32 ot tf.int64. If `None` the global
 
-   step is not recorded in summaries and checkpoint files.  Used by chief
+  step is not recorded in summaries and checkpoint files. Used by chief
 
-   supervisors if a `logdir` was specified.
+  supervisors if a `logdir` was specified.
 
 * **`save_summaries_secs`**: Number of seconds between the computation of
 
-   summaries for the event log.  Defaults to 120 seconds.  Pass 0 to
+  summaries for the event log. Defaults to 120 seconds. Pass 0 to
 
-   disable summaries.
+  disable summaries.
 
 * **`save_model_secs`**: Number of seconds between the creation of model
 
-   checkpoints.  Defaults to 600 seconds.  Pass 0 to disable checkpoints.
+  checkpoints. Defaults to 600 seconds. Pass 0 to disable checkpoints.
 
 * **`recovery_wait_secs`**: Number of seconds between checks that the model
 
-   is ready.  Used by supervisors when waiting for a chief supervisor
+  is ready. Used by supervisors when waiting for a chief supervisor
 
-   to initialize or restore the model.  Defaults to 30 seconds.
+  to initialize or restore the model. Defaults to 30 seconds.
 
 * **`stop_grace_secs`**: Grace period, in seconds, given to running threads to
 
-   stop when `stop()` is called.  Defaults to 120 seconds.
+  stop when `stop()` is called. Defaults to 120 seconds.
 
 * **`checkpoint_basename`**: The basename for checkpoint saving.
 * **`session_manager`**: `SessionManager`, which manages Session creation and
 
-   recovery. If it is `None`, a default `SessionManager` will be created
+  recovery. If it is `None`, a default `SessionManager` will be created
 
-   with the set of arguments passed in for backwards compatibility.
+  with the set of arguments passed in for backwards compatibility.
 
-* **`summary_writer`**: `SummaryWriter` to use or `USE_DEFAULT`.  Can be `None`
+* **`summary_writer`**: `SummaryWriter` to use or `USE_DEFAULT`. Can be `None`
 
-   to indicate that no summaries should be written.
+  to indicate that no summaries should be written.
 
 * **`init_fn`**: Optional callable used to initialize the model. Called
 
-   after the optional `init_op` is called.  The callable must accept one
+  after the optional `init_op` is called. The callable must accept one
 
-   argument, the session being initialized.
+  argument, the session being initialized.
 
 **Returns:**
 
@@ -1611,21 +1611,21 @@ As a special case, exceptions used for control flow, such as `OutOfRangeError` w
 
 **Args:**
 
-* **`master`**: name of the TensorFlow master to use.  See the `tf.Session`
+* **`master`**: name of the TensorFlow master to use. See the `tf.Session`
 
-   constructor for how this is interpreted.
+  constructor for how this is interpreted.
 
 * **`config`**: Optional `ConfigProto` proto used to configure the session.
 
-   Passed as-is to create the session.
+  Passed as-is to create the session.
 
 * **`start_standard_services`**: Whether to start the standard services,
 
-   such as checkpoint, summary and step counter.
+  such as checkpoint, summary and step counter.
 
 * **`close_summary_writer`**: Whether to close the summary writer when
 
-   closing the session.  Defaults to True.
+  closing the session. Defaults to True.
 
 **Returns:**
 
@@ -1639,22 +1639,22 @@ Create a session on 'master', recovering or initializing the model as needed, or
 
 **Args:**
 
-* **`master`**: name of the TensorFlow master to use.  See the `tf.Session`
+* **`master`**: name of the TensorFlow master to use. See the `tf.Session`
 
-   constructor for how this is interpreted.
+  constructor for how this is interpreted.
 
 * **`config`**: Optional ConfigProto proto used to configure the session,
 
-   which is passed as-is to create the session.
+  which is passed as-is to create the session.
 
 * **`wait_for_checkpoint`**: Whether we should wait for the availability of a
 
-   checkpoint before creating Session. Defaults to False.
+  checkpoint before creating Session. Defaults to False.
 
 * **`max_wait_secs`**: Maximum time to wait for the session to become available.
 * **`start_standard_services`**: Whether to start the standard services and the
 
-   queue runners.
+  queue runners.
 
 **Returns:**
 
@@ -1683,7 +1683,7 @@ A list of threads that are running the standard services. You can use the Superv
 * **`RuntimeError`**: If called with a non-chief Supervisor.
 * **`ValueError`**: If not `logdir` was passed to the constructor as the
 
-   services need a log directory.
+  services need a log directory.
 
 #### `tf.train.Supervisor.start_queue_runners(sess, queue_runners=None)` <a id="Supervisor.start_queue_runners"></a>
 
@@ -1696,9 +1696,9 @@ Note that the queue runners collected in the graph key `QUEUE_RUNNERS` are alrea
 * **`sess`**: A `Session`.
 * **`queue_runners`**: A list of `QueueRunners`. If not specified, we'll use the
 
-   list of queue runners gathered in the graph under the key
+  list of queue runners gathered in the graph under the key
 
-   `GraphKeys.QUEUE_RUNNERS`.
+  `GraphKeys.QUEUE_RUNNERS`.
 
 **Returns:**
 
@@ -1714,7 +1714,7 @@ Indicate that a summary was computed.
 * **`summary`**: A Summary proto, or a string holding a serialized summary proto.
 * **`global_step`**: Int. global step this summary is associated with. If `None`,
 
-   it will try to fetch the current step.
+  it will try to fetch the current step.
 
 **Raises:**
 
@@ -1729,21 +1729,21 @@ This does not close the session.
 
 **Args:**
 
-* **`threads`**: Optional list of threads to join with the coordinator.  If
+* **`threads`**: Optional list of threads to join with the coordinator. If
 
-   `None`, defaults to the threads running the standard services, the
+  `None`, defaults to the threads running the standard services, the
 
-   threads started for `QueueRunners`, and the threads started by the
+  threads started for `QueueRunners`, and the threads started by the
 
-   `loop()` method.  To wait on additional threads, pass the
+  `loop()` method. To wait on additional threads, pass the
 
-   list in this parameter.
+  list in this parameter.
 
-* **`close_summary_writer`**: Whether to close the `summary_writer`.  Defaults to
+* **`close_summary_writer`**: Whether to close the `summary_writer`. Defaults to
 
-   `True` if the summary writer was created by the supervisor, `False`
+  `True` if the summary writer was created by the supervisor, `False`
 
-   otherwise.
+  otherwise.
 
 #### `tf.train.Supervisor.request_stop(ex=None)` <a id="Supervisor.request_stop"></a>
 
@@ -1755,9 +1755,9 @@ See `Coordinator.request_stop()`.
 
 * **`ex`**: Optional `Exception`, or Python `exc_info` tuple as returned by
 
-   `sys.exc_info()`.  If this is the first call to `request_stop()` the
+  `sys.exc_info()`. If this is the first call to `request_stop()` the
 
-   corresponding exception is recorded and re-raised from `join()`.
+  corresponding exception is recorded and re-raised from `join()`.
 
 #### `tf.train.Supervisor.should_stop()` <a id="Supervisor.should_stop"></a>
 
@@ -1812,22 +1812,22 @@ Create a session on 'master', recovering or initializing the model as needed, or
 
 **Args:**
 
-* **`master`**: name of the TensorFlow master to use.  See the `tf.Session`
+* **`master`**: name of the TensorFlow master to use. See the `tf.Session`
 
-   constructor for how this is interpreted.
+  constructor for how this is interpreted.
 
 * **`config`**: Optional ConfigProto proto used to configure the session,
 
-   which is passed as-is to create the session.
+  which is passed as-is to create the session.
 
 * **`wait_for_checkpoint`**: Whether we should wait for the availability of a
 
-   checkpoint before creating Session. Defaults to False.
+  checkpoint before creating Session. Defaults to False.
 
 * **`max_wait_secs`**: Maximum time to wait for the session to become available.
 * **`start_standard_services`**: Whether to start the standard services and the
 
-   queue runners.
+  queue runners.
 
 **Returns:**
 
@@ -1843,9 +1843,9 @@ See `Coordinator.request_stop()`.
 
 * **`ex`**: Optional `Exception`, or Python `exc_info` tuple as returned by
 
-   `sys.exc_info()`.  If this is the first call to `request_stop()` the
+  `sys.exc_info()`. If this is the first call to `request_stop()` the
 
-   corresponding exception is recorded and re-raised from `join()`.
+  corresponding exception is recorded and re-raised from `join()`.
 
 #### `tf.train.Supervisor.ShouldStop()` <a id="Supervisor.ShouldStop"></a>
 
@@ -1868,9 +1868,9 @@ Note that the queue runners collected in the graph key `QUEUE_RUNNERS` are alrea
 * **`sess`**: A `Session`.
 * **`queue_runners`**: A list of `QueueRunners`. If not specified, we'll use the
 
-   list of queue runners gathered in the graph under the key
+  list of queue runners gathered in the graph under the key
 
-   `GraphKeys.QUEUE_RUNNERS`.
+  `GraphKeys.QUEUE_RUNNERS`.
 
 **Returns:**
 
@@ -1899,7 +1899,7 @@ A list of threads that are running the standard services. You can use the Superv
 * **`RuntimeError`**: If called with a non-chief Supervisor.
 * **`ValueError`**: If not `logdir` was passed to the constructor as the
 
-   services need a log directory.
+  services need a log directory.
 
 #### `tf.train.Supervisor.Stop(threads=None, close_summary_writer=True)` <a id="Supervisor.Stop"></a>
 
@@ -1909,21 +1909,21 @@ This does not close the session.
 
 **Args:**
 
-* **`threads`**: Optional list of threads to join with the coordinator.  If
+* **`threads`**: Optional list of threads to join with the coordinator. If
 
-   `None`, defaults to the threads running the standard services, the
+  `None`, defaults to the threads running the standard services, the
 
-   threads started for `QueueRunners`, and the threads started by the
+  threads started for `QueueRunners`, and the threads started by the
 
-   `loop()` method.  To wait on additional threads, pass the
+  `loop()` method. To wait on additional threads, pass the
 
-   list in this parameter.
+  list in this parameter.
 
-* **`close_summary_writer`**: Whether to close the `summary_writer`.  Defaults to
+* **`close_summary_writer`**: Whether to close the `summary_writer`. Defaults to
 
-   `True` if the summary writer was created by the supervisor, `False`
+  `True` if the summary writer was created by the supervisor, `False`
 
-   otherwise.
+  otherwise.
 
 #### `tf.train.Supervisor.StopOnException()` <a id="Supervisor.StopOnException"></a>
 
@@ -1945,7 +1945,7 @@ Indicate that a summary was computed.
 * **`summary`**: A Summary proto, or a string holding a serialized summary proto.
 * **`global_step`**: Int. global step this summary is associated with. If `None`,
 
-   it will try to fetch the current step.
+  it will try to fetch the current step.
 
 **Raises:**
 
@@ -2138,7 +2138,7 @@ If `ready_op` is `None`, the model is not checked for readiness.
 
 * **`local_init_op`**: An `Operation` run immediately after session creation.
 
-    Usually used to initialize tables and local variables.
+  Usually used to initialize tables and local variables.
 
 * **`ready_op`**: An `Operation` to check if the model is initialized.
 * **`graph`**: The `Graph` that the model will use.
@@ -2175,15 +2175,15 @@ return sess
 * **`config`**: Optional `ConfigProto` proto used to configure the session.
 * **`init_feed_dict`**: Optional dictionary that maps `Tensor` objects to feed
 
-   values.  This feed dictionary is passed to the session `run()` call when
+  values. This feed dictionary is passed to the session `run()` call when
 
-   running the init op.
+  running the init op.
 
 * **`init_fn`**: Optional callable used to initialize the model. Called after the
 
-   optional `init_op` is called.  The callable must accept one argument,
+  optional `init_op` is called. The callable must accept one argument,
 
-   the session being initialized.
+  the session being initialized.
 
 **Returns:**
 
@@ -2268,13 +2268,13 @@ Creates a `ClusterSpec`.
 
 * **`cluster`**: A dictionary mapping one or more job names to lists of network
 
-   addresses, or a `tf.train.ClusterDef` protocol buffer.
+  addresses, or a `tf.train.ClusterDef` protocol buffer.
 
 **Raises:**
 
 * **`TypeError`**: If `cluster` is not a dictionary mapping strings to lists
 
-   of strings, and not a `tf.train.ClusterDef` protobuf.
+  of strings, and not a `tf.train.ClusterDef` protobuf.
 
 #### `tf.train.ClusterSpec.job_tasks(job_name)` <a id="ClusterSpec.job_tasks"></a>
 
@@ -2327,19 +2327,19 @@ with tf.device(tf.replica_device_setter(cluster=cluster_spec)):
 **Args:**
 
 * **`ps_tasks`**: Number of tasks in the `ps` job.
-* **`ps_device`**: String.  Device of the `ps` job.  If empty no `ps` job is used.
+* **`ps_device`**: String. Device of the `ps` job. If empty no `ps` job is used.
 
-   Defaults to `ps`.
+  Defaults to `ps`.
 
-* **`worker_device`**: String.  Device of the `worker` job.  If empty no `worker`
+* **`worker_device`**: String. Device of the `worker` job. If empty no `worker`
 
-   job is used.
+  job is used.
 
 * **`merge_devices`**: `Boolean`. If `True`, merges or only sets a device if the
 
-   device constraint is completely unset. merges device specification rather
+  device constraint is completely unset. merges device specification rather
 
-   than overriding them.
+  than overriding them.
 
 * **`cluster`**: `ClusterDef` proto or `ClusterSpec`.
 * **`ps_ops`**: List of `Operation` objects that need to be placed on `ps` devices.
@@ -2370,7 +2370,7 @@ The input `tags` and `values` must have the same shape. The generated summary ha
 * **`values`**: A real numeric Tensor.  Values for the summaries.
 * **`collections`**: Optional list of graph collections keys. The new summary op is
 
-   added to these collections. Defaults to `[GraphKeys.SUMMARIES]`.
+  added to these collections. Defaults to `[GraphKeys.SUMMARIES]`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2404,16 +2404,16 @@ The `tag` argument is a scalar `Tensor` of type `string`. It is used to build th
 
 * **`tag`**: A scalar `Tensor` of type `string`. Used to build the `tag`
 
-   of the summary values.
+  of the summary values.
 
 * **`tensor`**: A 4-D `uint8` or `float32` `Tensor` of shape \`\[batch\_size, height,
 
-   width, channels\]`where`channels\` is 1, 3, or 4.
+  width, channels\]`where`channels\` is 1, 3, or 4.
 
 * **`max_images`**: Max number of batch elements to generate images for.
-* **`collections`**: Optional list of ops.GraphKeys.  The collections to add the
+* **`collections`**: Optional list of ops.GraphKeys. The collections to add the
 
-   summary to.  Defaults to \[ops.GraphKeys.SUMMARIES\]
+  summary to. Defaults to \[ops.GraphKeys.SUMMARIES\]
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2438,17 +2438,17 @@ The `tag` argument is a scalar `Tensor` of type `string`. It is used to build th
 
 * **`tag`**: A scalar `Tensor` of type `string`. Used to build the `tag`
 
-   of the summary values.
+  of the summary values.
 
 * **`tensor`**: A 3-D `float32` `Tensor` of shape `[batch_size, frames, channels]`
 
-   or a 2-D `float32` `Tensor` of shape `[batch_size, frames]`.
+  or a 2-D `float32` `Tensor` of shape `[batch_size, frames]`.
 
 * **`sample_rate`**: The sample rate of the signal in hertz.
 * **`max_outputs`**: Max number of batch elements to generate audio for.
-* **`collections`**: Optional list of ops.GraphKeys.  The collections to add the
+* **`collections`**: Optional list of ops.GraphKeys. The collections to add the
 
-   summary to.  Defaults to \[ops.GraphKeys.SUMMARIES\]
+  summary to. Defaults to \[ops.GraphKeys.SUMMARIES\]
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2469,11 +2469,11 @@ This op reports an `InvalidArgument` error if any value is not finite.
 * **`tag`**: A `string` `Tensor`. 0-D.  Tag to use for the summary value.
 * **`values`**: A real numeric `Tensor`. Any shape. Values to use to
 
-   build the histogram.
+  build the histogram.
 
 * **`collections`**: Optional list of graph collections keys. The new summary op is
 
-   added to these collections. Defaults to `[GraphKeys.SUMMARIES]`.
+  added to these collections. Defaults to `[GraphKeys.SUMMARIES]`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2515,11 +2515,11 @@ When the Op is run, it reports an `InvalidArgument` error if multiple values in 
 
 * **`inputs`**: A list of `string` `Tensor` objects containing serialized `Summary`
 
-   protocol buffers.
+  protocol buffers.
 
 * **`collections`**: Optional list of graph collections keys. The new summary op is
 
-   added to these collections. Defaults to `[GraphKeys.SUMMARIES]`.
+  added to these collections. Defaults to `[GraphKeys.SUMMARIES]`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2533,9 +2533,9 @@ Merges all summaries collected in the default graph.
 
 **Args:**
 
-* **`key`**: `GraphKey` used to collect the summaries.  Defaults to
+* **`key`**: `GraphKey` used to collect the summaries. Defaults to
 
-   `GraphKeys.SUMMARIES`.
+  `GraphKeys.SUMMARIES`.
 
 **Returns:**
 
@@ -2586,7 +2586,7 @@ The other arguments to the constructor control the asynchronous writes to the ev
 * **`max_queue`**: Integer. Size of the queue for pending events and summaries.
 * **`flush_secs`**: Number. How often, in seconds, to flush the
 
-   pending events and summaries to disk.
+  pending events and summaries to disk.
 
 * **`graph_def`**: DEPRECATED: Use the `graph` argument instead.
 
@@ -2603,7 +2603,7 @@ You can pass the result of evaluating any summary op, using [`Session.run()`](cl
 * **`summary`**: A `Summary` protocol buffer, optionally serialized as a string.
 * **`global_step`**: Number. Optional global step value to record with the
 
-   summary.
+  summary.
 
 #### `tf.train.SummaryWriter.add_session_log(session_log, global_step=None)` <a id="SummaryWriter.add_session_log"></a>
 
@@ -2616,7 +2616,7 @@ This method wraps the provided session in an `Event` procotol buffer and adds it
 * **`session_log`**: A `SessionLog` protocol buffer.
 * **`global_step`**: Number. Optional global step value to record with the
 
-   summary.
+  summary.
 
 #### `tf.train.SummaryWriter.add_event(event)` <a id="SummaryWriter.add_event"></a>
 
@@ -2637,7 +2637,7 @@ The graph described by the protocol buffer will be displayed by TensorBoard. Mos
 * **`graph`**: A `Graph` object, such as `sess.graph`.
 * **`global_step`**: Number. Optional global step counter to record with the
 
-   graph.
+  graph.
 
 * **`graph_def`**: DEPRECATED. Use the `graph` parameter instead.
 
@@ -2655,7 +2655,7 @@ Adds a metadata information for a single session.run\(\) call.
 * **`tag`**: The tag name for this metadata.
 * **`global_step`**: Number. Optional global step counter to record with the
 
-   StepStats.
+  StepStats.
 
 **Raises:**
 
@@ -2732,7 +2732,7 @@ global_step: 10
 * **`sess`**: A TensorFlow `Session` object.
 * **`global_step_tensor`**: `Tensor` or the `name` of the operation that contains
 
-   the global step.
+  the global step.
 
 **Returns:**
 
@@ -2755,7 +2755,7 @@ tf.train.write_graph(sess.graph_def, '/tmp/my-model', 'train.pbtxt')
 * **`graph_def`**: A `GraphDef` protocol buffer.
 * **`logdir`**: Directory where to write the graph. This can refer to remote
 
-   filesystems, such as Google Cloud Storage \(GCS\).
+  filesystems, such as Google Cloud Storage \(GCS\).
 
 * **`name`**: Filename for the graph.
 * **`as_text`**: If `True`, writes the graph as an ASCII proto.
@@ -2783,7 +2783,7 @@ Create a LooperThread.
 * **`coord`**: A Coordinator.
 * **`timer_interval_secs`**: Time boundaries at which to call Run\(\), or None
 
-   if it should be called back to back.
+  if it should be called back to back.
 
 * **`target`**: Optional callable object that will be executed in the thread.
 * **`args`**: Optional arguments to pass to `target` when calling it.
@@ -2895,13 +2895,13 @@ Generates a checkpoint state proto.
 
 * **`save_dir`**: Directory where the model was saved.
 * **`model_checkpoint_path`**: The checkpoint file.
-* **`all_model_checkpoint_paths`**: List of strings.  Paths to all not-yet-deleted
+* **`all_model_checkpoint_paths`**: List of strings. Paths to all not-yet-deleted
 
-   checkpoints, sorted from oldest to newest.  If this is a non-empty list,
+  checkpoints, sorted from oldest to newest. If this is a non-empty list,
 
-   the last element must be equal to model\_checkpoint\_path.  These paths
+  the last element must be equal to model\_checkpoint\_path. These paths
 
-   are also saved in the CheckpointState proto.
+  are also saved in the CheckpointState proto.
 
 **Returns:**
 

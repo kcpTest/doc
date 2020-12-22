@@ -37,7 +37,7 @@ Classes와 Utility Functions를 위한 문서는 docstring에서 발췌합니다
 
 #### 코드에 대해서 적을 때
 
-문서에서 아래와 같은 것들을 적을 때  `` \(backticks\) 로 감싸야 합니다:
+문서에서 아래와 같은 것들을 적을 때 \`\` \(backticks\) 로 감싸야 합니다:
 
 * 인자의 이름 \(e.g. `input`, `x`, `tensor`\)
 * 반환되는 Tensor의 이름 \(e.g. `output`, `idx`, `out`\)
@@ -83,9 +83,9 @@ tensor의 크기를 말할 때는 "dimension"\(차원\) 이라는 단어를 사�
 * scalar\(스칼라\)는 "0-D tensor" 로 부른다
 * vector\(벡터\)는 "1-D tensor" 로 부른다
 * matrix\(메트릭스\)는 "2-D tensor" 로 부른다
-* 3차원 이상인 tensors는 "3-D tensors 또는 n-D tensors" 로 부른다. 
+* 3차원 이상인 tensors는 "3-D tensors 또는 n-D tensors" 로 부른다.
 
-  이해가 될 경우에는 "rank" 라는 단어를 사용한다. 하지만 "dimension"을 대신 쓰도록 노력하라. 
+  이해가 될 경우에는 "rank" 라는 단어를 사용한다. 하지만 "dimension"을 대신 쓰도록 노력하라.
 
   절대 tensor의 크기를 표현하기 위해 "order" 라는 단어를 사용하지 말라.
 
@@ -270,8 +270,8 @@ rgb_image = tf.image.decode_png(...,  channels=3)
 rgb_image_float = tf.image.convert_image_dtype(rgb_image, tf.float32)
 hsv_image = tf.image.rgb_to_hsv(rgb_image)
 ```
-```
 
+```text
 #### 필요조건, 경고, 중요한 사항들.
 
 예시:

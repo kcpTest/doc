@@ -24,7 +24,7 @@ TensorFlow 파이썬 API에서 `a`, `b`, `c` 는 [`Tensor`](../index-4/index-1/f
 
 ### 디바이스명은 어떻게 불리는가?
 
-CPU 디바이스는 `"/device:CPU:0"` \(또는 `"/cpu:0"`\)로, _i_th GPU 디바이스는 `"/device:GPU:i"` \(또는 `"/gpu:i"`\)로 지원된다.
+CPU 디바이스는 `"/device:CPU:0"` \(또는 `"/cpu:0"`\)로, \_i\_th GPU 디바이스는 `"/device:GPU:i"` \(또는 `"/gpu:i"`\)로 지원된다.
 
 ### 특정 디바이스에 오퍼레이션을 배치하려면 어떻게 해야 하는가?
 

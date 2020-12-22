@@ -33,24 +33,24 @@ The attr `ratio` allows downscaling the image by an integer factor during decodi
 * **`contents`**: A `Tensor` of type `string`. 0-D.  The JPEG-encoded image.
 * **`channels`**: An optional `int`. Defaults to `0`.
 
-   Number of color channels for the decoded image.
+  Number of color channels for the decoded image.
 
 * **`ratio`**: An optional `int`. Defaults to `1`. Downscaling ratio.
 * **`fancy_upscaling`**: An optional `bool`. Defaults to `True`.
 
-   If true use a slower but nicer upscaling of the
+  If true use a slower but nicer upscaling of the
 
-   chroma planes \(yuv420/422 only\).
+  chroma planes \(yuv420/422 only\).
 
 * **`try_recover_truncated`**: An optional `bool`. Defaults to `False`.
 
-   If true try to recover an image from truncated input.
+  If true try to recover an image from truncated input.
 
 * **`acceptable_fraction`**: An optional `float`. Defaults to `1`.
 
-   The minimum required fraction of lines before a truncated
+  The minimum required fraction of lines before a truncated
 
-   input is accepted.
+  input is accepted.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -67,7 +67,7 @@ JPEG-encode an image.
 The attr `format` can be used to override the color format of the encoded output. Values can be:
 
 * `''`: Use a default format based on the number of channels in the image.
-* `grayscale`: Output a grayscale JPEG image.  The `channels` dimension
+* `grayscale`: Output a grayscale JPEG image. The `channels` dimension
 
   of `image` must be 1.
 
@@ -84,45 +84,45 @@ If `format` is not specified or is the empty string, a default format is picked 
 
 * **`image`**: A `Tensor` of type `uint8`.
 
-   3-D with shape `[height, width, channels]`.
+  3-D with shape `[height, width, channels]`.
 
 * **`format`**: An optional `string` from: `"", "grayscale", "rgb"`. Defaults to `""`.
 
-   Per pixel image format.
+  Per pixel image format.
 
 * **`quality`**: An optional `int`. Defaults to `95`.
 
-   Quality of the compression from 0 to 100 \(higher is better and slower\).
+  Quality of the compression from 0 to 100 \(higher is better and slower\).
 
 * **`progressive`**: An optional `bool`. Defaults to `False`.
 
-   If True, create a JPEG that loads progressively \(coarse to fine\).
+  If True, create a JPEG that loads progressively \(coarse to fine\).
 
 * **`optimize_size`**: An optional `bool`. Defaults to `False`.
 
-   If True, spend CPU/RAM to reduce size with no quality change.
+  If True, spend CPU/RAM to reduce size with no quality change.
 
 * **`chroma_downsampling`**: An optional `bool`. Defaults to `True`.
 
-   See [http://en.wikipedia.org/wiki/Chroma\_subsampling](http://en.wikipedia.org/wiki/Chroma_subsampling).
+  See [http://en.wikipedia.org/wiki/Chroma\_subsampling](http://en.wikipedia.org/wiki/Chroma_subsampling).
 
 * **`density_unit`**: An optional `string` from: `"in", "cm"`. Defaults to `"in"`.
 
-   Unit used to specify `x_density` and `y_density`:
+  Unit used to specify `x_density` and `y_density`:
 
-   pixels per inch \(`'in'`\) or centimeter \(`'cm'`\).
+  pixels per inch \(`'in'`\) or centimeter \(`'cm'`\).
 
 * **`x_density`**: An optional `int`. Defaults to `300`.
 
-   Horizontal pixels per density unit.
+  Horizontal pixels per density unit.
 
 * **`y_density`**: An optional `int`. Defaults to `300`.
 
-   Vertical pixels per density unit.
+  Vertical pixels per density unit.
 
 * **`xmp_metadata`**: An optional `string`. Defaults to `""`.
 
-   If not empty, embed this XMP metadata in the image header.
+  If not empty, embed this XMP metadata in the image header.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -150,7 +150,7 @@ If needed, the PNG-encoded image is transformed to match the requested number of
 * **`contents`**: A `Tensor` of type `string`. 0-D.  The PNG-encoded image.
 * **`channels`**: An optional `int`. Defaults to `0`.
 
-   Number of color channels for the decoded image.
+  Number of color channels for the decoded image.
 
 * **`dtype`**: An optional `tf.DType` from: `tf.uint8, tf.uint16`. Defaults to `tf.uint8`.
 * **`name`**: A name for the operation \(optional\).
@@ -176,7 +176,7 @@ The ZLIB compression level, `compression`, can be -1 for the PNG-encoder default
 
 * **`image`**: A `Tensor`. Must be one of the following types: `uint8`, `uint16`.
 
-   3-D with shape `[height, width, channels]`.
+  3-D with shape `[height, width, channels]`.
 
 * **`compression`**: An optional `int`. Defaults to `-1`. Compression level.
 * **`name`**: A name for the operation \(optional\).
@@ -244,7 +244,7 @@ Resized images will be distorted if their original aspect ratio is not the same 
 
 * **`ValueError`**: if the shape of `images` is incompatible with the
 
-   shape arguments to this function
+  shape arguments to this function
 
 * **`ValueError`**: if an unsupported resize method is specified.
 
@@ -262,19 +262,19 @@ Input images can be of different types but output images are always float.
 
 * **`images`**: A `Tensor`. Must be one of the following types: `uint8`, `int8`, `int16`, `int32`, `int64`, `half`, `float32`, `float64`.
 
-   4-D with shape `[batch, height, width, channels]`.
+  4-D with shape `[batch, height, width, channels]`.
 
-* **`size`**: A 1-D int32 Tensor of 2 elements: `new_height, new_width`.  The
+* **`size`**: A 1-D int32 Tensor of 2 elements: `new_height, new_width`. The
 
-   new size for the images.
+  new size for the images.
 
 * **`align_corners`**: An optional `bool`. Defaults to `False`.
 
-   If true, rescale input by \(new\_height - 1\) / \(height - 1\), which
+  If true, rescale input by \(new\_height - 1\) / \(height - 1\), which
 
-   exactly aligns the 4 corners of images and resized images. If false, rescale
+  exactly aligns the 4 corners of images and resized images. If false, rescale
 
-   by new\_height / height. Treat similarly the width dimension.
+  by new\_height / height. Treat similarly the width dimension.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -292,19 +292,19 @@ Input images can be of different types but output images are always float.
 
 * **`images`**: A `Tensor`. Must be one of the following types: `uint8`, `int8`, `int16`, `int32`, `int64`, `half`, `float32`, `float64`.
 
-   4-D with shape `[batch, height, width, channels]`.
+  4-D with shape `[batch, height, width, channels]`.
 
-* **`size`**: A 1-D int32 Tensor of 2 elements: `new_height, new_width`.  The
+* **`size`**: A 1-D int32 Tensor of 2 elements: `new_height, new_width`. The
 
-   new size for the images.
+  new size for the images.
 
 * **`align_corners`**: An optional `bool`. Defaults to `False`.
 
-   If true, rescale input by \(new\_height - 1\) / \(height - 1\), which
+  If true, rescale input by \(new\_height - 1\) / \(height - 1\), which
 
-   exactly aligns the 4 corners of images and resized images. If false, rescale
+  exactly aligns the 4 corners of images and resized images. If false, rescale
 
-   by new\_height / height. Treat similarly the width dimension.
+  by new\_height / height. Treat similarly the width dimension.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -322,19 +322,19 @@ Input images can be of different types but output images are always float.
 
 * **`images`**: A `Tensor`. Must be one of the following types: `uint8`, `int8`, `int16`, `int32`, `int64`, `half`, `float32`, `float64`.
 
-   4-D with shape `[batch, height, width, channels]`.
+  4-D with shape `[batch, height, width, channels]`.
 
-* **`size`**: A 1-D int32 Tensor of 2 elements: `new_height, new_width`.  The
+* **`size`**: A 1-D int32 Tensor of 2 elements: `new_height, new_width`. The
 
-   new size for the images.
+  new size for the images.
 
 * **`align_corners`**: An optional `bool`. Defaults to `False`.
 
-   If true, rescale input by \(new\_height - 1\) / \(height - 1\), which
+  If true, rescale input by \(new\_height - 1\) / \(height - 1\), which
 
-   exactly aligns the 4 corners of images and resized images. If false, rescale
+  exactly aligns the 4 corners of images and resized images. If false, rescale
 
-   by new\_height / height. Treat similarly the width dimension.
+  by new\_height / height. Treat similarly the width dimension.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -350,19 +350,19 @@ Resize `images` to `size` using nearest neighbor interpolation.
 
 * **`images`**: A `Tensor`. Must be one of the following types: `uint8`, `int8`, `int16`, `int32`, `int64`, `half`, `float32`, `float64`.
 
-   4-D with shape `[batch, height, width, channels]`.
+  4-D with shape `[batch, height, width, channels]`.
 
-* **`size`**: A 1-D int32 Tensor of 2 elements: `new_height, new_width`.  The
+* **`size`**: A 1-D int32 Tensor of 2 elements: `new_height, new_width`. The
 
-   new size for the images.
+  new size for the images.
 
 * **`align_corners`**: An optional `bool`. Defaults to `False`.
 
-   If true, rescale input by \(new\_height - 1\) / \(height - 1\), which
+  If true, rescale input by \(new\_height - 1\) / \(height - 1\), which
 
-   exactly aligns the 4 corners of images and resized images. If false, rescale
+  exactly aligns the 4 corners of images and resized images. If false, rescale
 
-   by new\_height / height. Treat similarly the width dimension.
+  by new\_height / height. Treat similarly the width dimension.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -445,7 +445,7 @@ This op does nothing if `offset_*` is zero and the image already has size `targe
 
 * **`ValueError`**: If the shape of `image` is incompatible with the `offset_*` or
 
-   `target_*` arguments
+  `target_*` arguments
 
 ### `tf.image.crop_to_bounding_box(image, offset_height, offset_width, target_height, target_width)` <a id="crop_to_bounding_box"></a>
 
@@ -538,9 +538,9 @@ With a 1 in 2 chance, outputs the contents of `image` flipped along the first di
 * **`image`**: A 3-D tensor of shape `[height, width, channels].`
 * **`seed`**: A Python integer. Used to create a random seed. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 #### Returns:
 
@@ -581,9 +581,9 @@ With a 1 in 2 chance, outputs the contents of `image` flipped along the second d
 * **`image`**: A 3-D tensor of shape `[height, width, channels].`
 * **`seed`**: A Python integer. Used to create a random seed. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 #### Returns:
 
@@ -642,7 +642,7 @@ Outputs a tensor of the same `DType` and rank as `images`. The size of the last 
 
 * **`images`**: The RGB tensor to convert. Last dimension must have size 3 and
 
-   should contain RGB values.
+  should contain RGB values.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -677,7 +677,7 @@ See `rgb_to_hsv` for a description of the HSV encoding.
 
 * **`images`**: A `Tensor` of type `float32`.
 
-   1-D or higher rank. HSV data to convert. Last dimension must be size 3.
+  1-D or higher rank. HSV data to convert. Last dimension must be size 3.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -697,7 +697,7 @@ Outputs a tensor of the same shape as the `images` tensor, containing the HSV va
 
 * **`images`**: A `Tensor` of type `float32`.
 
-   1-D or higher rank. RGB data to convert. Last dimension must be size 3.
+  1-D or higher rank. RGB data to convert. Last dimension must be size 3.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -761,9 +761,9 @@ Equivalent to `adjust_brightness()` using a `delta` randomly picked in the inter
 * **`max_delta`**: float, must be non-negative.
 * **`seed`**: A Python integer. Used to create a random seed. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 #### Returns:
 
@@ -807,9 +807,9 @@ Equivalent to `adjust_contrast()` but uses a `contrast_factor` randomly picked i
 * **`upper`**: float.  Upper bound for the random contrast factor.
 * **`seed`**: A Python integer. Used to create a random seed. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 #### Returns:
 
@@ -853,11 +853,11 @@ Equivalent to `adjust_hue()` but uses a `delta` randomly picked in the interval 
 * **`max_delta`**: float.  Maximum value for the random delta.
 * **`seed`**: An operation-specific seed. It will be used in conjunction
 
-   with the graph-level seed to determine the real seeds that will be
+  with the graph-level seed to determine the real seeds that will be
 
-   used in this operation. Please see the documentation of
+  used in this operation. Please see the documentation of
 
-   set\_random\_seed for its interaction with the graph-level random seed.
+  set\_random\_seed for its interaction with the graph-level random seed.
 
 #### Returns:
 
@@ -898,11 +898,11 @@ Equivalent to `adjust_saturation()` but uses a `saturation_factor` randomly pick
 * **`upper`**: float.  Upper bound for the random saturation factor.
 * **`seed`**: An operation-specific seed. It will be used in conjunction
 
-   with the graph-level seed to determine the real seeds that will be
+  with the graph-level seed to determine the real seeds that will be
 
-   used in this operation. Please see the documentation of
+  used in this operation. Please see the documentation of
 
-   set\_random\_seed for its interaction with the graph-level random seed.
+  set\_random\_seed for its interaction with the graph-level random seed.
 
 #### Returns:
 
@@ -953,13 +953,13 @@ Parts of the bounding box may fall outside the image.
 
 * **`images`**: A `Tensor`. Must be one of the following types: `float32`, `half`.
 
-   4-D with shape `[batch, height, width, depth]`. A batch of images.
+  4-D with shape `[batch, height, width, depth]`. A batch of images.
 
 * **`boxes`**: A `Tensor` of type `float32`.
 
-   3-D with shape `[batch, num_bounding_boxes, 4]` containing bounding
+  3-D with shape `[batch, num_bounding_boxes, 4]` containing bounding
 
-   boxes.
+  boxes.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1000,59 +1000,59 @@ Note that if no bounding box information is available, setting `use_image_if_no_
 
 * **`image_size`**: A `Tensor`. Must be one of the following types: `uint8`, `int8`, `int16`, `int32`, `int64`.
 
-   1-D, containing `[height, width, channels]`.
+  1-D, containing `[height, width, channels]`.
 
 * **`bounding_boxes`**: A `Tensor` of type `float32`.
 
-   3-D with shape `[batch, N, 4]` describing the N bounding boxes
+  3-D with shape `[batch, N, 4]` describing the N bounding boxes
 
-   associated with the image.
+  associated with the image.
 
 * **`seed`**: An optional `int`. Defaults to `0`.
 
-   If either `seed` or `seed2` are set to non-zero, the random number
+  If either `seed` or `seed2` are set to non-zero, the random number
 
-   generator is seeded by the given `seed`.  Otherwise, it is seeded by a random
+  generator is seeded by the given `seed`. Otherwise, it is seeded by a random
 
-   seed.
+  seed.
 
 * **`seed2`**: An optional `int`. Defaults to `0`.
 
-   A second seed to avoid seed collision.
+  A second seed to avoid seed collision.
 
 * **`min_object_covered`**: An optional `float`. Defaults to `0.1`.
 
-   The cropped area of the image must contain at least this
+  The cropped area of the image must contain at least this
 
-   fraction of any bounding box supplied.
+  fraction of any bounding box supplied.
 
 * **`aspect_ratio_range`**: An optional list of `floats`. Defaults to `[0.75, 1.33]`.
 
-   The cropped area of the image must have an aspect ratio =
+  The cropped area of the image must have an aspect ratio =
 
-   width / height within this range.
+  width / height within this range.
 
 * **`area_range`**: An optional list of `floats`. Defaults to `[0.05, 1]`.
 
-   The cropped area of the image must contain a fraction of the
+  The cropped area of the image must contain a fraction of the
 
-   supplied image within in this range.
+  supplied image within in this range.
 
 * **`max_attempts`**: An optional `int`. Defaults to `100`.
 
-   Number of attempts at generating a cropped region of the image
+  Number of attempts at generating a cropped region of the image
 
-   of the specified constraints. After `max_attempts` failures, return the entire
+  of the specified constraints. After `max_attempts` failures, return the entire
 
-   image.
+  image.
 
 * **`use_image_if_no_bounding_boxes`**: An optional `bool`. Defaults to `False`.
 
-   Controls behavior if no bounding boxes supplied.
+  Controls behavior if no bounding boxes supplied.
 
-   If true, assume an implicit bounding box covering the whole input. If false,
+  If true, assume an implicit bounding box covering the whole input. If false,
 
-   raise an error.
+  raise an error.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1062,13 +1062,13 @@ A tuple of `Tensor` objects \(begin, size, bboxes\).
 
 * **`begin`**: A `Tensor`. Has the same type as `image_size`. 1-D, containing `[offset_height, offset_width, 0]`. Provide as input to
 
-   `tf.slice`.
+  `tf.slice`.
 
 * **`size`**: A `Tensor`. Has the same type as `image_size`. 1-D, containing `[target_height, target_width, -1]`. Provide as input to
 
-   `tf.slice`.
+  `tf.slice`.
 
 * **`bboxes`**: A `Tensor` of type `float32`. 3-D with shape `[1, 1, 4]` containing the distorted bounding box.
 
-   Provide as input to `tf.image.draw_bounding_boxes`.
+  Provide as input to `tf.image.draw_bounding_boxes`.
 

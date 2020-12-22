@@ -3,7 +3,7 @@
 전제 조건:
 
 * C++에 대한 약간의 익숙함
-* [다운로드 받은 TensorFlow 소스](../index-1/os_setup.md#installing-from-sources)가 있어야 하고, 
+* [다운로드 받은 TensorFlow 소스](../index-1/os_setup.md#installing-from-sources)가 있어야 하고,
 
   빌드 할 수 있어야 합니다.
 
@@ -60,7 +60,7 @@ Status ReadLocked(string* key, string* value, bool* produced, bool* at_end)
 
 `ReadLocked`이 파일의 레코드를 성공적으로 읽으면, 아래 값을 채웁니다:
 
-* `*key`: 레코드의 식별자로, 사용자는 이 레코드를 다시 찾을때 사용할 수 있습니다. 
+* `*key`: 레코드의 식별자로, 사용자는 이 레코드를 다시 찾을때 사용할 수 있습니다.
 
   여러분은 `current_work()`에 파일 이름을 포함할 수도 있고, 레코드 번호나, 또는 무엇이든 추가할 수 있습니다.
 

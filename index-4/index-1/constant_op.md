@@ -209,7 +209,7 @@ tf.range(limit) ==> [0, 1, 2, 3, 4]
 * **`limit`**: `int32`타입의 스칼라 값\(0-D\)입니다. 시퀀스의 상한이며, 시퀀스에 포함되지 않습니다. \(exclusive\)
 * **`delta`**: A 0-D `Tensor` \(scalar\) of type `int32`. Optional. Default is 1.
 
-   Number that increments `start`. `int32`타입의 스칼라\(0-D\) 텐서입니다. 선택적인 인자이며, 기본값은 1입니다. `start`를 증가시키는 수입니다.
+  Number that increments `start`. `int32`타입의 스칼라\(0-D\) 텐서입니다. 선택적인 인자이며, 기본값은 1입니다. `start`를 증가시키는 수입니다.
 
 * **`name`**: 연산의 명칭 \(선택사항\).
 

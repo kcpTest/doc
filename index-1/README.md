@@ -49,7 +49,7 @@ sess.close()
 
 좀 더 흥미를 돋우기 위해 전형적인 머신러닝 모델이 텐서플로우에서 어떻게 구현되는지 살펴보시면 좋습니다. 뉴럴 네트워크 분야에서 가장 전형적인 문제는 MNIST 손글씨 숫자를 분류하는 것입니다. 우리는 여기서 두가지 버전의 설명 즉 하나는 머신러닝 초보자를 위한 것과 하나는 전문가를 위한 버전을 제공합니다. 만약 다른 소프트웨어 패키지로 MNIST 모델을 여러번 훈련시킨 적이 있다면 붉은 알약을 선택하세요. 만약 MNIST에 대해 들어본 적이 없다면 푸른 알약을 선택하면 됩니다. 초보자와 전문가 사이의 어디라면 푸른색 말고 붉은 알약을 선택하시면 됩니다.
 
- [![MNIST for machine learning beginners tutorial](../.gitbook/assets/blue_pill.png)](../index-2/undefined/index.md) [![Deep MNIST for machine learning experts tutorial](../.gitbook/assets/red_pill.png)](../index-2/undefined/index-1.md)
+ [![MNIST for machine learning beginners tutorial](../.gitbook/assets/blue_pill.png)]() [![Deep MNIST for machine learning experts tutorial](../.gitbook/assets/red_pill.png)]()
 
 Images licensed CC BY-SA 4.0; original by W. Carter
 
@@ -57,8 +57,8 @@ Images licensed CC BY-SA 4.0; original by W. Carter
 
 ## Recommended Next Steps
 
-* [다운로드 및 설치](os_setup.md)
-* [기본적인 사용법](basic_usage.md)
+* [다운로드 및 설치]()
+* [기본적인 사용법]()
 * [텐서플로우 구조]()
 * [텐서플로우 플레이그라운드](http://playground.tensorflow.org)
 

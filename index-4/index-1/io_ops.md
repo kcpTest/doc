@@ -32,7 +32,7 @@ with tf.Session() as sess:
 * **`dtype`**: The type of elements in the tensor to be fed.
 * **`shape`**: The shape of the tensor to be fed \(optional\). If the shape is not
 
-   specified, you can feed a tensor of any shape.
+  specified, you can feed a tensor of any shape.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -49,7 +49,7 @@ A placeholder op that passes though `input` when its output is not fed.
 * **`input`**: A `Tensor`. The default value to produce when `output` is not fed.
 * **`shape`**: A `tf.TensorShape` or list of `ints`.
 
-   The \(possibly partial\) shape of the tensor.
+  The \(possibly partial\) shape of the tensor.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -92,7 +92,7 @@ with tf.Session() as sess:
 * **`dtype`**: The type of `values` elements in the tensor to be fed.
 * **`shape`**: The shape of the tensor to be fed \(optional\). If the shape is not
 
-   specified, you can feed a sparse tensor of any shape.
+  specified, you can feed a sparse tensor of any shape.
 
 * **`name`**: A name for prefixing the operations \(optional\).
 
@@ -121,7 +121,7 @@ Creates a new ReaderBase.
 * **`reader_ref`**: The operation that implements the reader.
 * **`supports_serialize`**: True if the reader implementation can
 
-   serialize its state.
+  serialize its state.
 
 #### `tf.ReaderBase.num_records_produced(name=None)` <a id="ReaderBase.num_records_produced"></a>
 
@@ -159,7 +159,7 @@ Will dequeue a work unit from queue if necessary \(e.g. when the Reader needs to
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -180,7 +180,7 @@ Will dequeue a work unit from queue if necessary \(e.g., when the Reader needs t
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`num_records`**: Number of records to read.
 * **`name`**: A name for the operation \(optional\).
@@ -218,7 +218,7 @@ Not all Readers support being restored, so this can produce an Unimplemented err
 
 * **`state`**: A string Tensor.
 
-   Result of a SerializeState of a Reader with matching type.
+  Result of a SerializeState of a Reader with matching type.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -256,9 +256,9 @@ Create a TextLineReader.
 
 **Args:**
 
-* **`skip_header_lines`**: An optional int. Defaults to 0.  Number of lines
+* **`skip_header_lines`**: An optional int. Defaults to 0. Number of lines
 
-   to skip from the beginning of every file.
+  to skip from the beginning of every file.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -298,7 +298,7 @@ Will dequeue a work unit from queue if necessary \(e.g. when the Reader needs to
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -319,7 +319,7 @@ Will dequeue a work unit from queue if necessary \(e.g., when the Reader needs t
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`num_records`**: Number of records to read.
 * **`name`**: A name for the operation \(optional\).
@@ -357,7 +357,7 @@ Not all Readers support being restored, so this can produce an Unimplemented err
 
 * **`state`**: A string Tensor.
 
-   Result of a SerializeState of a Reader with matching type.
+  Result of a SerializeState of a Reader with matching type.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -435,7 +435,7 @@ Will dequeue a work unit from queue if necessary \(e.g. when the Reader needs to
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -456,7 +456,7 @@ Will dequeue a work unit from queue if necessary \(e.g., when the Reader needs t
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`num_records`**: Number of records to read.
 * **`name`**: A name for the operation \(optional\).
@@ -494,7 +494,7 @@ Not all Readers support being restored, so this can produce an Unimplemented err
 
 * **`state`**: A string Tensor.
 
-   Result of a SerializeState of a Reader with matching type.
+  Result of a SerializeState of a Reader with matching type.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -572,7 +572,7 @@ Will dequeue a work unit from queue if necessary \(e.g. when the Reader needs to
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -593,7 +593,7 @@ Will dequeue a work unit from queue if necessary \(e.g., when the Reader needs t
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`num_records`**: Number of records to read.
 * **`name`**: A name for the operation \(optional\).
@@ -631,7 +631,7 @@ Not all Readers support being restored, so this can produce an Unimplemented err
 
 * **`state`**: A string Tensor.
 
-   Result of a SerializeState of a Reader with matching type.
+  Result of a SerializeState of a Reader with matching type.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -707,7 +707,7 @@ Will dequeue a work unit from queue if necessary \(e.g. when the Reader needs to
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -728,7 +728,7 @@ Will dequeue a work unit from queue if necessary \(e.g., when the Reader needs t
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`num_records`**: Number of records to read.
 * **`name`**: A name for the operation \(optional\).
@@ -766,7 +766,7 @@ Not all Readers support being restored, so this can produce an Unimplemented err
 
 * **`state`**: A string Tensor.
 
-   Result of a SerializeState of a Reader with matching type.
+  Result of a SerializeState of a Reader with matching type.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -845,7 +845,7 @@ Will dequeue a work unit from queue if necessary \(e.g. when the Reader needs to
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -866,7 +866,7 @@ Will dequeue a work unit from queue if necessary \(e.g., when the Reader needs t
 
 * **`queue`**: A Queue or a mutable string Tensor representing a handle
 
-   to a Queue, with string work items.
+  to a Queue, with string work items.
 
 * **`num_records`**: Number of records to read.
 * **`name`**: A name for the operation \(optional\).
@@ -904,7 +904,7 @@ Not all Readers support being restored, so this can produce an Unimplemented err
 
 * **`state`**: A string Tensor.
 
-   Result of a SerializeState of a Reader with matching type.
+  Result of a SerializeState of a Reader with matching type.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -944,19 +944,19 @@ RFC 4180 format is expected for the CSV records. \([https://tools.ietf.org/html/
 
 * **`records`**: A `Tensor` of type `string`.
 
-   Each string is a record/row in the csv and all records should have
+  Each string is a record/row in the csv and all records should have
 
-   the same format.
+  the same format.
 
 * **`record_defaults`**: A list of `Tensor` objects with types from: `float32`, `int32`, `int64`, `string`.
 
-   One tensor per column of the input record, with either a
+  One tensor per column of the input record, with either a
 
-   scalar default value for that column or empty if the column is required.
+  scalar default value for that column or empty if the column is required.
 
 * **`field_delim`**: An optional `string`. Defaults to `","`.
 
-   delimiter to separate fields in a record.
+  delimiter to separate fields in a record.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -972,16 +972,16 @@ Reinterpret the bytes of a string as a vector of numbers.
 
 * **`bytes`**: A `Tensor` of type `string`.
 
-   All the elements must have the same length.
+  All the elements must have the same length.
 
 * **`out_type`**: A `tf.DType` from: `tf.float32, tf.float64, tf.int32, tf.uint8, tf.int16, tf.int8, tf.int64`.
 * **`little_endian`**: An optional `bool`. Defaults to `True`.
 
-   Whether the input `bytes` are in little-endian order.
+  Whether the input `bytes` are in little-endian order.
 
-   Ignored for `out_type` values that are stored in a single byte like
+  Ignored for `out_type` values that are stored in a single byte like
 
-   `uint8`.
+  `uint8`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1166,16 +1166,16 @@ And the expected output is:
 
 * **`serialized`**: A vector \(1-D Tensor\) of strings, a batch of binary
 
-   serialized `Example` protos.
+  serialized `Example` protos.
 
 * **`features`**: A `dict` mapping feature keys to `FixedLenFeature` or
 
-   `VarLenFeature` values.
+  `VarLenFeature` values.
 
 * **`name`**: A name for this operation \(optional\).
 * **`example_names`**: A vector \(1-D Tensor\) of strings \(optional\), the names of
 
-   the serialized protos in the batch.
+  the serialized protos in the batch.
 
 **Returns:**
 
@@ -1199,16 +1199,16 @@ For `SparseTensor`s, the first \(batch\) column of the indices matrix is removed
 
 * **`serialized`**: A scalar string Tensor, a single serialized Example.
 
-   See `_parse_single_example_raw` documentation for more details.
+  See `_parse_single_example_raw` documentation for more details.
 
 * **`features`**: A `dict` mapping feature keys to `FixedLenFeature` or
 
-   `VarLenFeature` values.
+  `VarLenFeature` values.
 
 * **`name`**: A name for this operation \(optional\).
 * **`example_names`**: \(Optional\) A scalar string Tensor, the associated name.
 
-   See `_parse_single_example_raw` documentation for more details.
+  See `_parse_single_example_raw` documentation for more details.
 
 **Returns:**
 
@@ -1228,9 +1228,9 @@ This op translates a tensor containing Example records, encoded using the [stand
 
 * **`json_examples`**: A `Tensor` of type `string`.
 
-   Each string is a JSON object serialized according to the JSON
+  Each string is a JSON object serialized according to the JSON
 
-   mapping of the Example proto.
+  mapping of the Example proto.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1264,7 +1264,7 @@ At runtime, this operation may raise an error if the queue is [closed](io_ops.md
 
 * **`vals`**: A tensor, a list or tuple of tensors, or a dictionary containing
 
-   the values to enqueue.
+  the values to enqueue.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1286,7 +1286,7 @@ At runtime, this operation may raise an error if the queue is [closed](io_ops.md
 
 * **`vals`**: A tensor, a list or tuple of tensors, or a dictionary
 
-   from which the queue elements are taken.
+  from which the queue elements are taken.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1353,7 +1353,7 @@ If `cancel_pending_enqueues` is `True`, all pending requests will also be cancel
 
 * **`cancel_pending_enqueues`**: \(Optional.\) A boolean, defaulting to
 
-   `False` \(described above\).
+  `False` \(described above\).
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1371,23 +1371,23 @@ The two optional lists, `shapes` and `names`, must be of the same length as `dty
 
 **Args:**
 
-* **`dtypes`**: A list of types.  The length of dtypes must equal the number
+* **`dtypes`**: A list of types. The length of dtypes must equal the number
 
-   of tensors in each element.
+  of tensors in each element.
 
 * **`shapes`**: Constraints on the shapes of tensors in an element:
 
-   A list of shape tuples or None. This list is the same length
+  A list of shape tuples or None. This list is the same length
 
-   as dtypes.  If the shape of any tensors in the element are constrained,
+  as dtypes. If the shape of any tensors in the element are constrained,
 
-   all must be; shapes can be None if the shapes should not be constrained.
+  all must be; shapes can be None if the shapes should not be constrained.
 
-* **`names`**: Optional list of names.  If provided, the `enqueue()` and
+* **`names`**: Optional list of names. If provided, the `enqueue()` and
 
-   `dequeue()` methods will use dictionaries with these names as keys.
+  `dequeue()` methods will use dictionaries with these names as keys.
 
-   Must be None or a list or tuple of the same length as `dtypes`.
+  Must be None or a list or tuple of the same length as `dtypes`.
 
 * **`queue_ref`**: The queue reference, i.e. the output of the queue op.
 
@@ -1426,7 +1426,7 @@ Create a queue using the queue reference from `queues[index]`.
 
 * **`index`**: An integer scalar tensor that determines the input that gets
 
-   selected.
+  selected.
 
 * **`queues`**: A list of `QueueBase` objects.
 
@@ -1438,7 +1438,7 @@ A `QueueBase` object.
 
 * **`TypeError`**: When `queues` is not a list of `QueueBase` objects,
 
-   or when the data types of `queues` are not all the same.
+  or when the data types of `queues` are not all the same.
 
 #### `tf.QueueBase.name` <a id="QueueBase.name"></a>
 
@@ -1472,25 +1472,25 @@ If the `shapes` argument is specified, each component of a queue element must ha
 
 * **`capacity`**: An integer. The upper bound on the number of elements
 
-   that may be stored in this queue.
+  that may be stored in this queue.
 
 * **`dtypes`**: A list of `DType` objects. The length of `dtypes` must equal
 
-   the number of tensors in each queue element.
+  the number of tensors in each queue element.
 
 * **`shapes`**: \(Optional.\) A list of fully-defined `TensorShape` objects
 
-   with the same length as `dtypes`, or `None`.
+  with the same length as `dtypes`, or `None`.
 
 * **`names`**: \(Optional.\) A list of string naming the components in the queue
 
-   with the same length as `dtypes`, or `None`.  If specified the dequeue
+  with the same length as `dtypes`, or `None`. If specified the dequeue
 
-   methods return a dictionary with the names as keys.
+  methods return a dictionary with the names as keys.
 
 * **`shared_name`**: \(Optional.\) If non-empty, this queue will be shared under
 
-   the given name across multiple sessions.
+  the given name across multiple sessions.
 
 * **`name`**: Optional name for the queue operation.
 
@@ -1516,29 +1516,29 @@ The `shapes` argument must be specified; each component of a queue element must 
 
 * **`capacity`**: An integer. The upper bound on the number of elements
 
-   that may be stored in this queue.
+  that may be stored in this queue.
 
 * **`dtypes`**: A list of `DType` objects. The length of `dtypes` must equal
 
-   the number of tensors in each queue element.
+  the number of tensors in each queue element.
 
 * **`shapes`**: A list of `TensorShape` objects, with the same length as
 
-   `dtypes`.  Any dimension in the `TensorShape` containing value
+  `dtypes`. Any dimension in the `TensorShape` containing value
 
-   `None` is dynamic and allows values to be enqueued with
+  `None` is dynamic and allows values to be enqueued with
 
-    variable size in that dimension.
+  variable size in that dimension.
 
 * **`names`**: \(Optional.\) A list of string naming the components in the queue
 
-   with the same length as `dtypes`, or `None`.  If specified the dequeue
+  with the same length as `dtypes`, or `None`. If specified the dequeue
 
-   methods return a dictionary with the names as keys.
+  methods return a dictionary with the names as keys.
 
 * **`shared_name`**: \(Optional.\) If non-empty, this queue will be shared under
 
-   the given name across multiple sessions.
+  the given name across multiple sessions.
 
 * **`name`**: Optional name for the queue operation.
 
@@ -1546,9 +1546,9 @@ The `shapes` argument must be specified; each component of a queue element must 
 
 * **`ValueError`**: If shapes is not a list of shapes, or the lengths of dtypes
 
-   and shapes do not match, or if names is specified and the lengths of
+  and shapes do not match, or if names is specified and the lengths of
 
-   dtypes and names do not match.
+  dtypes and names do not match.
 
 ### `class tf.RandomShuffleQueue` <a id="RandomShuffleQueue"></a>
 
@@ -1572,32 +1572,32 @@ The `min_after_dequeue` argument allows the caller to specify a minimum number o
 
 * **`capacity`**: An integer. The upper bound on the number of elements
 
-   that may be stored in this queue.
+  that may be stored in this queue.
 
 * **`min_after_dequeue`**: An integer \(described above\).
 * **`dtypes`**: A list of `DType` objects. The length of `dtypes` must equal
 
-   the number of tensors in each queue element.
+  the number of tensors in each queue element.
 
 * **`shapes`**: \(Optional.\) A list of fully-defined `TensorShape` objects
 
-   with the same length as `dtypes`, or `None`.
+  with the same length as `dtypes`, or `None`.
 
 * **`names`**: \(Optional.\) A list of string naming the components in the queue
 
-   with the same length as `dtypes`, or `None`.  If specified the dequeue
+  with the same length as `dtypes`, or `None`. If specified the dequeue
 
-   methods return a dictionary with the names as keys.
+  methods return a dictionary with the names as keys.
 
 * **`seed`**: A Python integer. Used to create a random seed. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 * **`shared_name`**: \(Optional.\) If non-empty, this queue will be shared under
 
-   the given name across multiple sessions.
+  the given name across multiple sessions.
 
 * **`name`**: Optional name for the queue operation.
 
@@ -1659,9 +1659,9 @@ Returns tensor `num_epochs` times and then raises an `OutOfRange` error.
 **Args:**
 
 * **`tensor`**: Any `Tensor`.
-* **`num_epochs`**: A positive integer \(optional\).  If specified, limits the number
+* **`num_epochs`**: A positive integer \(optional\). If specified, limits the number
 
-   of steps the output tensor may be evaluated.
+  of steps the output tensor may be evaluated.
 
 * **`name`**: A name for the operations \(optional\).
 
@@ -1681,38 +1681,38 @@ Output the rows of `input_tensor` to a queue for an input pipeline.
 
 * **`input_tensor`**: A tensor with the rows to produce. Must be at
 
-   one-dimensional. Must either have a fully-defined shape, or
+  one-dimensional. Must either have a fully-defined shape, or
 
-   `element_shape` must be defined.
+  `element_shape` must be defined.
 
 * **`element_shape`**: \(Optional.\) A `TensorShape` representing the shape of a
 
-   row of `input_tensor`, if it cannot be inferred.
+  row of `input_tensor`, if it cannot be inferred.
 
 * **`num_epochs`**: \(Optional.\) An integer. If specified `input_producer` produces
 
-   each row of `input_tensor` `num_epochs` times before generating an
+  each row of `input_tensor` `num_epochs` times before generating an
 
-   `OutOfRange` error. If not specified, `input_producer` can cycle through
+  `OutOfRange` error. If not specified, `input_producer` can cycle through
 
-   the rows of `input_tensor` an unlimited number of times.
+  the rows of `input_tensor` an unlimited number of times.
 
 * **`shuffle`**: \(Optional.\) A boolean. If true, the rows are randomly shuffled
 
-   within each eopch.
+  within each eopch.
 
 * **`seed`**: \(Optional.\) An integer. The seed to use if `shuffle` is true.
 * **`capacity`**: \(Optional.\) The capacity of the queue to be used for buffering
 
-   the input.
+  the input.
 
 * **`shared_name`**: \(Optional.\) If set, this queue will be shared under the given
 
-   name across multiple sessions.
+  name across multiple sessions.
 
 * **`summary_name`**: \(Optional.\) If set, a scalar summary for the current queue
 
-   size will be generated, using this name as part of the tag.
+  size will be generated, using this name as part of the tag.
 
 * **`name`**: \(Optional.\) A name for queue.
 
@@ -1733,21 +1733,21 @@ Produces the integers from 0 to limit-1 in a queue.
 * **`limit`**: An int32 scalar tensor.
 * **`num_epochs`**: An integer \(optional\). If specified, `range_input_producer`
 
-   produces each integer `num_epochs` times before generating an
+  produces each integer `num_epochs` times before generating an
 
-   OutOfRange error. If not specified, `range_input_producer` can cycle
+  OutOfRange error. If not specified, `range_input_producer` can cycle
 
-   through the integers an unlimited number of times.
+  through the integers an unlimited number of times.
 
 * **`shuffle`**: Boolean. If true, the integers are randomly shuffled within each
 
-   epoch.
+  epoch.
 
 * **`seed`**: An integer \(optional\). Seed used if shuffle == True.
 * **`capacity`**: An integer. Sets the queue capacity.
 * **`shared_name`**: \(optional\). If set, this queue will be shared under the given
 
-   name across multiple sessions.
+  name across multiple sessions.
 
 * **`name`**: A name for the operations \(optional\).
 
@@ -1765,25 +1765,25 @@ Implemented using a Queue -- a `QueueRunner` for the Queue is added to the curre
 
 * **`tensor_list`**: A list of `Tensor` objects. Every `Tensor` in
 
-   `tensor_list` must have the same size in the first dimension.
+  `tensor_list` must have the same size in the first dimension.
 
 * **`num_epochs`**: An integer \(optional\). If specified, `slice_input_producer`
 
-   produces each slice `num_epochs` times before generating
+  produces each slice `num_epochs` times before generating
 
-   an `OutOfRange` error. If not specified, `slice_input_producer` can cycle
+  an `OutOfRange` error. If not specified, `slice_input_producer` can cycle
 
-   through the slices an unlimited number of times.
+  through the slices an unlimited number of times.
 
 * **`shuffle`**: Boolean. If true, the integers are randomly shuffled within each
 
-   epoch.
+  epoch.
 
 * **`seed`**: An integer \(optional\). Seed used if shuffle == True.
 * **`capacity`**: An integer. Sets the queue capacity.
 * **`shared_name`**: \(optional\). If set, this queue will be shared under the given
 
-   name across multiple sessions.
+  name across multiple sessions.
 
 * **`name`**: A name for the operations \(optional\).
 
@@ -1804,23 +1804,23 @@ Output strings \(e.g. filenames\) to a queue for an input pipeline.
 * **`string_tensor`**: A 1-D string tensor with the strings to produce.
 * **`num_epochs`**: An integer \(optional\). If specified, `string_input_producer`
 
-   produces each string from `string_tensor` `num_epochs` times before
+  produces each string from `string_tensor` `num_epochs` times before
 
-   generating an `OutOfRange` error. If not specified,
+  generating an `OutOfRange` error. If not specified,
 
-   `string_input_producer` can cycle through the strings in `string_tensor`
+  `string_input_producer` can cycle through the strings in `string_tensor`
 
-   an unlimited number of times.
+  an unlimited number of times.
 
 * **`shuffle`**: Boolean. If true, the strings are randomly shuffled within each
 
-   epoch.
+  epoch.
 
 * **`seed`**: An integer \(optional\). Seed used if shuffle == True.
 * **`capacity`**: An integer. Sets the queue capacity.
 * **`shared_name`**: \(optional\). If set, this queue will be shared under the given
 
-   name across multiple sessions.
+  name across multiple sessions.
 
 * **`name`**: A name for the operations \(optional\).
 
@@ -1830,7 +1830,7 @@ A queue with the output strings. A `QueueRunner` for the Queue is added to the c
 
 **Raises:**
 
-* **`ValueError`**: If the string\_tensor is a null Python list.  At runtime,
+* **`ValueError`**: If the string\_tensor is a null Python list. At runtime,
 
   will fail with an assertion if string\_tensor becomes a null tensor.
 
@@ -1867,19 +1867,19 @@ If `dynamic_pad` is `True`, it is sufficient that the _rank_ of the tensors is k
 * **`num_threads`**: The number of threads enqueuing `tensor_list`.
 * **`capacity`**: An integer. The maximum number of elements in the queue.
 * **`enqueue_many`**: Whether each tensor in `tensor_list` is a single example.
-* **`shapes`**: \(Optional\) The shapes for each example.  Defaults to the
+* **`shapes`**: \(Optional\) The shapes for each example. Defaults to the
 
-   inferred shapes for `tensor_list`.
+  inferred shapes for `tensor_list`.
 
-* **`dynamic_pad`**: Boolean.  Allow variable dimensions in input shapes.
+* **`dynamic_pad`**: Boolean. Allow variable dimensions in input shapes.
 
-   The given dimensions are padded upon dequeue so that tensors within a
+  The given dimensions are padded upon dequeue so that tensors within a
 
-   batch have the same shapes.
+  batch have the same shapes.
 
 * **`shared_name`**: \(optional\). If set, this queue will be shared under the given
 
-   name across multiple sessions.
+  name across multiple sessions.
 
 * **`name`**: \(Optional\) A name for the operations.
 
@@ -1891,7 +1891,7 @@ A list or dictionary of tensors with the same types as `tensors`.
 
 * **`ValueError`**: If the `shapes` are not specified, and cannot be
 
-   inferred from the elements of `tensors`.
+  inferred from the elements of `tensors`.
 
 ### `tf.train.batch_join(tensors_list, batch_size, capacity=32, enqueue_many=False, shapes=None, dynamic_pad=False, shared_name=None, name=None)` <a id="batch_join"></a>
 
@@ -1922,21 +1922,21 @@ If `dynamic_pad` is `True`, it is sufficient that the _rank_ of the tensors is k
 * **`capacity`**: An integer. The maximum number of elements in the queue.
 * **`enqueue_many`**: Whether each tensor in `tensor_list_list` is a single
 
-   example.
+  example.
 
-* **`shapes`**: \(Optional\) The shapes for each example.  Defaults to the
+* **`shapes`**: \(Optional\) The shapes for each example. Defaults to the
 
-   inferred shapes for `tensor_list_list[i]`.
+  inferred shapes for `tensor_list_list[i]`.
 
-* **`dynamic_pad`**: Boolean.  Allow variable dimensions in input shapes.
+* **`dynamic_pad`**: Boolean. Allow variable dimensions in input shapes.
 
-   The given dimensions are padded upon dequeue so that tensors within a
+  The given dimensions are padded upon dequeue so that tensors within a
 
-   batch have the same shapes.
+  batch have the same shapes.
 
 * **`shared_name`**: \(Optional\) If set, this queue will be shared under the given
 
-   name across multiple sessions.
+  name across multiple sessions.
 
 * **`name`**: \(Optional\) A name for the operations.
 
@@ -1948,7 +1948,7 @@ A list or dictionary of tensors with the same number and types as `tensors_list[
 
 * **`ValueError`**: If the `shapes` are not specified, and cannot be
 
-   inferred from the elements of `tensor_list_list`.
+  inferred from the elements of `tensor_list_list`.
 
 ### `tf.train.shuffle_batch(tensors, batch_size, capacity, min_after_dequeue, num_threads=1, seed=None, enqueue_many=False, shapes=None, shared_name=None, name=None)` <a id="shuffle_batch"></a>
 
@@ -1991,18 +1991,18 @@ _N.B.:_ You must ensure that either \(i\) the `shapes` argument is passed, or \(
 * **`capacity`**: An integer. The maximum number of elements in the queue.
 * **`min_after_dequeue`**: Minimum number elements in the queue after a
 
-   dequeue, used to ensure a level of mixing of elements.
+  dequeue, used to ensure a level of mixing of elements.
 
 * **`num_threads`**: The number of threads enqueuing `tensor_list`.
 * **`seed`**: Seed for the random shuffling within the queue.
 * **`enqueue_many`**: Whether each tensor in `tensor_list` is a single example.
-* **`shapes`**: \(Optional\) The shapes for each example.  Defaults to the
+* **`shapes`**: \(Optional\) The shapes for each example. Defaults to the
 
-   inferred shapes for `tensor_list`.
+  inferred shapes for `tensor_list`.
 
 * **`shared_name`**: \(Optional\) If set, this queue will be shared under the given
 
-   name across multiple sessions.
+  name across multiple sessions.
 
 * **`name`**: \(Optional\) A name for the operations.
 
@@ -2014,7 +2014,7 @@ A list or dictionary of tensors with the types as `tensors`.
 
 * **`ValueError`**: If the `shapes` are not specified, and cannot be
 
-   inferred from the elements of `tensors`.
+  inferred from the elements of `tensors`.
 
 ### `tf.train.shuffle_batch_join(tensors_list, batch_size, capacity, min_after_dequeue, seed=None, enqueue_many=False, shapes=None, shared_name=None, name=None)` <a id="shuffle_batch_join"></a>
 
@@ -2047,20 +2047,20 @@ The returned operation is a dequeue operation and will throw `tf.errors.OutOfRan
 * **`capacity`**: An integer. The maximum number of elements in the queue.
 * **`min_after_dequeue`**: Minimum number elements in the queue after a
 
-   dequeue, used to ensure a level of mixing of elements.
+  dequeue, used to ensure a level of mixing of elements.
 
 * **`seed`**: Seed for the random shuffling within the queue.
 * **`enqueue_many`**: Whether each tensor in `tensor_list_list` is a single
 
-   example.
+  example.
 
-* **`shapes`**: \(Optional\) The shapes for each example.  Defaults to the
+* **`shapes`**: \(Optional\) The shapes for each example. Defaults to the
 
-   inferred shapes for `tensors_list[i]`.
+  inferred shapes for `tensors_list[i]`.
 
 * **`shared_name`**: \(optional\). If set, this queue will be shared under the given
 
-   name across multiple sessions.
+  name across multiple sessions.
 
 * **`name`**: \(Optional\) A name for the operations.
 
@@ -2072,5 +2072,5 @@ A list or dictionary of tensors with the same number and types as `tensors_list[
 
 * **`ValueError`**: If the `shapes` are not specified, and cannot be
 
-   inferred from the elements of `tensors_list`.
+  inferred from the elements of `tensors_list`.
 

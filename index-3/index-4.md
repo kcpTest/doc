@@ -30,7 +30,7 @@ with tf.Session():
 
 While you can replace any Tensor with feed data, including variables and constants, the best practice is to use a [`placeholder` op](../index-4/index-1/io_ops.md#placeholder) node. A `placeholder` exists solely to serve as the target of feeds. It is not initialized and contains no data. A placeholder generates an error if it is executed without a feed, so you won't forget to feed it.
 
-An example using `placeholder` and feeding to train on MNIST data can be found in [`tensorflow/examples/tutorials/mnist/fully_connected_feed.py`](https://www.tensorflow.org/code/tensorflow/examples/tutorials/mnist/fully_connected_feed.py), and is described in the [MNIST tutorial]().
+An example using `placeholder` and feeding to train on MNIST data can be found in [`tensorflow/examples/tutorials/mnist/fully_connected_feed.py`](https://www.tensorflow.org/code/tensorflow/examples/tutorials/mnist/fully_connected_feed.py), and is described in the [MNIST tutorial](index-4.md).
 
 ## Reading from files
 
@@ -234,7 +234,7 @@ Imagine you have a model that has set a limit on the number of epochs to train o
 
 * Any current or future dequeue will either succeed \(if there are enough
 
-  elements left\) or fail \(with an `OutOfRange` error\) immediately.  They won't
+  elements left\) or fail \(with an `OutOfRange` error\) immediately. They won't
 
   block waiting for more elements to be enqueued, since by the previous point
 

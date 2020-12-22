@@ -48,7 +48,7 @@ Same as `tensors`.
 * **`ValueError`**: If `tensors` does not contain any `Tensor` or `IndexedSlices`.
 * **`TypeError`**: If `control_inputs` is not a list of `Operation` or `Tensor`
 
-   objects.
+  objects.
 
 ### `tf.group(*inputs, **kwargs)` <a id="group"></a>
 
@@ -61,7 +61,7 @@ See also `tuple` and `with_dependencies`.
 #### Args:
 
 * **`*inputs`**: Zero or more tensors to group.
-* **`**kwargs`**: Optional parameters to pass when constructing the NodeDef.
+* **\`**kwargs\`\*\*: Optional parameters to pass when constructing the NodeDef.
 * **`name`**: A name for this operation \(optional\).
 
 #### Returns:
@@ -94,13 +94,13 @@ This operation outputs "ref" after the update is done. This makes it easier to c
 
 * **`ref`**: A mutable `Tensor`. Must be one of the following types: `int32`, `int64`.
 
-   Should be from a scalar `Variable` node.
+  Should be from a scalar `Variable` node.
 
 * **`limit`**: An `int`.
 
-   If incrementing ref would bring it above limit, instead generates an
+  If incrementing ref would bring it above limit, instead generates an
 
-   'OutOfRange' error.
+  'OutOfRange' error.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -143,7 +143,7 @@ Tensors returned by the call to either `fn1` or `fn2`. If the callables return a
          return tensors of different types.
   ```
 
-* **`Example`**: 
+* **`Example`**:
 
 ```python
   x = tf.constant(2)
@@ -441,9 +441,9 @@ select(condition, t, e) ==> [[1, 2],
 * **`condition`**: A `Tensor` of type `bool`.
 * **`t`**: A `Tensor` which may have the same shape as `condition`.
 
-   If `condition` is rank 1, `t` may have higher rank,
+  If `condition` is rank 1, `t` may have higher rank,
 
-   but its first dimension must match the size of `condition`.
+  but its first dimension must match the size of `condition`.
 
 * **`e`**: A `Tensor` with the same type and shape as `t`.
 * **`name`**: A name for the operation \(optional\).

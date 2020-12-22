@@ -80,57 +80,57 @@ This constructor creates both a `variable` Op and an `assign` Op to set the vari
 
 * **`initial_value`**: A `Tensor`, or Python object convertible to a `Tensor`,
 
-   which is the initial value for the Variable. The initial value must have
+  which is the initial value for the Variable. The initial value must have
 
-   a shape specified unless `validate_shape` is set to False. Can also be a
+  a shape specified unless `validate_shape` is set to False. Can also be a
 
-   callable with no argument that returns the initial value when called. In
+  callable with no argument that returns the initial value when called. In
 
-   that case, `dtype` must be specified. \(Note that initializer functions
+  that case, `dtype` must be specified. \(Note that initializer functions
 
-   from init\_ops.py must first be bound to a shape before being used here.\)
+  from init\_ops.py must first be bound to a shape before being used here.\)
 
 * **`trainable`**: If `True`, the default, also adds the variable to the graph
 
-   collection `GraphKeys.TRAINABLE_VARIABLES`. This collection is used as
+  collection `GraphKeys.TRAINABLE_VARIABLES`. This collection is used as
 
-   the default list of variables to use by the `Optimizer` classes.
+  the default list of variables to use by the `Optimizer` classes.
 
 * **`collections`**: List of graph collections keys. The new variable is added to
 
-   these collections. Defaults to `[GraphKeys.VARIABLES]`.
+  these collections. Defaults to `[GraphKeys.VARIABLES]`.
 
 * **`validate_shape`**: If `False`, allows the variable to be initialized with a
 
-   value of unknown shape. If `True`, the default, the shape of
+  value of unknown shape. If `True`, the default, the shape of
 
-   `initial_value` must be known.
+  `initial_value` must be known.
 
 * **`caching_device`**: Optional device string describing where the Variable
 
-   should be cached for reading.  Defaults to the Variable's device.
+  should be cached for reading. Defaults to the Variable's device.
 
-   If not `None`, caches on another device.  Typical use is to cache
+  If not `None`, caches on another device. Typical use is to cache
 
-   on the device where the Ops using the Variable reside, to deduplicate
+  on the device where the Ops using the Variable reside, to deduplicate
 
-   copying through `Switch` and other conditional statements.
+  copying through `Switch` and other conditional statements.
 
 * **`name`**: Optional name for the variable. Defaults to `'Variable'` and gets
 
-   uniquified automatically.
+  uniquified automatically.
 
 * **`variable_def`**: `VariableDef` protocol buffer. If not `None`, recreates
 
-   the Variable object with its contents. `variable_def` and the other
+  the Variable object with its contents. `variable_def` and the other
 
-   arguments are mutually exclusive.
+  arguments are mutually exclusive.
 
 * **`dtype`**: If set, initial\_value will be converted to the given type.
 
-   If `None`, either the datatype will be kept \(if `initial_value` is
+  If `None`, either the datatype will be kept \(if `initial_value` is
 
-   a Tensor\), or `convert_to_tensor` will decide.
+  a Tensor\), or `convert_to_tensor` will decide.
 
 **Returns:**
 
@@ -141,7 +141,7 @@ A Variable.
 * **`ValueError`**: If both `variable_def` and initial\_value are specified.
 * **`ValueError`**: If the initial value is not specified, or does not have a
 
-   shape and `validate_shape` is `True`.
+  shape and `validate_shape` is `True`.
 
 #### `tf.Variable.initialized_value()` <a id="Variable.initialized_value"></a>
 
@@ -271,7 +271,7 @@ with tf.Session() as sess:
 
 * **`session`**: The session to use to evaluate this variable. If
 
-   none, the default session is used.
+  none, the default session is used.
 
 **Returns:**
 
@@ -464,7 +464,7 @@ When run, it returns a 1-D tensor containing the names of uninitialized variable
 
 * **`var_list`**: List of `Variable` objects to check. Defaults to the
 
-   value of `all_variables() + local_variables()`
+  value of `all_variables() + local_variables()`
 
 * **`name`**: Optional name of the `Operation`.
 
@@ -486,7 +486,7 @@ Note: This function is implemented by trying to fetch the values of the variable
 
 * **`var_list`**: List of `Variable` objects to check. Defaults to the
 
-   value of `all_variables().`
+  value of `all_variables().`
 
 **Returns:**
 
@@ -580,41 +580,41 @@ The optional `sharded` argument, if `True`, instructs the saver to shard checkpo
 
 * **`var_list`**: A list of `Variable` objects or a dictionary mapping names to
 
-   variables.  If `None`, defaults to the list of all variables.
+  variables. If `None`, defaults to the list of all variables.
 
 * **`reshape`**: If `True`, allows restoring parameters from a checkpoint
 
-   where the variables have a different shape.
+  where the variables have a different shape.
 
 * **`sharded`**: If `True`, shard the checkpoints, one per device.
 * **`max_to_keep`**: Maximum number of recent checkpoints to keep.
 
-   Defaults to 5.
+  Defaults to 5.
 
 * **`keep_checkpoint_every_n_hours`**: How often to keep checkpoints.
 
-   Defaults to 10,000 hours.
+  Defaults to 10,000 hours.
 
-* **`name`**: String.  Optional name to use as a prefix when adding operations.
+* **`name`**: String. Optional name to use as a prefix when adding operations.
 * **`restore_sequentially`**: A `Bool`, which if true, causes restore of different
 
-   variables to happen sequentially within each device.  This can lower
+  variables to happen sequentially within each device. This can lower
 
-   memory usage when restoring very large models.
+  memory usage when restoring very large models.
 
 * **`saver_def`**: Optional `SaverDef` proto to use instead of running the
 
-   builder. This is only useful for specialty code that wants to recreate
+  builder. This is only useful for specialty code that wants to recreate
 
-   a `Saver` object for a previously built `Graph` that had a `Saver`.
+  a `Saver` object for a previously built `Graph` that had a `Saver`.
 
-   The `saver_def` proto should be the one returned by the
+  The `saver_def` proto should be the one returned by the
 
-   `as_saver_def()` call of the `Saver` that was created for that `Graph`.
+  `as_saver_def()` call of the `Saver` that was created for that `Graph`.
 
 * **`builder`**: Optional `SaverBuilder` to use if a `saver_def` was not provided.
 
-   Defaults to `BaseSaverBuilder()`.
+  Defaults to `BaseSaverBuilder()`.
 
 **Raises:**
 
@@ -632,30 +632,30 @@ The method returns the path of the newly created checkpoint file. This path can 
 **Args:**
 
 * **`sess`**: A Session to use to save the variables.
-* **`save_path`**: String.  Path to the checkpoint filename.  If the saver is
+* **`save_path`**: String. Path to the checkpoint filename. If the saver is
 
-   `sharded`, this is the prefix of the sharded checkpoint filename.
+  `sharded`, this is the prefix of the sharded checkpoint filename.
 
 * **`global_step`**: If provided the global step number is appended to
 
-   `save_path` to create the checkpoint filename. The optional argument
+  `save_path` to create the checkpoint filename. The optional argument
 
-   can be a `Tensor`, a `Tensor` name or an integer.
+  can be a `Tensor`, a `Tensor` name or an integer.
 
 * **`latest_filename`**: Optional name for the protocol buffer file that will
 
-   contains the list of most recent checkpoint filenames.  That file,
+  contains the list of most recent checkpoint filenames. That file,
 
-   kept in the same directory as the checkpoint files, is automatically
+  kept in the same directory as the checkpoint files, is automatically
 
-   managed by the saver to keep track of recent checkpoints.  Defaults to
+  managed by the saver to keep track of recent checkpoints. Defaults to
 
-   'checkpoint'.
+  'checkpoint'.
 
 * **`meta_graph_suffix`**: Suffix for `MetaGraphDef` file. Defaults to 'meta'.
 * **`write_meta_graph`**: `Boolean` indicating whether or not to write the meta
 
-   graph file.
+  graph file.
 
 **Returns:**
 
@@ -745,7 +745,7 @@ Sets the list of old checkpoint filenames and timestamps.
 
 * **`last_checkpoints_with_time`**: A list of tuples of checkpoint filenames and
 
-   timestamps.
+  timestamps.
 
 **Raises:**
 
@@ -768,9 +768,9 @@ Finds the filename of latest saved checkpoint file.
 * **`checkpoint_dir`**: Directory where the variables were saved.
 * **`latest_filename`**: Optional name for the protocol buffer file that
 
-   contains the list of most recent checkpoint filenames.
+  contains the list of most recent checkpoint filenames.
 
-   See the corresponding argument to `Saver.save()`.
+  See the corresponding argument to `Saver.save()`.
 
 **Returns:**
 
@@ -785,9 +785,9 @@ If the "checkpoint" file contains a valid CheckpointState proto, returns it.
 **Args:**
 
 * **`checkpoint_dir`**: The directory of checkpoints.
-* **`latest_filename`**: Optional name of the checkpoint file.  Default to
+* **`latest_filename`**: Optional name of the checkpoint file. Default to
 
-   'checkpoint'.
+  'checkpoint'.
 
 **Returns:**
 
@@ -803,17 +803,17 @@ This updates the checkpoint file containing a CheckpointState proto.
 
 * **`save_dir`**: Directory where the model was saved.
 * **`model_checkpoint_path`**: The checkpoint file.
-* **`all_model_checkpoint_paths`**: List of strings.  Paths to all not-yet-deleted
+* **`all_model_checkpoint_paths`**: List of strings. Paths to all not-yet-deleted
 
-   checkpoints, sorted from oldest to newest.  If this is a non-empty list,
+  checkpoints, sorted from oldest to newest. If this is a non-empty list,
 
-   the last element must be equal to model\_checkpoint\_path.  These paths
+  the last element must be equal to model\_checkpoint\_path. These paths
 
-   are also saved in the CheckpointState proto.
+  are also saved in the CheckpointState proto.
 
-* **`latest_filename`**: Optional name of the checkpoint file.  Default to
+* **`latest_filename`**: Optional name of the checkpoint file. Default to
 
-   'checkpoint'.
+  'checkpoint'.
 
 **Raises:**
 
@@ -853,39 +853,39 @@ Some useful partitioners are available. See, e.g., `variable_axis_size_partition
 * **`initializer`**: Initializer for the variable if one is created.
 * **`regularizer`**: A \(Tensor -&gt; Tensor or None\) function; the result of
 
-   applying it on a newly created variable will be added to the collection
+  applying it on a newly created variable will be added to the collection
 
-   GraphKeys.REGULARIZATION\_LOSSES and can be used for regularization.
+  GraphKeys.REGULARIZATION\_LOSSES and can be used for regularization.
 
 * **`trainable`**: If `True` also add the variable to the graph collection
 
-   `GraphKeys.TRAINABLE_VARIABLES` \(see tf.Variable\).
+  `GraphKeys.TRAINABLE_VARIABLES` \(see tf.Variable\).
 
 * **`collections`**: List of graph collections keys to add the Variable to.
 
-   Defaults to `[GraphKeys.VARIABLES]` \(see tf.Variable\).
+  Defaults to `[GraphKeys.VARIABLES]` \(see tf.Variable\).
 
 * **`caching_device`**: Optional device string or function describing where the
 
-   Variable should be cached for reading.  Defaults to the Variable's
+  Variable should be cached for reading. Defaults to the Variable's
 
-   device.  If not `None`, caches on another device.  Typical use is to
+  device. If not `None`, caches on another device. Typical use is to
 
-   cache on the device where the Ops using the Variable reside, to
+  cache on the device where the Ops using the Variable reside, to
 
-   deduplicate copying through `Switch` and other conditional statements.
+  deduplicate copying through `Switch` and other conditional statements.
 
 * **`partitioner`**: Optional callable that accepts a fully defined `TensorShape`
 
-   and `dtype` of the Variable to be created, and returns a list of
+  and `dtype` of the Variable to be created, and returns a list of
 
-   partitions for each axis \(currently only one axis can be partitioned\).
+  partitions for each axis \(currently only one axis can be partitioned\).
 
 * **`validate_shape`**: If False, allows the variable to be initialized with a
 
-     value of unknown shape. If True, the default, the shape of initial\_value
+  value of unknown shape. If True, the default, the shape of initial\_value
 
-     must be known.
+  must be known.
 
 **Returns:**
 
@@ -895,9 +895,9 @@ The created or existing variable.
 
 * **`ValueError`**: when creating a new variable and shape is not declared,
 
-   or when violating reuse during variable creation. Reuse is set inside
+  or when violating reuse during variable creation. Reuse is set inside
 
-   `variable_scope`.
+  `variable_scope`.
 
 ### `class tf.VariableScope` <a id="VariableScope"></a>
 
@@ -1006,7 +1006,7 @@ Note that the `reuse` flag is inherited: if we open a reusing scope, then all it
 * **`name_or_scope`**: `string` or `VariableScope`: the scope to open.
 * **`reuse`**: `True` or `None`; if `True`, we go into reuse mode for this scope as
 
-   well as all sub-scopes; if `None`, we just inherit the parent scope reuse.
+  well as all sub-scopes; if `None`, we just inherit the parent scope reuse.
 
 * **`initializer`**: default initializer for variables within this scope.
 * **`regularizer`**: default regularizer for variables within this scope.
@@ -1021,7 +1021,7 @@ A scope that can be to captured and reused.
 
 * **`ValueError`**: when trying to reuse within a create scope, or create within
 
-   a reuse scope, or if reuse is not `None` or `True`.
+  a reuse scope, or if reuse is not `None` or `True`.
 
 * **`TypeError`**: when the types of some arguments are not appropriate.
 
@@ -1052,13 +1052,13 @@ def my_op_with_vars(a, b, scope=None):
 * **`values`**: The list of `Tensor` arguments that are passed to the op function.
 * **`name_or_scope`**: The name argument that is passed to the op function,
 
-   this name\_or\_scope is not uniquified in the variable scope.
+  this name\_or\_scope is not uniquified in the variable scope.
 
 * **`default_name`**: The default name to use if the `name_or_scope` argument is
 
-   `None`, this name will be uniquified. If name\_or\_scope is provided it
+  `None`, this name will be uniquified. If name\_or\_scope is provided it
 
-   won't be used and therefore it is not required and can be None.
+  won't be used and therefore it is not required and can be None.
 
 * **`initializer`**: The default initializer to pass to variable scope.
 * **`regularizer`**: The default regularizer for variables within this scope.
@@ -1066,7 +1066,7 @@ def my_op_with_vars(a, b, scope=None):
 * **`partitioner`**: The default partitioner for variables within this scope.
 * **`reuse`**: `True` or `None`; if `True`, we go into reuse mode for this scope as
 
-   well as all sub-scopes; if `None`, we just inherit the parent scope reuse.
+  well as all sub-scopes; if `None`, we just inherit the parent scope reuse.
 
 **Returns:**
 
@@ -1076,7 +1076,7 @@ A context manager for use in defining a Python op.
 
 * **`ValueError`**: when trying to reuse within a create scope, or create within
 
-   a reuse scope, or if reuse is not `None` or `True`.
+  a reuse scope, or if reuse is not `None` or `True`.
 
 * **`TypeError`**: when the types of some arguments are not appropriate.
 
@@ -1092,27 +1092,27 @@ This wraps `func_` in a Template and partially evaluates it. Templates are funct
 
 * The function should create all trainable variables and any variables that
 
-   should be reused by calling `tf.get_variable`. If a trainable variable is
+  should be reused by calling `tf.get_variable`. If a trainable variable is
 
-   created using `tf.Variable`, then a ValueError will be thrown. Variables
+  created using `tf.Variable`, then a ValueError will be thrown. Variables
 
-   that are intended to be locals can be created by specifying
+  that are intended to be locals can be created by specifying
 
-   `tf.Variable(..., trainable=false)`.
+  `tf.Variable(..., trainable=false)`.
 
 * The function may use variable scopes and other templates internally to
 
-    create and reuse variables, but it shouldn't use `tf.get_variables` to
+  create and reuse variables, but it shouldn't use `tf.get_variables` to
 
-    capture variables that are defined outside of the scope of the function.
+  capture variables that are defined outside of the scope of the function.
 
 * Internal scopes and variable names should not depend on any arguments that
 
-    are not supplied to `make_template`. In general you will get a ValueError
+  are not supplied to `make_template`. In general you will get a ValueError
 
-    telling you that you are trying to reuse a variable that doesn't exist
+  telling you that you are trying to reuse a variable that doesn't exist
 
-    if you make a mistake.
+  if you make a mistake.
 
 In the following example, both `z` and `w` will be scaled by the same `y`. It is important to note that if we didn't assign `scalar_name` and used a different name for z and w that a `ValueError` would be thrown because it couldn't reuse the variable.
 
@@ -1135,13 +1135,13 @@ If all of these are true, then 2 properties are enforced by the template:
 
 1. Calling the same template multiple times will share all non-local
 
-    variables.
+   variables.
 
 2. Two different templates are guaranteed to be unique, unless you reenter the
 
-    same variable scope as the initial definition of a template and redefine
+   same variable scope as the initial definition of a template and redefine
 
-    it. An examples of this exception:
+   it. An examples of this exception:
 
 ```python
 def my_op(x, scalar_name):
@@ -1170,16 +1170,16 @@ Note: `name_`, `func_` and `create_scope_now_` have a trailing underscore to red
 
 * **`name_`**: A name for the scope created by this template. If necessary, the name
 
-   will be made unique by appending `_N` to the name.
+  will be made unique by appending `_N` to the name.
 
 * **`func_`**: The function to wrap.
 * **`create_scope_now_`**: Boolean controlling whether the scope should be created
 
-   when the template is constructed or when the template is called. Default
+  when the template is constructed or when the template is called. Default
 
-   is False, meaning the scope is created when the template is called.
+  is False, meaning the scope is created when the template is called.
 
-* **`**kwargs`**: Keyword arguments to apply to `func_`.
+* **\`**kwargs`**: Keyword arguments to apply to`func\_\`.
 
 **Returns:**
 
@@ -1201,7 +1201,7 @@ Returns an initializer that generates tensors with a single value.
 
 * **`value`**: A Python scalar. All elements of the initialized variable
 
-   will be set to this value.
+  will be set to this value.
 
 * **`dtype`**: The data type. Only floating point types are supported.
 
@@ -1221,17 +1221,17 @@ Returns an initializer that generates tensors with a normal distribution.
 
 * **`mean`**: a python scalar or a scalar tensor. Mean of the random values
 
-   to generate.
+  to generate.
 
 * **`stddev`**: a python scalar or a scalar tensor. Standard deviation of the
 
-   random values to generate.
+  random values to generate.
 
 * **`seed`**: A Python integer. Used to create random seeds. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 * **`dtype`**: The data type. Only floating point types are supported.
 
@@ -1253,17 +1253,17 @@ These values are similar to values from a `random_normal_initializer` except tha
 
 * **`mean`**: a python scalar or a scalar tensor. Mean of the random values
 
-   to generate.
+  to generate.
 
 * **`stddev`**: a python scalar or a scalar tensor. Standard deviation of the
 
-   random values to generate.
+  random values to generate.
 
 * **`seed`**: A Python integer. Used to create random seeds. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 * **`dtype`**: The data type. Only floating point types are supported.
 
@@ -1283,17 +1283,17 @@ Returns an initializer that generates tensors with a uniform distribution.
 
 * **`minval`**: a python scalar or a scalar tensor. lower bound of the range
 
-   of random values to generate.
+  of random values to generate.
 
 * **`maxval`**: a python scalar or a scalar tensor. upper bound of the range
 
-   of random values to generate.
+  of random values to generate.
 
 * **`seed`**: A Python integer. Used to create random seeds. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 * **`dtype`**: The data type. Only floating point types are supported.
 
@@ -1324,16 +1324,16 @@ If the shape tuple `full_shape` is provided, the scale will be calculated from t
 * **`factor`**: Float.  A multiplicative factor by which the values will be scaled.
 * **`seed`**: A Python integer. Used to create random seeds. See
 
-   [`set_random_seed`](constant_op.md#set_random_seed)
+  [`set_random_seed`](constant_op.md#set_random_seed)
 
-   for behavior.
+  for behavior.
 
 * **`dtype`**: The data type. Only floating point types are supported.
-* **`full_shape`**: Tuple or list of integers.  The shape used for calculating
+* **`full_shape`**: Tuple or list of integers. The shape used for calculating
 
-   scale normalization \(instead of the shape passed at creation time\).
+  scale normalization \(instead of the shape passed at creation time\).
 
-   Useful when creating sharded variables via partitioning.
+  Useful when creating sharded variables via partitioning.
 
 **Returns:**
 
@@ -1369,11 +1369,11 @@ One reasonable value for `max_shard_bytes` is `(64 << 20) - 1`, or almost `64MB`
 * **`axis`**: The axis to partition along.  Default: outermost axis.
 * **`bytes_per_string_element`**: If the `Variable` is of type string, this provides
 
-   an estimate of how large each scalar in the `Variable` is.
+  an estimate of how large each scalar in the `Variable` is.
 
 * **`max_shards`**: The maximum number of shards in int created taking precedence
 
-   over `max_shard_bytes`.
+  over `max_shard_bytes`.
 
 **Returns:**
 
@@ -1419,17 +1419,17 @@ Requires `updates.shape = indices.shape + ref.shape[1:]`.
 * **`ref`**: A mutable `Tensor`. Should be from a `Variable` node.
 * **`indices`**: A `Tensor`. Must be one of the following types: `int32`, `int64`.
 
-   A tensor of indices into the first dimension of `ref`.
+  A tensor of indices into the first dimension of `ref`.
 
 * **`updates`**: A `Tensor`. Must have the same type as `ref`.
 
-   A tensor of updated values to store in `ref`.
+  A tensor of updated values to store in `ref`.
 
 * **`use_locking`**: An optional `bool`. Defaults to `True`.
 
-   If True, the assignment will be protected by a lock;
+  If True, the assignment will be protected by a lock;
 
-   otherwise the behavior is undefined, but may exhibit less contention.
+  otherwise the behavior is undefined, but may exhibit less contention.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1466,21 +1466,21 @@ Requires `updates.shape = indices.shape + ref.shape[1:]`.
 
 * **`ref`**: A mutable `Tensor`. Must be one of the following types: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 
-   Should be from a `Variable` node.
+  Should be from a `Variable` node.
 
 * **`indices`**: A `Tensor`. Must be one of the following types: `int32`, `int64`.
 
-   A tensor of indices into the first dimension of `ref`.
+  A tensor of indices into the first dimension of `ref`.
 
 * **`updates`**: A `Tensor`. Must have the same type as `ref`.
 
-   A tensor of updated values to add to `ref`.
+  A tensor of updated values to add to `ref`.
 
 * **`use_locking`**: An optional `bool`. Defaults to `False`.
 
-   If True, the addition will be protected by a lock;
+  If True, the addition will be protected by a lock;
 
-   otherwise the behavior is undefined, but may exhibit less contention.
+  otherwise the behavior is undefined, but may exhibit less contention.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1515,21 +1515,21 @@ Requires `updates.shape = indices.shape + ref.shape[1:]`.
 
 * **`ref`**: A mutable `Tensor`. Must be one of the following types: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 
-   Should be from a `Variable` node.
+  Should be from a `Variable` node.
 
 * **`indices`**: A `Tensor`. Must be one of the following types: `int32`, `int64`.
 
-   A tensor of indices into the first dimension of `ref`.
+  A tensor of indices into the first dimension of `ref`.
 
 * **`updates`**: A `Tensor`. Must have the same type as `ref`.
 
-   A tensor of updated values to subtract from `ref`.
+  A tensor of updated values to subtract from `ref`.
 
 * **`use_locking`**: An optional `bool`. Defaults to `False`.
 
-   If True, the subtraction will be protected by a lock;
+  If True, the subtraction will be protected by a lock;
 
-   otherwise the behavior is undefined, but may exhibit less contention.
+  otherwise the behavior is undefined, but may exhibit less contention.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1643,7 +1643,7 @@ This function exports the graph, saver, and collection objects into `MetaGraphDe
 
 * **`filename`**: Optional filename including the path for writing the
 
-   generated `MetaGraphDef` protocol buffer.
+  generated `MetaGraphDef` protocol buffer.
 
 * **`meta_info_def`**: `MetaInfoDef` protocol buffer.
 * **`graph_def`**: `GraphDef` protocol buffer.
@@ -1701,7 +1701,7 @@ NOTE: Restarting training from saved `meta_graph` only works if the device assig
 
 * **`meta_graph_or_file`**: `MetaGraphDef` protocol buffer or filename \(including
 
-   the path\) containing a `MetaGraphDef`.
+  the path\) containing a `MetaGraphDef`.
 
 **Returns:**
 

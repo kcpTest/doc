@@ -29,36 +29,42 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
 * 통신방식은 샘플소스 기준으로 bin\pp\_cli \(실행파일\)를 통해 가맹점 서버와 소켓통신 합니다.\( JSP의 경우 lib\jPpcliE.jar 파일 \)
 * 방화벽은 KCP와 결제 통신을 위해 TCP SOCKET을 사용합니다.
 * 결과 요청 및 처리에 관한 변수처리는 기관의 정책이나 신규 서비스 출시 등에 따라 변경이 될 수 있으니 연동매뉴얼을 업데이트하여 관리하시기 바랍니다.
-* ** NHN KCP 결제 모듈에는 데이터베이스 연동 작업을 위한 기능은 포함되어있지 않습니다.**
-\(데이터베이스 연동을 위한 지불 결과 데이터만 제공하며 데이터베이스 처리에 관한 부분은 일체 가맹점에서 관리\)
+*  **NHN KCP 결제 모듈에는 데이터베이스 연동 작업을 위한 기능은 포함되어있지 않습니다.**
+
+  \(데이터베이스 연동을 위한 지불 결과 데이터만 제공하며 데이터베이스 처리에 관한 부분은 일체 가맹점에서 관리\)
+
 * 결과 요청 및 처리에 관한 변수처리는 기관의 정책이나 신규 서비스 출시 등에 따라 변경이 될 수 있으니 연동매뉴얼을 업데이트하여 관리하시기 바랍니다.
 * 설치 Directory 는 절대 Web으로 접근할 수 있는 경로에 설치하지 마십시오.
-결제서비스 관련 폴더 및 파일들은 보안상 절대 Web을 통해서 접근하지 않도록 관리해주시기 바랍니다.
-* 결제 창 호출 시 요청하는 site_cd 와 승인 요청 시 site_cd 가 다를 경우 정산 시 불이익을 받을 수 있습니다.
-* 반드시 결제 인증 및 승인 시 동일한 site_cd 로 요청하시기 바랍니다.
+
+  결제서비스 관련 폴더 및 파일들은 보안상 절대 Web을 통해서 접근하지 않도록 관리해주시기 바랍니다.
+
+* 결제 창 호출 시 요청하는 site\_cd 와 승인 요청 시 site\_cd 가 다를 경우 정산 시 불이익을 받을 수 있습니다.
+* 반드시 결제 인증 및 승인 시 동일한 site\_cd 로 요청하시기 바랍니다.
 
 **※특히 사이트 키 값, 결제거래번호, 환경설정파일의 경우 가맹점과 NHN KCP간의 보안을 유지하는 값이므로 Web 상에서 확인될 수 없도록 관리 바랍니다.**
 
 ### 2.결제 창 호출 가능한 운영체제 및 브라우저 안내
-①	PC버전 OS : 표준WEB(Windows & Mac), Plugin(Windows only)   
-②	PC버전 Browser : IE(Ver. 6 ~), Firefox (Ver. 5.0 ~), Chrome (Ver. 16.0 ~), Safari(Ver. 5.0 ~), Opera (Ver. 10~)   
-③	모바일버전 OS : Android, IOS   
-④	모바일버전 Browser : 스마트폰 기본브라우저
 
+① PC버전 OS : 표준WEB\(Windows & Mac\), Plugin\(Windows only\)  
+② PC버전 Browser : IE\(Ver. 6 ~\), Firefox \(Ver. 5.0 ~\), Chrome \(Ver. 16.0 ~\), Safari\(Ver. 5.0 ~\), Opera \(Ver. 10~\)  
+③ 모바일버전 OS : Android, IOS  
+④ 모바일버전 Browser : 스마트폰 기본브라우저
 
 **※ 방화벽 설정 정보**
+
+**\[PC, Mobile 공통\]**
 
 <table>
   <thead>
     <tr>
       <th style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; PORT</th>
-      <td style="text-align:left"><b>8090</b>
-      </td>
+      <th style="text-align:left"><b>8090</b>
+      </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; &#xB3C4;&#xBA54;&#xC778;</th>
+      <td style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; &#xB3C4;&#xBA54;&#xC778;</td>
       <td style="text-align:left">
         <p>paygw.kcp.co.kr (&#xC2E4; &#xACB0;&#xC81C;)</p>
         <p>testpaygw.kcp.co.kr (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</p>
@@ -67,10 +73,27 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
   </tbody>
 </table>
 
-* **KCP 결제 모듈에는 DB 연동 작업을 위한 기능이 포함되어 있지 않고, DB연동을 위한 지불 결과 데이터만 제공 되므로, DB처리에 관한 부분은 일체 가맹점에서 관리가 필요합니다.**
-* 결과 요청 및 처리에 관한 변수처리는 기관의 정책이나 신규 서비스 출시 등에 따라 변경이 될 수 있으니 연동 메뉴얼을 업데이트하여 관리하는 것을 권장합니다.
+**\[Mobile 전용\]**
 
-  **\*\*위 사항을 지키지 않아 발생하는 문제에 대하여 KCP는 책임을 지지 않습니다. \*\***
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b>&#xC5F0;&#xACB0;&#xB300;&#xC0C1; PORT/&#xB3C4;&#xBA54;</b>
+      </th>
+      <th style="text-align:left">
+        <p><b>smpay.kcp.co.kr 443/80 (&#xC2E4; &#xACB0;&#xC81C;)</b>
+        </p>
+        <p><b>testsmpay.kcp.co.kr 443  (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</b>
+        </p>
+      </th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+* NHN KCP 결제는 TCP Socket 통신으로 이루어지며, 추가로 모바일버전의 경우 결제 창 호출 전 SOAP 통신을 통해 주요 주문데이터 검증을 위해 거래등록을 진행합니다. 아래 도메인, PORT 에 대해 방화벽 허가를 해주셔야 합니다.
+
+
 
 ### 2.API 규격 안내 및 특수문자
 
@@ -100,4 +123,5 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
 
 하기 사항을 지키지 않아 발생하는 보안관련 사고에 대해서는 KCP에서 책임을 질 수 없는 부분이오니 반드시 결제모듈 연동 시 철저하게 가맹점 관리 부탁 드립니다.
 
-**site_key 관리 강화**
+**site\_key 관리 강화**
+

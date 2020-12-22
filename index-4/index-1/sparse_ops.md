@@ -105,13 +105,13 @@ _N.B._ Before invoking `SparseTensor.eval()`, its graph must have been launched 
 
 * **`feed_dict`**: A dictionary that maps `Tensor` objects to feed values.
 
-   See [`Session.run()`](client.md#Session.run) for a
+  See [`Session.run()`](client.md#Session.run) for a
 
-   description of the valid feed values.
+  description of the valid feed values.
 
 * **`session`**: \(Optional.\) The `Session` to be used to evaluate this sparse
 
-   tensor. If none, the default session will be used.
+  tensor. If none, the default session will be used.
 
 **Returns:**
 
@@ -162,25 +162,25 @@ Indices should be sorted in lexicographic order, and indices must not contain an
 
 * **`sparse_indices`**: A 0-D, 1-D, or 2-D `Tensor` of type `int32` or `int64`.
 
-   `sparse_indices[i]` contains the complete index where `sparse_values[i]`
+  `sparse_indices[i]` contains the complete index where `sparse_values[i]`
 
-   will be placed.
+  will be placed.
 
-* **`output_shape`**: A 1-D `Tensor` of the same type as `sparse_indices`.  Shape
+* **`output_shape`**: A 1-D `Tensor` of the same type as `sparse_indices`. Shape
 
-   of the dense output tensor.
+  of the dense output tensor.
 
-* **`sparse_values`**: A 0-D or 1-D `Tensor`.  Values corresponding to each row of
+* **`sparse_values`**: A 0-D or 1-D `Tensor`. Values corresponding to each row of
 
-   `sparse_indices`, or a scalar value to be used for all sparse indices.
+  `sparse_indices`, or a scalar value to be used for all sparse indices.
 
-* **`default_value`**: A 0-D `Tensor` of the same type as `sparse_values`.  Value
+* **`default_value`**: A 0-D `Tensor` of the same type as `sparse_values`. Value
 
-   to set for indices not specified in `sparse_indices`.  Defaults to zero.
+  to set for indices not specified in `sparse_indices`. Defaults to zero.
 
-* **`validate_indices`**: A boolean value.  If True, indices are checked to make
+* **`validate_indices`**: A boolean value. If True, indices are checked to make
 
-   sure they are sorted in lexicographic order and that there are no repeats.
+  sure they are sorted in lexicographic order and that there are no repeats.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -197,9 +197,7 @@ This op is a convenience wrapper around `sparse_to_dense` for `SparseTensor`s.
 For example, if `sp_input` has shape `[3, 5]` and non-empty string values:
 
 ```text
-[0, 1]: a
-[0, 3]: b
-[2, 0]: c
+
 ```
 
 and `default_value` is `x`, then the output will be a dense `[3, 5]` string tensor with values:
@@ -217,11 +215,11 @@ Indices must be without repeats. This is only tested if validate\_indices is Tru
 * **`sp_input`**: The input `SparseTensor`.
 * **`default_value`**: Scalar value to set for indices not specified in
 
-   `sp_input`.  Defaults to zero.
+  `sp_input`. Defaults to zero.
 
-* **`validate_indices`**: A boolean value.  If `True`, indices are checked to make
+* **`validate_indices`**: A boolean value. If `True`, indices are checked to make
 
-   sure they are sorted in lexicographic order and that there are no repeats.
+  sure they are sorted in lexicographic order and that there are no repeats.
 
 * **`name`**: A name prefix for the returned tensors \(optional\).
 
@@ -248,13 +246,7 @@ and False elsewhere in `output`.
 For example, if `sp_input.shape = [2, 3, 4]` with non-empty values:
 
 ```text
-[0, 0, 0]: 0
-[0, 1, 0]: 10
-[1, 0, 3]: 103
-[1, 1, 2]: 150
-[1, 1, 3]: 149
-[1, 1, 4]: 150
-[1, 2, 1]: 121
+
 ```
 
 and `vocab_size = 200`, then the output will be a `[2, 3, 200]` dense bool tensor with False everywhere except at positions
@@ -272,11 +264,11 @@ The input `SparseTensor` must be in row-major order.
 
 * **`sp_input`**: A `SparseTensor` with `values` property of type `int32` or
 
-   `int64`.
+  `int64`.
 
 * **`vocab_size`**: A scalar int64 Tensor \(or Python int\) containing the new size
 
-   of the last dimension, `all(0 <= sp_input.values < vocab_size)`.
+  of the last dimension, `all(0 <= sp_input.values < vocab_size)`.
 
 * **`name`**: A name prefix for the returned tensors \(optional\)
 
@@ -321,12 +313,12 @@ SparseTensor\(indices=\[\[0, 0\], \[1, 1\], \[1, 3\], \[1, 4\], \[2, 0\], \[2, 3
 
 * **`sp_ids`**: A `SparseTensor` with `values` property of type `int32`
 
-   or `int64`.
+  or `int64`.
 
 * **`sp_values`**: A`SparseTensor` of any type.
 * **`vocab_size`**: A scalar `int64` Tensor \(or Python int\) containing the new size
 
-   of the last dimension, `all(0 <= sp_ids.values < vocab_size)`.
+  of the last dimension, `all(0 <= sp_ids.values < vocab_size)`.
 
 * **`name`**: A name prefix for the returned tensors \(optional\)
 
@@ -362,24 +354,13 @@ For example, if `concat_dim = 1` and the inputs are
 
 ```text
 sp_inputs[0]: shape = [2, 3]
-[0, 2]: "a"
-[1, 0]: "b"
-[1, 1]: "c"
-
 sp_inputs[1]: shape = [2, 4]
-[0, 1]: "d"
-[0, 2]: "e"
 ```
 
 then the output will be
 
 ```text
 shape = [2, 7]
-[0, 2]: "a"
-[0, 4]: "d"
-[0, 5]: "e"
-[1, 0]: "b"
-[1, 1]: "c"
 ```
 
 Graphically this is equivalent to doing
@@ -393,24 +374,13 @@ Another example, if 'concat\_dim = 1' and the inputs are
 
 ```text
 sp_inputs[0]: shape = [3, 3]
-[0, 2]: "a"
-[1, 0]: "b"
-[2, 1]: "c"
-
 sp_inputs[1]: shape = [2, 4]
-[0, 1]: "d"
-[0, 2]: "e"
 ```
 
 if expand\_nonconcat\_dim = False, this will result in an error. But if expand\_nonconcat\_dim = True, this will result in:
 
 ```text
 shape = [3, 7]
-[0, 2]: "a"
-[0, 4]: "d"
-[0, 5]: "e"
-[1, 0]: "b"
-[2, 1]: "c"
 ```
 
 Graphically this is equivalent to doing
@@ -428,7 +398,7 @@ Graphically this is equivalent to doing
 * **`name`**: A name prefix for the returned tensors \(optional\).
 * **`expand_nonconcat_dim`**: Whether to allow the expansion in the non-concat
 
-   dimensions. Defaulted to False.
+  dimensions. Defaulted to False.
 
 **Returns:**
 
@@ -449,19 +419,13 @@ Reordering does not affect the shape of the `SparseTensor`.
 For example, if `sp_input` has shape `[4, 5]` and `indices` / `values`:
 
 ```text
-[0, 3]: b
-[0, 1]: a
-[3, 1]: d
-[2, 0]: c
+
 ```
 
 then the output will be a `SparseTensor` of shape `[4, 5]` and `indices` / `values`:
 
 ```text
-[0, 1]: a
-[0, 3]: b
-[2, 0]: c
-[3, 1]: d
+
 ```
 
 **Args:**
@@ -523,17 +487,13 @@ Retains specified non-empty values within a `SparseTensor`.
 For example, if `sp_input` has shape `[4, 5]` and 4 non-empty string values:
 
 ```text
-[0, 1]: a
-[0, 3]: b
-[2, 0]: c
-[3, 1]: d
+
 ```
 
 and `to_retain = [True, False, False, True]`, then the output will be a `SparseTensor` of shape `[4, 5]` with 2 non-empty values:
 
 ```text
-[0, 1]: a
-[3, 1]: d
+
 ```
 
 **Args:**
@@ -562,10 +522,7 @@ For example:
 Consider a `sp_input` with shape \[2, 3, 5\]:
 
 ```text
-[0, 0, 1]: a
-[0, 1, 0]: b
-[0, 2, 2]: c
-[1, 0, 3]: d
+
 ```
 
 * It is an error to set `new_shape` as \[3, 7\] since this represents a rank-2 tensor while `sp_input` is rank-3. This is either a ValueError during graph construction \(if both shapes are known\) or an OpError during run time.
@@ -578,7 +535,7 @@ Consider a `sp_input` with shape \[2, 3, 5\]:
 * **`sp_input`**: The input `SparseTensor`.
 * **`new_shape`**: None or a vector representing the new shape for the returned
 
-   `SpraseTensor`.
+  `SpraseTensor`.
 
 **Returns:**
 
@@ -589,9 +546,9 @@ A `SparseTensor` indices and values unchanged from `input_sp`. Its shape is `new
 * **`TypeError`**: If `sp_input` is not a `SparseTensor`.
 * **`ValueError`**: If `new_shape` represents a tensor with a different rank from
 
-   that of `sp_input` \(if shapes are known when graph is constructed\).
+  that of `sp_input` \(if shapes are known when graph is constructed\).
 
-* **`OpError`**: 
+* **`OpError`**:
   * If `new_shape` has dimension sizes that are too small.
   * If shapes are not known during graph construction time, and during run
 
@@ -606,21 +563,13 @@ This op adds entries with the specified `default_value` at index `[row, 0]` for 
 For example, suppose `sp_input` has shape `[5, 6]` and non-empty values:
 
 ```text
-[0, 1]: a
-[0, 3]: b
-[2, 0]: c
-[3, 1]: d
+
 ```
 
 Rows 1 and 4 are empty, so the output will be of shape `[5, 6]` with values:
 
 ```text
-[0, 1]: a
-[0, 3]: b
-[1, 0]: default_value
-[2, 0]: c
-[3, 1]: d
-[4, 0]: default_value
+
 ```
 
 Note that the input may have empty columns at the end, with no effect on this op.
@@ -638,7 +587,7 @@ empty_row_indicator[i] = True iff row i was an empty row.
 * **`sp_input`**: A `SparseTensor` with shape `[N, M]`.
 * **`default_value`**: The value to fill for empty rows, with the same type as
 
-   `sp_input.`
+  `sp_input.`
 
 * **`name`**: A name prefix for the returned tensors \(optional\)
 
@@ -646,11 +595,11 @@ empty_row_indicator[i] = True iff row i was an empty row.
 
 * **`sp_ordered_output`**: A `SparseTensor` with shape `[N, M]`, and with all empty
 
-   rows filled in with `default_value`.
+  rows filled in with `default_value`.
 
 * **`empty_row_indicator`**: A bool vector of length `N` indicating whether each
 
-   input row was empty.
+  input row was empty.
 
 **Raises:**
 
@@ -686,7 +635,7 @@ tf.sparse_reduce_sum(x, [0, 1]) ==> 3
 * **`sp_input`**: The SparseTensor to reduce. Should have numeric type.
 * **`reduction_axes`**: The dimensions to reduce; list or scalar. If `None` \(the
 
-   default\), reduces all dimensions.
+  default\), reduces all dimensions.
 
 * **`keep_dims`**: If true, retain reduced dimensions with length 1.
 
@@ -717,22 +666,22 @@ For example, suppose the logical sum of two sparse operands is \(densified\):
 Then,
 
 * thresh == 0 \(the default\): all 5 index/value pairs will be returned.
-* thresh == 0.11: only .1 and 0  will vanish, and the remaining three
+* thresh == 0.11: only .1 and 0 will vanish, and the remaining three
 
-    index/value pairs will be returned.
+  index/value pairs will be returned.
 
 * thresh == 0.21: .1, 0, and -.2 will vanish.
 
 **Args:**
 
 * **`a`**: The first operand; `SparseTensor` or `Tensor`.
-* **`b`**: The second operand; `SparseTensor` or `Tensor`.  At least one operand
+* **`b`**: The second operand; `SparseTensor` or `Tensor`. At least one operand
 
-   must be sparse.
+  must be sparse.
 
-* **`thresh`**: A 0-D `Tensor`.  The magnitude threshold that determines if an
+* **`thresh`**: A 0-D `Tensor`. The magnitude threshold that determines if an
 
-  output value/index pair takes space.  Its dtype should match that of the
+  output value/index pair takes space. Its dtype should match that of the
 
   values if they are real; if the latter are complex64/complex128, then the
 
@@ -823,13 +772,13 @@ Compiled with: -c opt --config=cuda --copt=-mavx
 
 * **`sp_a`**: SparseTensor A, of rank 2.
 * **`b`**: A dense Matrix with the same dtype as sp\_a.
-* **`adjoint_a`**: Use the adjoint of A in the matrix multiply.  If A is complex,
+* **`adjoint_a`**: Use the adjoint of A in the matrix multiply. If A is complex,
 
-   this is transpose\(conj\(A\)\).  Otherwise it's transpose\(A\).
+  this is transpose\(conj\(A\)\). Otherwise it's transpose\(A\).
 
-* **`adjoint_b`**: Use the adjoint of B in the matrix multiply.  If B is complex,
+* **`adjoint_b`**: Use the adjoint of B in the matrix multiply. If B is complex,
 
-   this is transpose\(conj\(B\)\).  Otherwise it's transpose\(B\).
+  this is transpose\(conj\(B\)\). Otherwise it's transpose\(B\).
 
 * **`name`**: A name prefix for the returned tensors \(optional\)
 

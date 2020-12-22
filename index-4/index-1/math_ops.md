@@ -136,11 +136,11 @@ Compute the pairwise cross product.
 
 * **`a`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int32`, `int64`, `uint8`, `int16`, `int8`, `uint16`, `half`.
 
-   A tensor containing 3-element vectors.
+  A tensor containing 3-element vectors.
 
 * **`b`**: A `Tensor`. Must have the same type as `a`.
 
-   Another tensor, of same type and shape as `a`.
+  Another tensor, of same type and shape as `a`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -160,7 +160,7 @@ Add all input tensors element wise.
 
 * **`inputs`**: A list of at least 1 `Tensor` objects of the same type in: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 
-   Must all be the same size and shape.
+  Must all be the same size and shape.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -757,7 +757,7 @@ which has shape (2, 4)
 
 * **`input`**: A `Tensor`.
 
-   Rank `k` tensor where `k >= 2` and the last two dimensions are equal.
+  Rank `k` tensor where `k >= 2` and the last two dimensions are equal.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -809,15 +809,15 @@ Useful special cases:
 * **`input`**: A `Tensor`. Rank `k` tensor.
 * **`num_lower`**: A `Tensor` of type `int64`.
 
-   0-D tensor. Number of subdiagonals to keep. If negative, keep entire
+  0-D tensor. Number of subdiagonals to keep. If negative, keep entire
 
-   lower triangle.
+  lower triangle.
 
 * **`num_upper`**: A `Tensor` of type `int64`.
 
-   0-D tensor. Number of superdiagonals to keep. If negative, keep
+  0-D tensor. Number of superdiagonals to keep. If negative, keep
 
-   entire upper triangle.
+  entire upper triangle.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -849,7 +849,7 @@ tf.diag(diagonal) ==> [[1, 0, 0, 0]
 
 * **`diagonal`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int32`, `int64`, `complex64`.
 
-   Rank k tensor where k is at most 3.
+  Rank k tensor where k is at most 3.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -882,7 +882,7 @@ tf.diag_part(input) ==> [1, 2, 3, 4]
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int32`, `int64`, `complex64`.
 
-   Rank k tensor where k is 2, 4, or 6.
+  Rank k tensor where k is 2, 4, or 6.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1028,19 +1028,19 @@ output[..., :, :] = matrix(x[..., :, :]) * matrix(y[..., :, :])
 
 * **`x`**: A `Tensor`. Must be one of the following types: `half`, `float32`, `float64`, `int32`, `complex64`, `complex128`.
 
-   3-D or higher with shape `[..., r_x, c_x]`.
+  3-D or higher with shape `[..., r_x, c_x]`.
 
 * **`y`**: A `Tensor`. Must have the same type as `x`.
 
-   3-D or higher with shape `[..., r_y, c_y]`.
+  3-D or higher with shape `[..., r_y, c_y]`.
 
 * **`adj_x`**: An optional `bool`. Defaults to `False`.
 
-   If `True`, adjoint the slices of `x`. Defaults to `False`.
+  If `True`, adjoint the slices of `x`. Defaults to `False`.
 
 * **`adj_y`**: An optional `bool`. Defaults to `False`.
 
-   If `True`, adjoint the slices of `y`. Defaults to `False`.
+  If `True`, adjoint the slices of `y`. Defaults to `False`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1056,7 +1056,7 @@ Calculates the determinant of a square matrix.
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float32`, `float64`.
 
-   A tensor of shape `[M, M]`.
+  A tensor of shape `[M, M]`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1074,7 +1074,7 @@ The input is a tensor of shape `[..., M, M]` whose inner-most 2 dimensions form 
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float32`, `float64`.
 
-   Shape is `[..., M, M]`.
+  Shape is `[..., M, M]`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1096,7 +1096,7 @@ If the matrix is not invertible there is no guarantee what the op does. It may d
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float64`, `float32`.
 
-   Shape is `[M, M]`.
+  Shape is `[M, M]`.
 
 * **`adjoint`**: An optional `bool`. Defaults to `False`.
 * **`name`**: A name for the operation \(optional\).
@@ -1121,7 +1121,7 @@ If a matrix is not invertible there is no guarantee what the op does. It may det
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float64`, `float32`.
 
-   Shape is `[..., M, M]`.
+  Shape is `[..., M, M]`.
 
 * **`adjoint`**: An optional `bool`. Defaults to `False`.
 * **`name`**: A name for the operation \(optional\).
@@ -1142,7 +1142,7 @@ The result is the lower-triangular matrix of the Cholesky decomposition of the i
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float64`, `float32`.
 
-   Shape is `[M, M]`.
+  Shape is `[M, M]`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1160,7 +1160,7 @@ The input is a tensor of shape `[..., M, M]` whose inner-most 2 dimensions form 
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float64`, `float32`.
 
-   Shape is `[..., M, M]`.
+  Shape is `[..., M, M]`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1190,19 +1190,19 @@ X[:, 2]  # Solution to the linear system A x = RHS[:, 2]
 
 #### Args:
 
-* **`chol`**: A `Tensor`.  Must be `float32` or `float64`, shape is `[M, M]`.
+* **`chol`**: A `Tensor`. Must be `float32` or `float64`, shape is `[M, M]`.
 
-   Cholesky factorization of `A`, e.g. `chol = tf.cholesky(A)`.  For that
+  Cholesky factorization of `A`, e.g. `chol = tf.cholesky(A)`. For that
 
-   reason, only the lower triangular part \(including the diagonal\) of `chol`
+  reason, only the lower triangular part \(including the diagonal\) of `chol`
 
-   is used.  The strictly upper part is assumed to be zero and not accessed.
+  is used. The strictly upper part is assumed to be zero and not accessed.
 
 * **`rhs`**: A `Tensor`, same type as `chol`, shape is `[M, K]`, designating `K`
 
-   systems of linear equations.
+  systems of linear equations.
 
-* **`name`**: A name to give this `Op`.  Defaults to `cholesky_solve`.
+* **`name`**: A name to give this `Op`. Defaults to `cholesky_solve`.
 
 #### Returns:
 
@@ -1230,15 +1230,15 @@ X[3, :, 2]  # Solution to the linear system A[3, :, :] x = RHS[3, :, 2]
 
 #### Args:
 
-* **`chol`**: A `Tensor`.  Must be `float32` or `float64`, shape is `[..., M, M]`.
+* **`chol`**: A `Tensor`. Must be `float32` or `float64`, shape is `[..., M, M]`.
 
-   Cholesky factorization of `A`, e.g. `chol = tf.batch_cholesky(A)`.
+  Cholesky factorization of `A`, e.g. `chol = tf.batch_cholesky(A)`.
 
-   For that reason, only the lower triangular parts \(including the diagonal\)
+  For that reason, only the lower triangular parts \(including the diagonal\)
 
-   of the last two dimensions of `chol` are used.  The strictly upper part is
+  of the last two dimensions of `chol` are used. The strictly upper part is
 
-   assumed to be zero and not accessed.
+  assumed to be zero and not accessed.
 
 * **`rhs`**: A `Tensor`, same type as `chol`, shape is `[..., M, K]`.
 * **`name`**: A name to give this `Op`.  Defaults to `batch_cholesky_solve`.
@@ -1259,7 +1259,7 @@ The result is a M+1 x M matrix whose first row is the eigenvalues, and subsequen
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float64`, `float32`.
 
-   Shape is `[M, M]`.
+  Shape is `[M, M]`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1279,7 +1279,7 @@ The result is a '\[..., M+1, M\] matrix with \[..., 0,:\] containing the eigenva
 
 * **`input`**: A `Tensor`. Must be one of the following types: `float64`, `float32`.
 
-   Shape is `[..., M, M]`.
+  Shape is `[..., M, M]`.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1295,18 +1295,18 @@ Solves a system of linear equations. Checks for invertibility.
 
 * **`matrix`**: A `Tensor`. Must be one of the following types: `float64`, `float32`.
 
-   Shape is `[M, M]`.
+  Shape is `[M, M]`.
 
 * **`rhs`**: A `Tensor`. Must have the same type as `matrix`. Shape is `[M, K]`.
 * **`adjoint`**: An optional `bool`. Defaults to `False`.
 
-   Boolean indicating whether to solve with `matrix` or its adjoint.
+  Boolean indicating whether to solve with `matrix` or its adjoint.
 
 * **`name`**: A name for the operation \(optional\).
 
 #### Returns:
 
-A `Tensor`. Has the same type as `matrix`. Shape is `[M, K]`. If `adjoint` is `False` then `output` that solves `matrix`  _`output` = `rhs`. If `adjoint` is `True` then `output` that solves `adjoint(matrix)`_  `output` = `rhs`.
+A `Tensor`. Has the same type as `matrix`. Shape is `[M, K]`. If `adjoint` is `False` then `output` that solves `matrix` _`output` = `rhs`. If `adjoint` is `True` then `output` that solves `adjoint(matrix)`_ `output` = `rhs`.
 
 ### `tf.batch_matrix_solve(matrix, rhs, adjoint=None, name=None)` <a id="batch_matrix_solve"></a>
 
@@ -1318,17 +1318,17 @@ Matrix is a tensor of shape `[..., M, M]` whose inner-most 2 dimensions form squ
 
 * **`matrix`**: A `Tensor`. Must be one of the following types: `float64`, `float32`.
 
-   Shape is `[..., M, M]`.
+  Shape is `[..., M, M]`.
 
 * **`rhs`**: A `Tensor`. Must have the same type as `matrix`.
 
-   Shape is `[..., M, K]`.
+  Shape is `[..., M, K]`.
 
 * **`adjoint`**: An optional `bool`. Defaults to `False`.
 
-   Boolean indicating whether to solve with `matrix` or its \(block-wise\)
+  Boolean indicating whether to solve with `matrix` or its \(block-wise\)
 
-   adjoint.
+  adjoint.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1344,22 +1344,22 @@ backsubstitution.
 
 `matrix` is a matrix of shape `[M, M]`. If `lower` is `True` then the strictly upper triangular part of `matrix` is assumed to be zero and not accessed. If `lower` is False then the strictly lower triangular part of `matrix` is assumed to be zero and not accessed. `rhs` is a matrix of shape \[M, K\]\`.
 
-The output is a matrix of shape `[M, K]`. If `adjoint` is `False` the output satisfies the matrix equation `matrix`  _`output` = `rhs`. If `adjoint` is `False` then `output` satisfies the matrix equation `matrix`_  `output` = `rhs`. If `adjoint` is `True` then `output` satisfies the matrix equation `adjoint(matrix)` \* `output` = `rhs`.
+The output is a matrix of shape `[M, K]`. If `adjoint` is `False` the output satisfies the matrix equation `matrix` _`output` = `rhs`. If `adjoint` is `False` then `output` satisfies the matrix equation `matrix`_ `output` = `rhs`. If `adjoint` is `True` then `output` satisfies the matrix equation `adjoint(matrix)` \* `output` = `rhs`.
 
 #### Args:
 
 * **`matrix`**: A `Tensor`. Must be one of the following types: `float64`, `float32`.
 
-   Shape is `[M, M]`.
+  Shape is `[M, M]`.
 
 * **`rhs`**: A `Tensor`. Must have the same type as `matrix`. Shape is `[M, K]`.
 * **`lower`**: An optional `bool`. Defaults to `True`.
 
-   Boolean indicating whether `matrix` is lower or upper triangular
+  Boolean indicating whether `matrix` is lower or upper triangular
 
 * **`adjoint`**: An optional `bool`. Defaults to `False`.
 
-   Boolean indicating whether to solve with `matrix` or its adjoint.
+  Boolean indicating whether to solve with `matrix` or its adjoint.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1375,29 +1375,29 @@ backsubstitution.
 
 `matrix` is a tensor of shape `[..., M, M]` whose inner-most 2 dimensions form square matrices. If `lower` is `True` then the strictly upper triangular part of each inner-most matrix is assumed to be zero and not accessed. If `lower` is False then the strictly lower triangular part of each inner-most matrix is assumed to be zero and not accessed. `rhs` is a tensor of shape \[..., M, K\]\`.
 
-The output is a tensor of shape `[..., M, K]`. If `adjoint` is `True` then the innermost matrices in output`satisfy matrix equations`matrix\[..., :, :\]  _output\[..., :, :\] = rhs\[..., :, :\]`. If`adjoint`is`False`then the strictly then the innermost matrices in`output`satisfy matrix equations`adjoint\(matrix\[..., i, k\]\)_  output\[..., k, j\] = rhs\[..., i, j\]\`.
+The output is a tensor of shape `[..., M, K]`. If `adjoint` is `True` then the innermost matrices in output`satisfy matrix equations`matrix\[..., :, :\] _output\[..., :, :\] = rhs\[..., :, :\]`. If`adjoint`is`False`then the strictly then the innermost matrices in`output`satisfy matrix equations`adjoint\(matrix\[..., i, k\]\)_ output\[..., k, j\] = rhs\[..., i, j\]\`.
 
 #### Args:
 
 * **`matrix`**: A `Tensor`. Must be one of the following types: `float64`, `float32`.
 
-   Shape is `[..., M, M]`.
+  Shape is `[..., M, M]`.
 
 * **`rhs`**: A `Tensor`. Must have the same type as `matrix`.
 
-   Shape is `[..., M, K]`.
+  Shape is `[..., M, K]`.
 
 * **`lower`**: An optional `bool`. Defaults to `True`.
 
-   Boolean indicating whether the innermost matrices in `matrix` are
+  Boolean indicating whether the innermost matrices in `matrix` are
 
-   lower or upper triangular.
+  lower or upper triangular.
 
 * **`adjoint`**: An optional `bool`. Defaults to `False`.
 
-   Boolean indicating whether to solve with `matrix` or its \(block-wise\)
+  Boolean indicating whether to solve with `matrix` or its \(block-wise\)
 
-   adjoint.
+  adjoint.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -1427,7 +1427,7 @@ If `fast` is `False` then the solution is computed using the rank revealing QR d
 
 * **`output`**: Matrix of shape `[N, K]` containing the matrix that solves
 
-   `matrix * output = rhs` in the least-squares sense.
+  `matrix * output = rhs` in the least-squares sense.
 
 ### `tf.batch_matrix_solve_ls(matrix, rhs, l2_regularizer=0.0, fast=True, name=None)` <a id="batch_matrix_solve_ls"></a>
 
@@ -1455,11 +1455,11 @@ If `fast` is `False` an algorithm based on the numerically robust complete ortho
 
 * **`output`**: `Tensor` of shape `[..., N, K]` whose inner-most 2 dimensions form
 
-   `M`-by-`K` matrices that solve the equations
+  `M`-by-`K` matrices that solve the equations
 
-   `matrix[..., :, :] * output[..., :, :] = rhs[..., :, :]` in the least
+  `matrix[..., :, :] * output[..., :, :] = rhs[..., :, :]` in the least
 
-   squares sense.
+  squares sense.
 
 ## Complex Number Functions
 
@@ -1783,7 +1783,7 @@ tf.reduce_sum(x, [0, 1]) ==> 6
 * **`input_tensor`**: The tensor to reduce. Should have numeric type.
 * **`reduction_indices`**: The dimensions to reduce. If `None` \(the default\),
 
-   reduces all dimensions.
+  reduces all dimensions.
 
 * **`keep_dims`**: If true, retains reduced dimensions with length 1.
 * **`name`**: A name for the operation \(optional\).
@@ -1805,7 +1805,7 @@ If `reduction_indices` has no entries, all dimensions are reduced, and a tensor 
 * **`input_tensor`**: The tensor to reduce. Should have numeric type.
 * **`reduction_indices`**: The dimensions to reduce. If `None` \(the default\),
 
-   reduces all dimensions.
+  reduces all dimensions.
 
 * **`keep_dims`**: If true, retains reduced dimensions with length 1.
 * **`name`**: A name for the operation \(optional\).
@@ -1827,7 +1827,7 @@ If `reduction_indices` has no entries, all dimensions are reduced, and a tensor 
 * **`input_tensor`**: The tensor to reduce. Should have numeric type.
 * **`reduction_indices`**: The dimensions to reduce. If `None` \(the default\),
 
-   reduces all dimensions.
+  reduces all dimensions.
 
 * **`keep_dims`**: If true, retains reduced dimensions with length 1.
 * **`name`**: A name for the operation \(optional\).
@@ -1849,7 +1849,7 @@ If `reduction_indices` has no entries, all dimensions are reduced, and a tensor 
 * **`input_tensor`**: The tensor to reduce. Should have numeric type.
 * **`reduction_indices`**: The dimensions to reduce. If `None` \(the default\),
 
-   reduces all dimensions.
+  reduces all dimensions.
 
 * **`keep_dims`**: If true, retains reduced dimensions with length 1.
 * **`name`**: A name for the operation \(optional\).
@@ -1881,7 +1881,7 @@ tf.reduce_mean(x, 1) ==> [1.,  2.]
 * **`input_tensor`**: The tensor to reduce. Should have numeric type.
 * **`reduction_indices`**: The dimensions to reduce. If `None` \(the default\),
 
-   reduces all dimensions.
+  reduces all dimensions.
 
 * **`keep_dims`**: If true, retains reduced dimensions with length 1.
 * **`name`**: A name for the operation \(optional\).
@@ -1913,7 +1913,7 @@ tf.reduce_all(x, 1) ==> [True, False]
 * **`input_tensor`**: The boolean tensor to reduce.
 * **`reduction_indices`**: The dimensions to reduce. If `None` \(the default\),
 
-   reduces all dimensions.
+  reduces all dimensions.
 
 * **`keep_dims`**: If true, retains reduced dimensions with length 1.
 * **`name`**: A name for the operation \(optional\).
@@ -1945,7 +1945,7 @@ tf.reduce_any(x, 1) ==> [True, False]
 * **`input_tensor`**: The boolean tensor to reduce.
 * **`reduction_indices`**: The dimensions to reduce. If `None` \(the default\),
 
-   reduces all dimensions.
+  reduces all dimensions.
 
 * **`keep_dims`**: If true, retains reduced dimensions with length 1.
 * **`name`**: A name for the operation \(optional\).
@@ -2017,9 +2017,9 @@ Computes a tensor such that \\(output\_i = \sum\_j data\_j\\) where sum is over 
 * **`data`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 * **`segment_ids`**: A `Tensor`. Must be one of the following types: `int32`, `int64`.
 
-   A 1-D tensor whose rank is equal to the rank of `data`'s
+  A 1-D tensor whose rank is equal to the rank of `data`'s
 
-   first dimension.  Values should be sorted and can be repeated.
+  first dimension. Values should be sorted and can be repeated.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2042,9 +2042,9 @@ Computes a tensor such that \\(output\_i = \prod\_j data\_j\\) where the product
 * **`data`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 * **`segment_ids`**: A `Tensor`. Must be one of the following types: `int32`, `int64`.
 
-   A 1-D tensor whose rank is equal to the rank of `data`'s
+  A 1-D tensor whose rank is equal to the rank of `data`'s
 
-   first dimension.  Values should be sorted and can be repeated.
+  first dimension. Values should be sorted and can be repeated.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2067,9 +2067,9 @@ Computes a tensor such that \\(output\_i = \min\_j\(data\_j\)\\) where `min` is 
 * **`data`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int32`, `int64`, `uint8`, `int16`, `int8`, `uint16`, `half`.
 * **`segment_ids`**: A `Tensor`. Must be one of the following types: `int32`, `int64`.
 
-   A 1-D tensor whose rank is equal to the rank of `data`'s
+  A 1-D tensor whose rank is equal to the rank of `data`'s
 
-   first dimension.  Values should be sorted and can be repeated.
+  first dimension. Values should be sorted and can be repeated.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2092,9 +2092,9 @@ Computes a tensor such that \\(output\_i = \max\_j\(data\_j\)\\) where `max` is 
 * **`data`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int32`, `int64`, `uint8`, `int16`, `int8`, `uint16`, `half`.
 * **`segment_ids`**: A `Tensor`. Must be one of the following types: `int32`, `int64`.
 
-   A 1-D tensor whose rank is equal to the rank of `data`'s
+  A 1-D tensor whose rank is equal to the rank of `data`'s
 
-   first dimension.  Values should be sorted and can be repeated.
+  first dimension. Values should be sorted and can be repeated.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2117,9 +2117,9 @@ Computes a tensor such that \\(output\_i = \frac{\sum\_j data\_j}{N}\\) where `m
 * **`data`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int32`, `int64`, `uint8`, `int16`, `int8`, `uint16`, `half`.
 * **`segment_ids`**: A `Tensor`. Must be one of the following types: `int32`, `int64`.
 
-   A 1-D tensor whose rank is equal to the rank of `data`'s
+  A 1-D tensor whose rank is equal to the rank of `data`'s
 
-   first dimension.  Values should be sorted and can be repeated.
+  first dimension. Values should be sorted and can be repeated.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2146,9 +2146,9 @@ If the sum is empty for a given segment ID `i`, `output[i] = 0`.
 * **`data`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 * **`segment_ids`**: A `Tensor`. Must be one of the following types: `int32`, `int64`.
 
-   A 1-D tensor whose rank is equal to the rank of `data`'s
+  A 1-D tensor whose rank is equal to the rank of `data`'s
 
-   first dimension.
+  first dimension.
 
 * **`num_segments`**: A `Tensor` of type `int32`.
 * **`name`**: A name for the operation \(optional\).
@@ -2193,11 +2193,11 @@ tf.segment_sum(c, tf.constant([0, 0, 1]))
 * **`data`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int32`, `int64`, `uint8`, `int16`, `int8`, `uint16`, `half`.
 * **`indices`**: A `Tensor` of type `int32`.
 
-   A 1-D tensor. Has same rank as `segment_ids`.
+  A 1-D tensor. Has same rank as `segment_ids`.
 
 * **`segment_ids`**: A `Tensor` of type `int32`.
 
-   A 1-D tensor. Values should be sorted and can be repeated.
+  A 1-D tensor. Values should be sorted and can be repeated.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2218,11 +2218,11 @@ Like `SegmentMean`, but `segment_ids` can have rank less than `data`'s first dim
 * **`data`**: A `Tensor`. Must be one of the following types: `float32`, `float64`.
 * **`indices`**: A `Tensor` of type `int32`.
 
-   A 1-D tensor. Has same rank as `segment_ids`.
+  A 1-D tensor. Has same rank as `segment_ids`.
 
 * **`segment_ids`**: A `Tensor` of type `int32`.
 
-   A 1-D tensor. Values should be sorted and can be repeated.
+  A 1-D tensor. Values should be sorted and can be repeated.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2243,11 +2243,11 @@ Read [the section on Segmentation](math_ops.md#segmentation) for an explanation 
 * **`data`**: A `Tensor`. Must be one of the following types: `float32`, `float64`.
 * **`indices`**: A `Tensor` of type `int32`.
 
-   A 1-D tensor. Has same rank as `segment_ids`.
+  A 1-D tensor. Has same rank as `segment_ids`.
 
 * **`segment_ids`**: A `Tensor` of type `int32`.
 
-   A 1-D tensor. Values should be sorted and can be repeated.
+  A 1-D tensor. Values should be sorted and can be repeated.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2268,9 +2268,9 @@ Returns the index with the smallest value across dimensions of a tensor.
 * **`input`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 * **`dimension`**: A `Tensor` of type `int32`.
 
-   int32, 0 &lt;= dimension &lt; rank\(input\).  Describes which dimension
+  int32, 0 &lt;= dimension &lt; rank\(input\). Describes which dimension
 
-   of the input Tensor to reduce across. For vectors, use dimension = 0.
+  of the input Tensor to reduce across. For vectors, use dimension = 0.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2287,9 +2287,9 @@ Returns the index with the largest value across dimensions of a tensor.
 * **`input`**: A `Tensor`. Must be one of the following types: `float32`, `float64`, `int64`, `int32`, `uint8`, `uint16`, `int16`, `int8`, `complex64`, `complex128`, `qint8`, `quint8`, `qint32`, `half`.
 * **`dimension`**: A `Tensor` of type `int32`.
 
-   int32, 0 &lt;= dimension &lt; rank\(input\).  Describes which dimension
+  int32, 0 &lt;= dimension &lt; rank\(input\). Describes which dimension
 
-   of the input Tensor to reduce across. For vectors, use dimension = 0.
+  of the input Tensor to reduce across. For vectors, use dimension = 0.
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2450,7 +2450,7 @@ output ==> [[inf, 1.0],  # (0,0): no truth, (0,1): no hypothesis
 * **`truth`**: A `SparseTensor` containing truth sequences.
 * **`normalize`**: A `bool`. If `True`, normalizes the Levenshtein distance by
 
-   length of `truth.`
+  length of `truth.`
 
 * **`name`**: A name for the operation \(optional\).
 
@@ -2519,19 +2519,19 @@ Returns tensor "output" with same shape as grad, except for dimension 0 whose va
 
 * **`grad`**: A `Tensor`. Must be one of the following types: `float32`, `float64`.
 
-   gradient propagated to the SparseSegmentSqrtN op.
+  gradient propagated to the SparseSegmentSqrtN op.
 
 * **`indices`**: A `Tensor` of type `int32`.
 
-   indices passed to the corresponding SparseSegmentSqrtN op.
+  indices passed to the corresponding SparseSegmentSqrtN op.
 
 * **`segment_ids`**: A `Tensor` of type `int32`.
 
-   segment\_ids passed to the corresponding SparseSegmentSqrtN op.
+  segment\_ids passed to the corresponding SparseSegmentSqrtN op.
 
 * **`output_dim0`**: A `Tensor` of type `int32`.
 
-   dimension 0 of "data" passed to SparseSegmentSqrtN op.
+  dimension 0 of "data" passed to SparseSegmentSqrtN op.
 
 * **`name`**: A name for the operation \(optional\).
 

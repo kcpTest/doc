@@ -150,7 +150,7 @@ CONTINUOUS_COLUMNS = ["age", "education_num", "capital_gain", "capital_loss", "h
 
 TF.Learn 모델을 구축 할 때, 입력 데이터는 Input Builder 함수에 의해서 명시된다. 이 builder 함수는 TF.Learn에 `fit` 이나 `evaluate` 와 같은 메소드들에게 넘겨 질때 까지 호출되지 않는다. 이 함수의 목적은 입력 데이터를 [Tensors](https://www.tensorflow.org/versions/r0.9/api_docs/python/framework.html#Tensor) 나 [SparseTensors](https://www.tensorflow.org/versions/r0.9/api_docs/python/sparse_ops.html#SparseTensor) 형태로 구성하기 위함에 있다. 더 구체적으로, Input Builder 함수는 다음과 같은 한 쌍을 반환한다:
 
-1. `feature_cols`:  A dict from feature column names to `Tensors` or
+1. `feature_cols`: A dict from feature column names to `Tensors` or
 
    `SparseTensors`.
 

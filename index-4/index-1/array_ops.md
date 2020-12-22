@@ -697,7 +697,7 @@ reverse(t, dims) ==> [[[[8, 9, 10, 11],
 
 * **`tensor`**: `Tensor`. 자료형이 `uint8`, `int8`, `int32`, `bool`, `half`, `float32`, `float64` 중 하나여야 합니다.
 
-   Up to 8-D.
+  Up to 8-D.
 
 * **`dims`**: `bool`형 1-D `Tensor`. 반전시킬 차원을 나타냅니다.
 * **`name`**: 오퍼레이션의 명칭. \(선택사항\)
@@ -772,7 +772,7 @@ tf.transpose(x, perm=[0, 2, 1]) ==> [[[1  4]
 * **`strides`**: `int`들의 리스트. 기본값은 `[]`. 길이 4의 1-D 텐서. 이미지에서 추출할 두 `patch` 사이의 중심 거리를 지정합니다. `[1, stride_rows, stride_cols, 1]`와 같은 형태여야 합니다. \(선택사항\)
 * **`rates`**: `int`들의 리스트. 기본값은 `[]`. 길이 4의 1-D 텐서. 입력의 스트라이드로, 입력에서 두 연속된 `patch` 샘플들이 얼마나 멀리 떨어져 있어야 할 지 지정합니다. `[1, rate_rows, rate_cols, 1]`와 같은 형태여야 합니다. \(선택사항\)
 
-   `patch`를 추출할 때 `patch_sizes_eff = patch_sizes + (patch_sizes - 1) * (rates - 1)`으로 놓고 공간적으로 `rates`의 인자로 부차추출\(subsampling\)하는 것과 동일합니다.
+  `patch`를 추출할 때 `patch_sizes_eff = patch_sizes + (patch_sizes - 1) * (rates - 1)`으로 놓고 공간적으로 `rates`의 인자로 부차추출\(subsampling\)하는 것과 동일합니다.
 
 * **`name`**: 오퍼레이션의 명칭. \(선택사항\)
 
