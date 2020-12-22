@@ -29,7 +29,7 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
 * 통신방식은 샘플소스 기준으로 bin\pp\_cli \(실행파일\)를 통해 가맹점 서버와 소켓통신 합니다.\( JSP의 경우 lib\jPpcliE.jar 파일 \)
 * 방화벽은 KCP와 결제 통신을 위해 TCP SOCKET을 사용합니다.
 * 결과 요청 및 처리에 관한 변수처리는 기관의 정책이나 신규 서비스 출시 등에 따라 변경이 될 수 있으니 연동매뉴얼을 업데이트하여 관리하시기 바랍니다.
-** NHN KCP 결제 모듈에는 데이터베이스 연동 작업을 위한 기능은 포함되어있지 않습니다.**
+* ** NHN KCP 결제 모듈에는 데이터베이스 연동 작업을 위한 기능은 포함되어있지 않습니다.**
 \(데이터베이스 연동을 위한 지불 결과 데이터만 제공하며 데이터베이스 처리에 관한 부분은 일체 가맹점에서 관리\)
 * 결과 요청 및 처리에 관한 변수처리는 기관의 정책이나 신규 서비스 출시 등에 따라 변경이 될 수 있으니 연동매뉴얼을 업데이트하여 관리하시기 바랍니다.
 * 설치 Directory 는 절대 Web으로 접근할 수 있는 경로에 설치하지 마십시오.
@@ -46,13 +46,13 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
   <thead>
     <tr>
       <th style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; PORT</th>
-      <th style="text-align:left"><b>8090</b>
-      </th>
+      <td style="text-align:left"><b>8090</b>
+      </td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; &#xB3C4;&#xBA54;&#xC778;</td>
+      <th style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; &#xB3C4;&#xBA54;&#xC778;</th>
       <td style="text-align:left">
         <p>paygw.kcp.co.kr (&#xC2E4; &#xACB0;&#xC81C;)</p>
         <p>testpaygw.kcp.co.kr (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</p>
