@@ -39,6 +39,12 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
 
 **※특히 사이트 키 값, 결제거래번호, 환경설정파일의 경우 가맹점과 NHN KCP간의 보안을 유지하는 값이므로 Web 상에서 확인될 수 없도록 관리 바랍니다.**
 
+### 2.결제 창 호출 가능한 운영체제 및 브라우저 안내
+①	PC버전 OS : 표준WEB(Windows & Mac), Plugin(Windows only)
+②	PC버전 Browser : IE(Ver. 6 ~), Firefox (Ver. 5.0 ~), Chrome (Ver. 16.0 ~), Safari(Ver. 5.0 ~), Opera (Ver. 10~)
+③	모바일버전 OS : Android, IOS
+④	모바일버전 Browser : 스마트폰 기본브라우저
+
 
 **※ 방화벽 설정 정보**
 
