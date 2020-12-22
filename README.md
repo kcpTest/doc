@@ -52,44 +52,6 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
 
 **※ 방화벽 설정 정보**
 
-**\[PC, Mobile 공통\]**
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; PORT</th>
-      <td style="text-align:left"><b>8090</b>
-      </td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; &#xB3C4;&#xBA54;&#xC778;</th>
-      <td style="text-align:left">
-        <p>paygw.kcp.co.kr (&#xC2E4; &#xACB0;&#xC81C;)</p>
-        <p>testpaygw.kcp.co.kr (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-**\[Mobile 전용\]**
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>&#xC5F0;&#xACB0;&#xB300;&#xC0C1; PORT/&#xB3C4;&#xBA54;</b>
-      </th>
-      <td style="text-align:left">
-        <p>smpay.kcp.co.kr 443/80 (&#xC2E4; &#xACB0;&#xC81C;)
-        </p>
-        <p>testsmpay.kcp.co.kr 443  (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)
-        </p>
-      </td>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
 
 * NHN KCP 결제는 TCP Socket 통신으로 이루어지며, 추가로 모바일버전의 경우 결제 창 호출 전 SOAP 통신을 통해 주요 주문데이터 검증을 위해 거래등록을 진행합니다. 아래 도메인, PORT 에 대해 방화벽 허가를 해주셔야 합니다.
 
