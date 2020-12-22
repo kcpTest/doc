@@ -58,13 +58,13 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
   <thead>
     <tr>
       <th style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; PORT</th>
-      <th style="text-align:left"><b>8090</b>
-      </th>
+      <td style="text-align:left"><b>8090</b>
+      </td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; &#xB3C4;&#xBA54;&#xC778;</td>
+      <th style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; &#xB3C4;&#xBA54;&#xC778;</th>
       <td style="text-align:left">
         <p>paygw.kcp.co.kr (&#xC2E4; &#xACB0;&#xC81C;)</p>
         <p>testpaygw.kcp.co.kr (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</p>
@@ -80,12 +80,12 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
     <tr>
       <th style="text-align:left"><b>&#xC5F0;&#xACB0;&#xB300;&#xC0C1; PORT/&#xB3C4;&#xBA54;</b>
       </th>
-      <th style="text-align:left">
-        <p><b>smpay.kcp.co.kr 443/80 (&#xC2E4; &#xACB0;&#xC81C;)</b>
+      <td style="text-align:left">
+        <p>smpay.kcp.co.kr 443/80 (&#xC2E4; &#xACB0;&#xC81C;)
         </p>
-        <p><b>testsmpay.kcp.co.kr 443  (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</b>
+        <p>testsmpay.kcp.co.kr 443  (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)
         </p>
-      </th>
+      </td>
     </tr>
   </thead>
   <tbody></tbody>
