@@ -144,9 +144,22 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
 ** ※가맹점에서 관리하는 소중한 고객 정보 등이 웹에 노출 될 우려가 있습니다. **
 
 ### 5.환경설정
-가맹점에 부여된 가맹점코드(site_cd)와 암호화 관련 필드(site_key), 가맹점 서버 경로 등을 설정하는 페이지입니다.
+가맹점에 부여된 가맹점코드(site_cd)와 암호화 관련 필드(site_key), 가맹점 서버 경로 등을 설정하는 페이지입니다.   
 환경설정 파일 경로는 샘플 소스 기준으로 {HOME 디렉터리}/PAYMENT_STANDARD/cfg/site_conf_inc 페이지에 해당하며 REAL 정보와 TEST 정보를 구분하여 반영해 주시기 바랍니다.
 
+**\[Mobile 전용\]**
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b>Parameter</b>
+      </th>
+      <th style="text-align:left"><b>Type</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
 
 
 
