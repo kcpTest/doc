@@ -32,7 +32,7 @@ TensorFlow 문서는 tensor 차원을 표현할 때 세 가지 기호를 사용�
 | 3 | \[D0, D1, D2\] | 3-D | A 3-D tensor with shape \[1, 4, 3\]. |
 | n | \[D0, D1, ... Dn-1\] | n-D | A tensor with shape \[D0, D1, ... Dn-1\]. |
 
-Shape는 Python 리스트 / 정수형 튜플 또는 [`TensorShape` class](../index-4/index-1/framework.md#TensorShape)로 표현 할 수 있다.
+Shape는 Python 리스트 / 정수형 튜플 또는 [`TensorShape` class]()로 표현 할 수 있다.
 
 ## Data types
 

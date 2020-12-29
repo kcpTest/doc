@@ -14,11 +14,11 @@
 
 **Feed**
 
-세션에서 시작된 그래프에 있는 노드로 직접 텐서를 패치하는 TensorFlow의 메커니즘입니다. 그래프를 생성하는 때가 아닌 그래프의 실행을 트리거링할 때 피드를 적용합니다. 피드는 임시로 노드를 텐서값으로 바꿉니다. 계산을 시작하는 `run()` 또는 `eval()` 호출에 피드 데이터를 인자로써 공급합니다. 실행 후에는 피드가 사라지며 원래 노드의 정의가 남습니다. 일반적으로 그것들을 생성하기위해 `tf.placeholder()`를 사용하여 "feed" 노드가 될 특정한 노드들을 지정합니다. 좀 더 자세한 내용은 [Basic Usage](../index-1/basic_usage.md)를 보십시오.
+세션에서 시작된 그래프에 있는 노드로 직접 텐서를 패치하는 TensorFlow의 메커니즘입니다. 그래프를 생성하는 때가 아닌 그래프의 실행을 트리거링할 때 피드를 적용합니다. 피드는 임시로 노드를 텐서값으로 바꿉니다. 계산을 시작하는 `run()` 또는 `eval()` 호출에 피드 데이터를 인자로써 공급합니다. 실행 후에는 피드가 사라지며 원래 노드의 정의가 남습니다. 일반적으로 그것들을 생성하기위해 `tf.placeholder()`를 사용하여 "feed" 노드가 될 특정한 노드들을 지정합니다. 좀 더 자세한 내용은 [Basic Usage]()를 보십시오.
 
 **Fetch**
 
-세션에서 시작된 그래프에서 텐서를 검색하기위한 TensorFlow의 메커니즘입니다. 그래프를 생성하는 때가 아닌 그래프의 실행을 트리거링할 때 페치를 검색합니다. 노드 또는 노드들의 텐서값을 가져오기위해 `Session` 객체에서 `run()`을 호출하여 그래프를 실행시키고 검색할 노드명 리스트를 전달합니다. 좀 더 자세한 내용은 [Basic Usage](../index-1/basic_usage.md)를 보십시오.
+세션에서 시작된 그래프에서 텐서를 검색하기위한 TensorFlow의 메커니즘입니다. 그래프를 생성하는 때가 아닌 그래프의 실행을 트리거링할 때 페치를 검색합니다. 노드 또는 노드들의 텐서값을 가져오기위해 `Session` 객체에서 `run()`을 호출하여 그래프를 실행시키고 검색할 노드명 리스트를 전달합니다. 좀 더 자세한 내용은 [Basic Usage]()를 보십시오.
 
 **Graph**
 
@@ -36,25 +36,25 @@
 
 **Op \(operation\)**
 
-TensorFlow 런타임에서: `add`나 `matmul` 또는 `concat`과 같은 연산의 타입입니다. [how to add an op](../index-3/index-7.md)에 설명된대로 런타임에 새로운 연산을 추가할 수 있습니다.
+TensorFlow 런타임에서: `add`나 `matmul` 또는 `concat`과 같은 연산의 타입입니다. [how to add an op]()에 설명된대로 런타임에 새로운 연산을 추가할 수 있습니다.
 
-파이썬 API에서: 그래프의 노드입니다. 연산은 [`tf.Operation`](../index-4/index-1/framework.md#Operation) 클래스의 인스턴스로 나타냅니다. `Operation`의 `type` 프로퍼티는 `add`나 `matmul`과 같은 노드에 대한 실행 연산을 나타냅니다.
+파이썬 API에서: 그래프의 노드입니다. 연산은 [`tf.Operation`]() 클래스의 인스턴스로 나타냅니다. `Operation`의 `type` 프로퍼티는 `add`나 `matmul`과 같은 노드에 대한 실행 연산을 나타냅니다.
 
 **Run**
 
 시작된 그래프에서 연산 실행의 액션입니다. 그래프가 `Session`에서 시작되어야 합니다.
 
-파이썬 API에서: `Session` 클래스 [`tf.Session.run`](../index-4/index-1/client.md#Session)의 메서드입니다. 피드와 페치를 하기 위한 텐서를 `run()` 호출에 전달할 수 있습니다.
+파이썬 API에서: `Session` 클래스 [`tf.Session.run`]()의 메서드입니다. 피드와 페치를 하기 위한 텐서를 `run()` 호출에 전달할 수 있습니다.
 
-C++ API에서: [`tensorflow::Session`](../index-4/index-2/classsession.md)의 메서드입니다.
+C++ API에서: [`tensorflow::Session`]()의 메서드입니다.
 
 **Session**
 
 시작된 그래프를 나타내는 런타임 객체입니다. 그래프에서 연산을 실행하기 위한 메서드들을 제공합니다.
 
-파이썬 API에서: [`tf.Session`](../index-4/index-1/client.md#Session)
+파이썬 API에서: [`tf.Session`]()
 
-C++ API에서: 그래프를 시작하고 연산을 실행할 때 사용되는 클래스 [`tensorflow::Session`](../index-4/index-2/classsession.md)
+C++ API에서: 그래프를 시작하고 연산을 실행할 때 사용되는 클래스 [`tensorflow::Session`]()
 
 **Shape**
 
@@ -62,9 +62,9 @@ C++ API에서: 그래프를 시작하고 연산을 실행할 때 사용되는 �
 
 시작된 그래프에서: 노드 사이를 흐르는 텐서의 프로퍼티. 몇몇 연산은 그들의 입력의 구조\(shape\)에 대한 엄격한 요구조건을 가지고 있으며, 안맞을시 런타임에서 에러를 리포팅합니다.
 
-파이썬 API에서: 그래프 생성 API에 있는 파이썬 `Tensor`의 속성. 생성 도중 텐서의 구조\(shape\)는 부분적으로만 알 수 있거나 아예 모를수도 있습니다. [`tf.TensorShape`](../index-4/index-1/framework.md#TensorShape)를 보십시오.
+파이썬 API에서: 그래프 생성 API에 있는 파이썬 `Tensor`의 속성. 생성 도중 텐서의 구조\(shape\)는 부분적으로만 알 수 있거나 아예 모를수도 있습니다. [`tf.TensorShape`]()를 보십시오.
 
-C++ API에서: 텐서의 구조\(shape\)을 나타내는데 사용되는 클래스 [`tensorflow::TensorShape`](../index-4/index-2/classtensorshape.md)
+C++ API에서: 텐서의 구조\(shape\)을 나타내는데 사용되는 클래스 [`tensorflow::TensorShape`]()
 
 **SparseTensor**
 
@@ -76,7 +76,7 @@ C++ API에서: 텐서의 구조\(shape\)을 나타내는데 사용되는 클래�
 
 시작된 그래프에서: 노드 사이를 흐르는 데이터의 타입.
 
-파이썬 API에서: 그래프에 추가된 연산의 출력과 입력을 나타내는데 사용되는 클래스[`tf.Tensor`](../index-4/index-1/framework.md#Tensor). 이 클래스의 인스턴스는 데이터를 저장하지 않습니다.
+파이썬 API에서: 그래프에 추가된 연산의 출력과 입력을 나타내는데 사용되는 클래스[`tf.Tensor`](). 이 클래스의 인스턴스는 데이터를 저장하지 않습니다.
 
-C++ API에서: [`tensorflow::Tensor`](../index-4/index-2/classtensor.md)를 호출하는 [`Session::Run()`](../index-4/index-2/classsession.md)에서 반환되는 텐서를 나타내는데 사용되는 클래스. 이 클래스의 인스턴스는 데이터를 가지고 있습니다.
+C++ API에서: [`tensorflow::Tensor`]()를 호출하는 [`Session::Run()`]()에서 반환되는 텐서를 나타내는데 사용되는 클래스. 이 클래스의 인스턴스는 데이터를 가지고 있습니다.
 

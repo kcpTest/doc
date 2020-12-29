@@ -29,7 +29,7 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
 * 통신방식은 샘플소스 기준으로 bin\pp\_cli \(실행파일\)를 통해 가맹점 서버와 소켓통신 합니다.\( JSP의 경우 lib\jPpcliE.jar 파일 \)
 * 방화벽은 KCP와 결제 통신을 위해 TCP SOCKET을 사용합니다.
 * 결과 요청 및 처리에 관한 변수처리는 기관의 정책이나 신규 서비스 출시 등에 따라 변경이 될 수 있으니 연동매뉴얼을 업데이트하여 관리하시기 바랍니다.
-*  **NHN KCP 결제 모듈에는 데이터베이스 연동 작업을 위한 기능은 포함되어있지 않습니다.**
+* **NHN KCP 결제 모듈에는 데이터베이스 연동 작업을 위한 기능은 포함되어있지 않습니다.**
 
   \(데이터베이스 연동을 위한 지불 결과 데이터만 제공하며 데이터베이스 처리에 관한 부분은 일체 가맹점에서 관리\)
 
@@ -58,13 +58,13 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
   <thead>
     <tr>
       <th style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; PORT</th>
-      <td style="text-align:left"><b>8090</b>
-      </td>
+      <th style="text-align:left"><b>8090</b>
+      </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; &#xB3C4;&#xBA54;&#xC778;</th>
+      <td style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; &#xB3C4;&#xBA54;&#xC778;</td>
       <td style="text-align:left">
         <p>paygw.kcp.co.kr (&#xC2E4; &#xACB0;&#xC81C;)</p>
         <p>testpaygw.kcp.co.kr (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</p>
@@ -80,20 +80,16 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
     <tr>
       <th style="text-align:left"><b>&#xC5F0;&#xACB0;&#xB300;&#xC0C1; PORT/&#xB3C4;&#xBA54;</b>
       </th>
-      <td style="text-align:left">
-        <p>smpay.kcp.co.kr 443/80 (&#xC2E4; &#xACB0;&#xC81C;)
-        </p>
-        <p>testsmpay.kcp.co.kr 443  (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)
-        </p>
-      </td>
+      <th style="text-align:left">
+        <p>smpay.kcp.co.kr 443/80 (&#xC2E4; &#xACB0;&#xC81C;)</p>
+        <p>testsmpay.kcp.co.kr 443 (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</p>
+      </th>
     </tr>
   </thead>
   <tbody></tbody>
 </table>
 
 * NHN KCP 결제는 TCP Socket 통신으로 이루어지며, 추가로 모바일버전의 경우 결제 창 호출 전 SOAP 통신을 통해 주요 주문데이터 검증을 위해 거래등록을 진행합니다. 아래 도메인, PORT 에 대해 방화벽 허가를 해주셔야 합니다.
-
-
 
 ### 3.API 규격 안내 및 특수문자
 
@@ -121,45 +117,20 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
 
 ### 4.보안지침서
 
-하기 사항을 지키지 않아 발생하는 보안관련 사고에 대해서는 NHN KCP에서 책임을 질 수 없는 부분이오니 반드시 결제모듈 연동 시 철저하게 관리 부탁 드립니다.   
+하기 사항을 지키지 않아 발생하는 보안관련 사고에 대해서는 NHN KCP에서 책임을 질 수 없는 부분이오니 반드시 결제모듈 연동 시 철저하게 관리 부탁 드립니다.
 
-* **금액 검증을 위한 절차 \(필수사항\)**   
-**※ 추후에 발생할 수 있는 결제금액 위 변조 위험에 대비해 해당 기능을 반드시 체크해 주시기 바랍니다.**   
-①	주문페이지(order)에서 전달하는 good_mny 값과 별개로 pp_cli_hub 페이지에서 실제 결제될 금액 ordr_mony 값 처리   
-②	결제완료 후 전달되는 금액(amount)과 DB의 금액을 비교하여 다를 경우 자동 취소하는 bSucc 구문 처리로 자동취소 로직 구현   
-
-* **site_key 관리 강화 **   
-①	주문페이지(order)에는 site_cd 만 전달하고, site_key 값은 서버사이드 구간 (pp_cli_hub)에서 사용사이트키를 주문페이지에서 전달하면 웹 상에 사이트키 값이 노출될 위험이 있을 수 있습니다.   
-②	결제 연동 시 사이트코드와 사이트키를 담당자 메일로 전달받으면 해당 사이트 키 값을 승인 및 취소 시에 적용해야 합니다.   
-**※ 취소 시 사이트키를 적용하지 않으면 취소 거절이 발생합니다.**   
-
-* **결제 로그 파일 관리 강화**   
-결제완료 및 결제처리 시 발생하는 log 파일은 웹에서 접근이 불가한 위치에서 처리해야 합니다.   
-①	Apache 와 WAS 에서 처리 시 pp_cli 파일 위치에 log 파일이 생성되기 때문에 documentRoot로 설정된 곳에 pp_cli 파일과 log 파일을 올리지 마시기 바랍니다.   
-②	설치 Directory 는 절대 Web으로 접근할 수 없는 경로에 설치해주시기 바랍니다.
-결제 실행관련 파일들\(bin, key, log, site_conf_inc\)은 보안상 절대 web 을 통해서 접근하지 않도록 관리해주시기 바랍니다.   
-③	NHN KCP와 통신하는 pp_cli_hub 페이지 접근 시에는 접근권한을 반드시 적용하여 다른 외부에서 해당 페이지에 접근을 막을 수 있게 관리하시기 바랍니다.      
-④	샘플소스내의 페이지명\(예. site_conf_inc, order, pp_cli_hub, cancel 등\)은 상점페이지명에 맞게 수정  
-**특히 pp_cli_hub 페이지명은 그대로 사용하지 않는 것을 권장 드립니다.**  
-** ※가맹점에서 관리하는 소중한 고객 정보 등이 웹에 노출 될 우려가 있습니다. **
+* **금액 검증을 위한 절차 \(필수사항\)** **※ 추후에 발생할 수 있는 결제금액 위 변조 위험에 대비해 해당 기능을 반드시 체크해 주시기 바랍니다.** ① 주문페이지\(order\)에서 전달하는 good\_mny 값과 별개로 pp\_cli\_hub 페이지에서 실제 결제될 금액 ordr\_mony 값 처리 ② 결제완료 후 전달되는 금액\(amount\)과 DB의 금액을 비교하여 다를 경우 자동 취소하는 bSucc 구문 처리로 자동취소 로직 구현
+* **site\_key 관리 강화**  ① 주문페이지\(order\)에는 site\_cd 만 전달하고, site\_key 값은 서버사이드 구간 \(pp\_cli\_hub\)에서 사용사이트키를 주문페이지에서 전달하면 웹 상에 사이트키 값이 노출될 위험이 있을 수 있습니다. ② 결제 연동 시 사이트코드와 사이트키를 담당자 메일로 전달받으면 해당 사이트 키 값을 승인 및 취소 시에 적용해야 합니다. **※ 취소 시 사이트키를 적용하지 않으면 취소 거절이 발생합니다.**
+* **결제 로그 파일 관리 강화** 결제완료 및 결제처리 시 발생하는 log 파일은 웹에서 접근이 불가한 위치에서 처리해야 합니다. ① Apache 와 WAS 에서 처리 시 pp\_cli 파일 위치에 log 파일이 생성되기 때문에 documentRoot로 설정된 곳에 pp\_cli 파일과 log 파일을 올리지 마시기 바랍니다. ② 설치 Directory 는 절대 Web으로 접근할 수 없는 경로에 설치해주시기 바랍니다. 결제 실행관련 파일들\(bin, key, log, site\_conf\_inc\)은 보안상 절대 web 을 통해서 접근하지 않도록 관리해주시기 바랍니다. ③ NHN KCP와 통신하는 pp\_cli\_hub 페이지 접근 시에는 접근권한을 반드시 적용하여 다른 외부에서 해당 페이지에 접근을 막을 수 있게 관리하시기 바랍니다. ④ 샘플소스내의 페이지명\(예. site\_conf\_inc, order, pp\_cli\_hub, cancel 등\)은 상점페이지명에 맞게 수정 **특히 pp\_cli\_hub 페이지명은 그대로 사용하지 않는 것을 권장 드립니다.**  **※가맹점에서 관리하는 소중한 고객 정보 등이 웹에 노출 될 우려가 있습니다.** 
 
 ### 5.환경설정
-가맹점에 부여된 가맹점코드(site_cd)와 암호화 관련 필드(site_key), 가맹점 서버 경로 등을 설정하는 페이지입니다.   
-환경설정 파일 경로는 샘플 소스 기준으로 {HOME 디렉터리}/PAYMENT_STANDARD/cfg/site_conf_inc 페이지에 해당하며 REAL 정보와 TEST 정보를 구분하여 반영해 주시기 바랍니다.
+
+가맹점에 부여된 가맹점코드\(site\_cd\)와 암호화 관련 필드\(site\_key\), 가맹점 서버 경로 등을 설정하는 페이지입니다.  
+환경설정 파일 경로는 샘플 소스 기준으로 {HOME 디렉터리}/PAYMENT\_STANDARD/cfg/site\_conf\_inc 페이지에 해당하며 REAL 정보와 TEST 정보를 구분하여 반영해 주시기 바랍니다.
 
 **\[Mobile 전용\]**
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>Parameter</b>
-      </th>
-      <th style="text-align:left"><b>Type</b>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
+| **Parameter** | **Type** |
+| :--- | :--- |
 
 
