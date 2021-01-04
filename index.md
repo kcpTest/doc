@@ -248,3 +248,7 @@ function jsf__pay( form )
   </tbody>
 </table>
 
+**※ pay\_method = “111000000000” 로 설정 했을 때 보여지는 결제 창**
+
+![](.gitbook/assets/pay_method.jpg)
+
