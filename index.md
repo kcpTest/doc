@@ -252,3 +252,7 @@ function jsf__pay( form )
 
 ![](.gitbook/assets/pay_method.jpg)
 
+### 3.신용카드 옵션처리 파라미터
+
+
+
