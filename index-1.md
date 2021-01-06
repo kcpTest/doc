@@ -283,5 +283,49 @@ NHN KCP는 테스트 가상계좌 발급 건에 한하여 \[모의 입금 페이
 
 **\[가상계좌 모의입금 페이지\]**
 
- [http://devadmin.kcp.co.kr/Modules/Noti/TEST\_Vcnt\_Noti.jsp](http://devadmin.kcp.co.kr/Modules/Noti/TEST_Vcnt_Noti.jsp)
+{% embed url="http://devadmin.kcp.co.kr/Modules/Noti/TEST\_Vcnt\_Noti.jsp" %}
+
+## 영수증 처리
+
+신용카드, 계좌이체, 가상계좌, 휴대폰, 현금영수증 등 결제가 정상적으로 처리된 후에, 해당 결제 건에 대한 영수증\(매출전표\)을 결과처리 페이지에서 바로 확인할 수 있게 연동하려는 경우, 다음과 같은 방법으로 결과 페이지에서 연동하시기 바랍니다.
+
+### 1.공통 파라미터
+
+
+
+|  | **Parameter** | **Type** | Max Length | 필수 여부 | Description |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | tno | Number | 14 | Y | 해당 변수에 tno 값 설정 |
+| 2 | order\_no | String | 40 | Y | 해당 변수에 ordr\_idxx 값 설정 |
+| 3 | trade\_mony | Number | 12 | Y | 해당 변수에 amount 값 설정 |
+
+### 2.현금영수 파라미터
+
+|  | **Parameter** | **Type** | Max Length | 필수 여부 | Description |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | cash\_no | String | 14 | Y | 해당 변수에 cash\_no 값 설정 |
+| 2 | order\_id | String | 40 | Y | 해당 변수에 ordr\_idxx 값 설정 |
+| 3 | trade\_mony | String | 12 | Y | 해당 변수에 amount 값 설정 |
+
+### 3.매출전표 링크 URL
+
+* 신용카드 매출전표 한글 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card\_bill&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card_bill&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
+* 신용카드 매출전표 영문 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card\_bill&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card_bill&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
+* 계좌이체 거래명세표 한글 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=acnt\_bill&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=acnt_bill&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
+* 계좌이체 거래명세표 영문 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=acnt\_bill\_eng&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=acnt_bill_eng&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
+* 가상계좌 거래명세표 한글 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt\_bill&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt_bill&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
+* 가상계좌 거래명세표 영문 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt\_bill\_eng&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt_bill_eng&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
+* 휴대폰 거래명세표 한글 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=mcash\_bill&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=mcash_bill&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
+* 휴대폰 거래명세표 영문 :  [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=mcash\_bill\_eng&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=mcash_bill_eng&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
+* 현금 영수증 URL : [http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=cash\_bill&cash\_no=](http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=cash_bill&cash_no=[%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_id=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])\[현금영수증거래번호\]&order\_id=\[주문번호\]&trade\_mony=\[거래금액\]
+
+예시\)
+
+* 신용카드 매출전표 : [http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card\_bill&tno=16123456789123&order\_no=TEST2014031013944143&trade\_mony=1004](http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card_bill&tno=16123456789123&order_no=TEST2014031013944143&trade_mony=1004) 창 크기는 WIDTH=”470”, HEIGHT=”815”가 적당합니다.
+* 신용카드외 거래명세표 : [http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt\_bill&tno=16123456789123&&order\_no=TEST2014031013944406&trade\_mony=1004](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt_bill&tno=16123456789123&&order_no=TEST2014031013944406&trade_mony=1004) 창 크기는 WIDTH="470",HEIGHT="695" 가 적당합니다.
+* 현금영수증 : [http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=cash\_bill&cash\_no=20140304459620&order\_id=TEST201403041393906311710&trade\_mony=1004](http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=cash_bill&cash_no=20140304459620&order_id=TEST201403041393906311710&trade_mony=1004) 영수증을 팝업으로 호출하는 경우, 창 크기는 WIDTH=”420”,HEIGHT=”670”가 적당합니다.
+
+**\[매출전표 호출 화면\]**
+
+![](.gitbook/assets/cash_ex.jpg)
 
