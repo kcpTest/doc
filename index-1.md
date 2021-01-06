@@ -112,8 +112,6 @@ description: 이 장은 공통통보 및 영수증 처리에 대한  안내 페�
 
 ### 2.가상계좌 입금 건 통보
 
-
-
 <table>
   <thead>
     <tr>
@@ -173,11 +171,7 @@ description: 이 장은 공통통보 및 영수증 처리에 대한  안내 페�
       <td style="text-align:left">Number</td>
       <td style="text-align:left">14</td>
       <td style="text-align:left">N</td>
-      <td style="text-align:left">
-        <p>&#xC5C5;&#xBB34;&#xCC98;&#xB9AC; &#xAD6C;&#xBD84;&#xCF54;&#xB4DC;</p>
-        <p>&#xAC00;&#xC0C1;&#xACC4;&#xC88C; &#xC785;&#xAE08; &#xD1B5;&#xBCF4; &#x2013;
-          TX00</p>
-      </td>
+      <td style="text-align:left">&#xAC00;&#xC0C1;&#xACC4;&#xC88C;&#xC5D0; &#xC785;&#xAE08;&#xB41C; &#xC2DC;&#xAC04;</td>
     </tr>
     <tr>
       <td style="text-align:left">5</td>
@@ -185,8 +179,8 @@ description: 이 장은 공통통보 및 영수증 처리에 대한  안내 페�
       <td style="text-align:left">String</td>
       <td style="text-align:left">2</td>
       <td style="text-align:left">N</td>
-      <td style="text-align:left">&#xD1B5;&#xBCF4;&#xB41C; &#xC5C5;&#xBB34;&#xC5D0; &#xB300;&#xD55C; &#xC5C5;&#xBB34;&#xCC98;&#xB9AC;
-        &#xC644;&#xB8CC; &#xC2DC;&#xAC04;</td>
+      <td style="text-align:left">&#xAC00;&#xC0C1;&#xACC4;&#xC88C; &#xC740;&#xD589;&#xCF54;&#xB4DC; (&#xCC38;&#xACE0;&#xC0AC;&#xD56D;
+        &#xC740;&#xD589;&#xCF54;&#xB4DC;&#xD45C; &#xCC38;&#xACE0;)</td>
     </tr>
     <tr>
       <td style="text-align:left">6</td>
@@ -194,18 +188,7 @@ description: 이 장은 공통통보 및 영수증 처리에 대한  안내 페�
       <td style="text-align:left">String</td>
       <td style="text-align:left">20</td>
       <td style="text-align:left">N</td>
-      <td style="text-align:left">NHN KCP&#xC5D0;&#xC11C; &#xC804;&#xC1A1;&#xD55C; &#xACB0;&#xACFC; &#xB370;&#xC774;&#xD130;&#xB97C;
-        &#xAC00;&#xB9F9;&#xC810; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C;
-        &#xBC1B;&#xC558;&#xB294;&#xC9C0;&#xB97C; &#xD655;&#xC778;&#xD558;&#xAE30;
-        &#xC704;&#xD55C; &#xBCC0;&#xC218;&#xB85C; &#xAC00;&#xB9F9;&#xC810; &#xC11C;&#xBC84;&#xC5D0;&#xC11C;
-        &#xACB0;&#xACFC; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C;
-        &#xBC1B;&#xC544;&#xC11C; &#xC131;&#xACF5;&#xC801;&#xC73C;&#xB85C; &#xCC98;&#xB9AC;&#xD55C;
-        &#xACBD;&#xC6B0; result &#xAC12;&#xC744; &#x2018;0000&#x2019;&#xC73C;&#xB85C;
-        &#xC124;&#xC815; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xCC98;&#xB9AC;
-        &#xC644;&#xB8CC;&#xB418;&#xC9C0; &#xBABB;&#xD55C; &#xACBD;&#xC6B0; &#xC784;&#xC758;&#xC758;
-        &#xAC12; &#xC124;&#xC815; result &#xAC12;&#xC744; &#xD655;&#xC778;&#xD558;&#xC5EC;
-        &#x2018;0000&#x2019;&#xC774; &#xC544;&#xB2D0; &#xACBD;&#xC6B0; NHN KCP
-        &#xD1B5;&#xBCF4; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xB2E4;&#xC2DC; &#xD1B5;&#xBCF4;&#xD568;</td>
+      <td style="text-align:left">&#xC785;&#xAE08;&#xB41C; &#xAC00;&#xC0C1;&#xACC4;&#xC88C; &#xBC88;&#xD638;</td>
     </tr>
     <tr>
       <td style="text-align:left">7</td>
@@ -213,7 +196,23 @@ description: 이 장은 공통통보 및 영수증 처리에 대한  안내 페�
       <td style="text-align:left">String</td>
       <td style="text-align:left">20</td>
       <td style="text-align:left">N</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>&#xAC00;&#xC0C1;&#xACC4;&#xC88C;&#xC758; &#xAC01; &#xC785;&#xAE08; &#xD1B5;&#xBCF4;
+          &#xAC74;&#xC5D0; &#xB300;&#xD55C; &#xACE0;&#xC720;&#xD55C; &#xAC12;&#xC744;
+          &#xAC00;&#xC9C0;&#xB294; &#xBCC0;&#xC218;</p>
+        <p>&#x203B; &#xC8FC;&#xC758; &#x2013; &#xAC00;&#xC0C1;&#xACC4;&#xC88C;&#xC758;
+          &#xACBD;&#xC6B0; &#xACB0;&#xC81C; 1 &#xAC74;&#xC5D0; &#xB300;&#xD574;&#xC11C;
+          &#xD1B5;&#xBCF4;&#xAC00; &#xC5EC;&#xB7EC; &#xBC88; &#xB098;&#xAC08; &#xC218;
+          &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+        <p>&#xC608;) &#xACE0;&#xAC1D;&#xC774; &#xAC00;&#xC0C1;&#xACC4;&#xC88C;&#xC5D0;
+          &#xC785;&#xAE08; &#xD6C4; &#xC740;&#xD589;&#xC744; &#xD1B5;&#xD574; &#xCDE8;&#xC18C;
+          &#xC694;&#xCCAD;&#xC744; &#xD55C; &#xACBD;&#xC6B0; &#xC740;&#xD589;&#xC5D0;&#xC11C;
+          NHN KCP&#xB85C; &#xCDE8;&#xC18C; &#xC804;&#xBB38;&#xC774; &#xC804;&#xC1A1;</p>
+        <p>(&#xC77C;&#xD68C; &#xACC4;&#xC88C;&#xC740;&#xD589; &#xCD9C;&#xAE08; &#xBD88;&#xAC00;)
+          &#x2013; &#xD574;&#xB2F9; &#xAC74;&#xC740; &#xC785;&#xAE08; &#xC804;&#xBB38;1&#xBC88;&#xACFC;
+          &#xCDE8;&#xC18C; &#xC804;&#xBB38; 1&#xBC88;&#xC774; &#xAC00;&#xB9F9;&#xC810;&#xC73C;&#xB85C;
+          &#xD1B5;&#xBCF4;&#xB429;&#xB2C8;&#xB2E4;.</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">8</td>
@@ -221,7 +220,22 @@ description: 이 장은 공통통보 및 영수증 처리에 대한  안내 페�
       <td style="text-align:left">Number</td>
       <td style="text-align:left">2</td>
       <td style="text-align:left">Y</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>&#xAC00;&#xC0C1;&#xACC4;&#xC88C; &#xC785;&#xAE08; &#xCC98;&#xB9AC; &#xACB0;&#xACFC;
+          &#xAD6C;&#xBD84; &#xCF54;&#xB4DC;</p>
+        <p>&#xAC00;&#xC0C1;&#xACC4;&#xC88C;&#xB294; &#xC785;&#xAE08;&#xCC98;&#xB9AC;
+          &#xC774;&#xC678;&#xC5D0;&#xB3C4; &#xC740;&#xD589; &#xACF5;&#xB3D9;&#xB9DD;&#xC744;
+          &#xD1B5;&#xD55C;&#xCDE8;&#xC18C;&#xAC00; &#xC774;&#xB8E8;&#xC5B4; &#xC9C8;
+          &#xC218; &#xC788;&#xC74C;. &#xD574;&#xB2F9; &#xBCC0;&#xC218;&#xB97C; &#xD1B5;&#xD574;&#xC11C;
+          &#xAC00;&#xC0C1;&#xACC4;&#xC88C; &#xC0C1;&#xD0DC; &#xAD6C;&#xBD84;&#xC744;
+          &#xBC18;&#xB4DC;&#xC2DC; &#xD574;&#xC8FC;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.
+          &#x2018;13&#x2019;&#xC744; &#xC81C;&#xC678;&#xD55C; &#xBAA8;&#xB4E0; &#xAC74;&#xC740;
+          &#xC785;&#xAE08; &#xAC74;&#xC73C;&#xB85C; &#xCC98;&#xB9AC; &#xD558;&#xC2DC;&#xAE30;
+          &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
+        <p>op_cd = &#x2018;13&#x2019; &#xC740; &#xC785;&#xAE08;&#xC774; &#xC798;&#xBABB;
+          &#xB41C; &#xACBD;&#xC6B0;&#xB85C; &#xAC00;&#xB9F9;&#xC810;&#xC5D0; &#xCDE8;&#xC18C;
+          &#xB178;&#xD2F0;&#xAC00; &#xB098;&#xAC11;&#xB2C8;&#xB2E4;.</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">9</td>
@@ -229,7 +243,10 @@ description: 이 장은 공통통보 및 영수증 처리에 대한  안내 페�
       <td style="text-align:left">String</td>
       <td style="text-align:left">14</td>
       <td style="text-align:left">N</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>&#xACB0;&#xC81C; &#xAE08;&#xC561;&#xC744; &#xC785;&#xAE08;&#xD55C; &#xC785;&#xAE08;&#xC790;&#xBA85;</p>
+        <p>&#xC8FC;&#xBB38;&#xC790;&#xBA85;&#xACFC; &#xB2E4;&#xB97C; &#xC218; &#xC788;&#xC74C;</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">10</td>
@@ -237,7 +254,14 @@ description: 이 장은 공통통보 및 영수증 처리에 대한  안내 페�
       <td style="text-align:left">Number</td>
       <td style="text-align:left">9</td>
       <td style="text-align:left">N</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">&#xAC00;&#xC0C1;&#xACC4;&#xC88C; &#xBC1C;&#xAE09; &#xC2DC; 1&#xC6D0; &#xC774;&#xC0C1;
+        &#xD604;&#xAE08; &#xAC70;&#xB798; &#xAC74;&#xC5D0; &#xB300;&#xD574;&#xC11C;
+        &#xD604;&#xAE08;&#xC601;&#xC218;&#xC99D; &#xB4F1;&#xB85D; &#xC694;&#xCCAD;
+        &#xB41C; &#xACBD;&#xC6B0; &#xACE0;&#xAC1D;&#xC774; &#xD574;&#xB2F9; &#xAC00;&#xC0C1;&#xACC4;&#xC88C;&#xC5D0;
+        &#xC785;&#xAE08;&#xACFC; &#xB3D9;&#xC2DC;&#xC5D0; &#xD604;&#xAE08;&#xC601;&#xC218;&#xC99D;&#xC774;
+        &#xB4F1;&#xB85D;&#xB418;&#xBA70;, &#xD574;&#xB2F9; &#xBCC0;&#xC218;&#xB97C;
+        &#xD1B5;&#xD574; &#xD604;&#xAE08;&#xC601;&#xC218;&#xC99D; &#xC2B9;&#xC778;&#xBC88;&#xD638;&#xB97C;
+        &#xC804;&#xC1A1;</td>
     </tr>
     <tr>
       <td style="text-align:left">11</td>
@@ -245,8 +269,19 @@ description: 이 장은 공통통보 및 영수증 처리에 대한  안내 페�
       <td style="text-align:left">Number</td>
       <td style="text-align:left">14</td>
       <td style="text-align:left">N</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">&#xAC00;&#xC0C1;&#xACC4;&#xC88C; &#xBC1C;&#xAE09; &#xC2DC; &#xD604;&#xAE08;&#xC601;&#xC218;&#xC99D;
+        &#xB4F1;&#xB85D; &#xC694;&#xCCAD; &#xAC74;&#xC5D0; &#xB300;&#xD574; &#xC785;&#xAE08;&#xC644;&#xB8CC;
+        &#xD6C4; &#xB9AC;&#xD134; &#xB418;&#xB294; &#xD604;&#xAE08;&#xC601;&#xC218;&#xC99D;
+        &#xAC70;&#xB798;&#xBC88;&#xD638;</td>
     </tr>
   </tbody>
 </table>
+
+NHN KCP는 테스트 가상계좌 발급 건에 한하여 \[모의 입금 페이지\]를 제공하고 있습니다. 가상계좌 모의입금 페이지는 NHN KCP 거래번호와 가상계좌번호를 통해 입금대기 상태의 결제 건을 입금완료로 바꾸며, 입금통보 URL을 통해 입금데이터가 정상적으로 들어오는지 확인할 수 있습니다. 
+
+가상계좌 모의입금 페이지는 테스트 서버에서 일어난 거래 건에 대해서만 유효하며 실 결제에서 일어난 건에 대해서는 사용이 불가능 합니다. 모의 입금 페이지는 아래의 URL을 통해서 접근 할 수 있습니다. 
+
+**\[가상계좌 모의입금 페이지\]**
+
+ [http://devadmin.kcp.co.kr/Modules/Noti/TEST\_Vcnt\_Noti.jsp](http://devadmin.kcp.co.kr/Modules/Noti/TEST_Vcnt_Noti.jsp)
 
