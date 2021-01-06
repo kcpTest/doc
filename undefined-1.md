@@ -206,6 +206,13 @@ NHN KCP 응답코드로 res\_cd = 8059, res\_msg = 포맷에러\(지불정보-�
 
 #### \[결제 실패\]
 
+|  | **Parameter** | **Type** | Max Length | 필수 여부 | Description |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | res\_cd | String | 4 | Y | 결과코드 |
+| 2 | res\_msg | String | 100 | Y | 결과 메시지 |
+
+#### \[결제 성\]
+
 <table>
   <thead>
     <tr>
@@ -224,96 +231,58 @@ NHN KCP 응답코드로 res\_cd = 8059, res\_msg = 포맷에러\(지불정보-�
       <td style="text-align:left">1</td>
       <td style="text-align:left">res_cd</td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">4</td>
       <td style="text-align:left">Y</td>
-      <td style="text-align:left">&#xACB0;</td>
+      <td style="text-align:left">&#xACB0;&#xACFC;&#xCF54;&#xB4DC;</td>
     </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">res_msg</td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">100</td>
       <td style="text-align:left">Y</td>
-      <td style="text-align:left">
-        <p>&#xD1B5;&#xD569; &#xACB0;&#xC81C; &#xCC3D;&#xC73C;&#xB85C;&#xBD80;&#xD130;
-          &#xC804;&#xB2EC; &#xBC1B;&#xB294; &#xC778;&#xC99D;&#xACB0;&#xACFC; &#xC554;&#xD638;&#xD654;
-          &#xB370;&#xC774;&#xD130;</p>
-        <p><b>&#x203B; &#xC808;&#xB300; &#xC784;&#xC758;&#xB85C; &#xBCC0;&#xACBD; &#xBD88;&#xAC00;. &#xACB0;&#xC81C; &#xCC3D;&#xC5D0;&#xC11C; &#xB0B4;&#xB824;&#xC8FC;&#xB294; &#xAC12; &#xADF8;&#xB300;&#xB85C; &#xC0AC;&#xC6A9;</b>
-        </p>
-      </td>
+      <td style="text-align:left">&#xACB0;&#xACFC; &#xBA54;&#xC2DC;&#xC9C0;</td>
     </tr>
     <tr>
       <td style="text-align:left">3</td>
-      <td style="text-align:left">tran_cd</td>
+      <td style="text-align:left">res_en_msg</td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Y</td>
-      <td style="text-align:left">
-        <p>&#xD1B5;&#xD569; &#xACB0;&#xC81C; &#xCC3D;&#xC5D0;&#xC11C; &#xCC98;&#xB9AC;&#xD558;&#xC5EC;
-          &#xC804;&#xB2EC;&#xBC1B;&#xB294; &#xC0C1;&#xD0DC;&#xCF54;&#xB4DC; &#xAC12;</p>
-        <p><b>&#x203B; &#xC808;&#xB300; &#xC784;&#xC758;&#xB85C; &#xBCC0;&#xACBD; &#xBD88;&#xAC00;. &#xACB0;&#xC81C; &#xCC3D;&#xC5D0;&#xC11C; &#xB0B4;&#xB824;&#xC8FC;&#xB294; &#xAC12; &#xADF8;&#xB300;&#xB85C; &#xC0AC;&#xC6A9; </b>
-        </p>
-        <p><b>&#x203B; &#xD574;&#xB2F9; &#xAC12;&#xC740; KCP &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0;&#xC11C; &#xCD94;&#xAC00; &#xBC0F; &#xBCC0;&#xACBD;&#xC774; &#xB418;&#xB294; &#xAC12;&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC790;&#xCCB4; &#xAD00;&#xB9AC;&#xD558;&#xC2DC;&#xBA74; &#xC548;&#xB428;</b>
-        </p>
-      </td>
+      <td style="text-align:left">100</td>
+      <td style="text-align:left">N</td>
+      <td style="text-align:left">&#xC601;&#xBB38; &#xACB0;&#xACFC; &#xBA54;&#xC2DC;&#xC9C0;</td>
     </tr>
     <tr>
       <td style="text-align:left">4</td>
-      <td style="text-align:left">ordr_chk</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">tno</td>
+      <td style="text-align:left">Number</td>
+      <td style="text-align:left">14</td>
       <td style="text-align:left">Y</td>
-      <td style="text-align:left">
-        <p>&#xC778;&#xC99D;&#xC644;&#xB8CC; &#xD6C4; &#xACB0;&#xC81C; &#xCC3D;&#xC73C;&#xB85C;&#xBD80;&#xD130;
-          &#xC804;&#xB2EC; &#xBC1B;&#xB294; &#xC8FC;&#xBB38;&#xBC88;&#xD638;&#xC640;
-          &#xC8FC;&#xBB38;&#xAE08;&#xC561; &#xC8FC;&#xBB38;&#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C;
-          &#xACB0;&#xC81C; &#xCC3D;&#xC73C;&#xB85C; &#xC804;&#xB2EC;&#xD55C; ordr_idxx,
-          good_mny &#xAC12;&#xC774; &#xADF8;&#xB300;&#xB85C; &#xB9AC;&#xD134; &#xB418;&#xAE30;
-          &#xB54C;&#xBB38;&#xC5D0; NHN KCP&#xB85C; &#xACB0;&#xC81C;&#xC694;&#xCCAD;
-          &#xC804;, &#xB9AC;&#xD134; &#xBC1B;&#xC740; &#xD574;&#xB2F9; &#xAC12;&#xC5D0;
-          &#xB300;&#xD574; &#xC5C5;&#xCCB4; &#xCE21;&#xC5D0;&#xC11C; &#xB2E4;&#xC2DC;
-          &#xD55C;&#xBC88; &#xAC80;&#xC99D; &#xD558;&#xACE0; &#xACB0;&#xC81C;&#xC694;&#xCCAD;
-          &#xD558;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
-        <p><b>&#x203B; PC&#xBC84;&#xC804;&#xC5D0;&#xB9CC; &#xC801;&#xC6A9;</b>
-        </p>
-      </td>
+      <td style="text-align:left">NHN KCP &#xAC70;&#xB798; &#xACE0;&#xC720;&#xBC88;&#xD638;</td>
     </tr>
     <tr>
       <td style="text-align:left">5</td>
-      <td style="text-align:left">use_pay_method</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Y</td>
-      <td style="text-align:left">&#xACE0;&#xAC1D;&#xC774; &#xC120;&#xD0DD;&#xD55C; &#xACB0;&#xC81C; &#xC218;&#xB2E8;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">6</td>
-      <td style="text-align:left">cash_yn</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Y</td>
-      <td style="text-align:left">&#xD604;&#xAE08;&#xC601;&#xC218;&#xC99D; &#xC120;&#xD0DD;&#xC5EC;&#xBD80;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">7</td>
-      <td style="text-align:left">cash_tr_code</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">amount</td>
+      <td style="text-align:left">Number</td>
+      <td style="text-align:left">12</td>
       <td style="text-align:left">Y</td>
       <td style="text-align:left">
-        <p>&#xD604;&#xAE08;&#xC601;&#xC218;&#xC99D; &#xC120;&#xD0DD; &#xC2DC; &#xC2DD;&#xBCC4;&#xCF54;&#xB4DC;</p>
-        <p>&#xC18C;&#xB4DD;&#xACF5;&#xC81C;&#xC6A9;(&#xAC1C;&#xC778;) : 0 / &#xC9C0;&#xCD9C;&#xC99D;&#xBE59;&#xC6A9;(&#xAE30;&#xC5C5;)
-          : 1</p>
+        <p>&#xACB0;&#xC81C; &#xAE08;&#xC561;</p>
+        <p>&#xACB0;&#xC81C; &#xAC74;&#xC758; &#xCD1D; &#xACB0;&#xC81C; &#xAE08;&#xC561;&#xC774;
+          &#xB9AC;&#xD134; &#xB429;&#xB2C8;&#xB2E4;. &#xCD5C;&#xC885; &#xACB0;&#xC81C;
+          &#xAE08;&#xC561;&#xC758; &#xCC98;&#xB9AC;&#xB294; &#xC2B9;&#xC778;&#xC644;&#xB8CC;
+          &#xD6C4; &#xB9AC;&#xD134; &#xB370;&#xC774;&#xD130; &#xC911; amount &#xB85C;
+          &#xCC98;&#xB9AC;&#xD558;&#xC5EC;&#xC57C; &#xD558;&#xBA70; &#xBC18;&#xB4DC;&#xC2DC;
+          &#xC5C5;&#xCCB4;&#xC758; DB&#xAE08;&#xC561;&#xACFC; &#xBE44;&#xAD50;&#xD558;&#xC5EC;
+          &#xAC80;&#xC99D;&#xD558;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">8</td>
-      <td style="text-align:left">cash_id_info</td>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">escw_yn</td>
       <td style="text-align:left">String</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">Y</td>
-      <td style="text-align:left">&#xD604;&#xAE08;&#xC601;&#xC218;&#xC99D; &#xB4F1;&#xB85D;&#xC694;&#xCCAD;
-        &#xC2DC; &#xC785;&#xB825;&#xD55C; &#xB4F1;&#xB85D; &#xC815;&#xBCF4;</td>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">N</td>
+      <td style="text-align:left">&#xC5D0;&#xC2A4;&#xD06C;&#xB85C; &#xACB0;&#xC81C;&#xC5EC;&#xBD80;</td>
     </tr>
   </tbody>
 </table>
