@@ -189,3 +189,176 @@ description: 이 페이지는 가맹점 사이트에서 NHN KCP Cancel API 연�
 
 
 
+### 2. 부취소
+
+**\[요\]**
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"></th>
+      <th style="text-align:left"><b>Parameter</b>
+      </th>
+      <th style="text-align:left"><b>Type</b>
+      </th>
+      <th style="text-align:left">Max Length</th>
+      <th style="text-align:left">&#xD544;&#xC218; &#xC5EC;&#xBD80;</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">req_tx</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">Y</td>
+      <td style="text-align:left">
+        <p>&#xD504;&#xB85C;&#xC138;&#xC2A4; &#xC694;&#xCCAD; &#xC885;&#xB958; &#xAD6C;&#xBD84;
+          &#xBCC0;&#xC218; &#xACB0;&#xC81C;&#xAC74; &#xCDE8;&#xC18C; &#xC694;&#xCCAD;&#xC758;
+          &#xACBD;&#xC6B0;&#xC5D0; &#xBC18;&#xB4DC;&#xC2DC; &#x2018;mod&#x2019;&#xB85C;
+          &#xC124;&#xC815;&#xD574; &#xC8FC;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
+        <p>Ex) mod</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">mod_type</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">Y</td>
+      <td style="text-align:left">
+        <p>&#xD504;&#xB85C;&#xC138;&#xC2A4; &#xC694;&#xCCAD;&#xC758; &#xAD6C;&#xBD84;
+          &#xBCC0;&#xC218;</p>
+        <p>&#xBD80; &#xCDE8;&#xC18C; : STPC</p>
+        <p>Ex) STPC</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">tno</td>
+      <td style="text-align:left">Number</td>
+      <td style="text-align:left">14</td>
+      <td style="text-align:left">Y</td>
+      <td style="text-align:left">
+        <p>&#xACB0;&#xC81C; &#xC644;&#xB8CC; &#xD6C4; &#xACB0;&#xC81C; &#xAC74;&#xC5D0;
+          &#xB300;&#xD55C; &#xACE0;&#xC720;&#xD55C; &#xAC12;</p>
+        <p>&#xD574;&#xB2F9; &#xAC12;&#xC73C;&#xB85C; &#xAC70;&#xB798;&#xAC74;&#xC758;
+          &#xC0C1;&#xD0DC;&#xB97C; &#xC870;&#xD68C;/&#xBCC0;&#xACBD;/&#xCDE8;&#xC18C;
+          &#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xB2C8; &#xACB0;&#xACFC; &#xCC98;&#xB9AC;
+          &#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C; tno &#xB97C; &#xBC18;&#xB4DC;&#xC2DC;
+          &#xC800;&#xC7A5; &#xD574;&#xC8FC;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.
+          Ex) 20171201111111</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">mod_desc</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">256</td>
+      <td style="text-align:left">N</td>
+      <td style="text-align:left">
+        <p>&#xD504;&#xB85C;&#xC138;&#xC2A4; &#xCDE8;&#xC18C; &#xC0AC;&#xC720;&#xC5D0;
+          &#xB300;&#xD55C; &#xBCC0;&#xC218; &#xAC12;</p>
+        <p>Ex) &#xACE0;&#xAC1D;&#xBCC0;&#xC2EC;</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+**\[응답\]**
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"></th>
+      <th style="text-align:left"><b>Parameter</b>
+      </th>
+      <th style="text-align:left"><b>Type</b>
+      </th>
+      <th style="text-align:left">Max Length</th>
+      <th style="text-align:left">&#xD544;&#xC218; &#xC5EC;&#xBD80;</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">1</td>
+      <td style="text-align:left">res_cd</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">Y</td>
+      <td style="text-align:left">
+        <p>&#xCDE8;&#xC18C;&#xC644;&#xB8CC; &#xC5EC;&#xBD80;&#xC5D0; &#xB300;&#xD55C;
+          &#xC751;&#xB2F5; &#xAC12;</p>
+        <p>&#xC815;&#xC0C1; &#xCC98;&#xB9AC; &#xAC74;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC;
+          0000&#xC73C;&#xB85C; &#xCC98;&#xB9AC;&#xD558;&#xBA70;, &#xC774;&#xC678;&#xC5D0;&#xB294;
+          &#xD574;&#xB2F9; &#xAC70;&#xC808; &#xC751;&#xB2F5; &#xCF54;&#xB4DC; &#xAC12;&#xC744;
+          &#xB9AC;&#xD134; &#xD569;&#xB2C8;&#xB2E4;. &#xACB0;&#xACFC; &#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C;
+          DB&#xCC98;&#xB9AC;&#xB97C; &#xD560; &#xACBD;&#xC6B0; res_cd&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC2DC;&#xAE30;
+          &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;. Ex) 0000</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2</td>
+      <td style="text-align:left">res_msg</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">Y</td>
+      <td style="text-align:left">
+        <p>&#xCDE8;&#xC18C; &#xC694;&#xCCAD; &#xACB0;&#xACFC;&#xC5D0; &#xB300;&#xD55C;
+          &#xBA54;&#xC2DC;&#xC9C0; &#xAC12;</p>
+        <p>&#x2018;&#xC815;&#xC0C1;&#xCC98;&#xB9AC;&#x2019; &#xC678;&#xC758; &#xAC70;&#xC808;
+          &#xAC74;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; &#xC751;&#xB2F5; &#xCF54;&#xB4DC;
+          &#xAC12;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xC624;&#xB958; &#xC751;&#xB2F5;
+          &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xB9AC;&#xD134; &#xD569;&#xB2C8;&#xB2E4;.
+          Ex) &#xC815;&#xC0C1;&#xCC98;&#xB9AC;</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">3</td>
+      <td style="text-align:left">card_cd</td>
+      <td style="text-align:left">Number</td>
+      <td style="text-align:left">14</td>
+      <td style="text-align:left">Y</td>
+      <td style="text-align:left">&#xACB0;&#xC81C; &#xAC74;&#xC758; &#xBC1C;&#xAE09; &#xC0AC; &#xCF54;&#xB4DC;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">4</td>
+      <td style="text-align:left">card_name</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">256</td>
+      <td style="text-align:left">N</td>
+      <td style="text-align:left">&#xACB0;&#xC81C; &#xAC74;&#xC758; &#xBC1C;&#xAE09; &#xC0AC; &#xBA85;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">5</td>
+      <td style="text-align:left">amount</td>
+      <td style="text-align:left">Number</td>
+      <td style="text-align:left">12</td>
+      <td style="text-align:left">N</td>
+      <td style="text-align:left">&#xACB0;&#xC81C; &#xAE08;&#xC561; &#xACB0;&#xC81C; &#xAC74;&#xC758; &#xCD1D;
+        &#xACB0;&#xC81C; &#xAE08;&#xC561;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">6</td>
+      <td style="text-align:left">coupon_mny</td>
+      <td style="text-align:left">Number</td>
+      <td style="text-align:left">12</td>
+      <td style="text-align:left">N</td>
+      <td style="text-align:left">&#xACB0;&#xC81C; &#xAC74;&#xC758; &#xCFE0;&#xD3F0; &#xD560;&#xC778;, &#xD398;&#xC774;&#xCF54;
+        &#xD3EC;&#xC778;&#xD2B8; &#xC0AC;&#xC6A9; &#xAE08;&#xC561; &#xACB0;&#xC81C;
+        &#xAC74;&#xC758; &#xCFE0;&#xD3F0; &#xD560;&#xC778; &#xAE08;&#xC561; &#xB610;&#xB294;
+        &#xD398;&#xC774;&#xCF54; &#xD3EC;&#xC778;&#xD2B8; &#xC0AC;&#xC6A9; &#xAE08;&#xC561;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">7</td>
+      <td style="text-align:left">canc_time</td>
+      <td style="text-align:left">Number</td>
+      <td style="text-align:left">14</td>
+      <td style="text-align:left">N</td>
+      <td style="text-align:left">&#xACB0;&#xC81C; &#xAC74;&#xC758; &#xCDE8;&#xC18C; &#xC694;&#xCCAD; &#xC2DC;&#xAC04;</td>
+    </tr>
+  </tbody>
+</table>
+
