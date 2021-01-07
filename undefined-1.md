@@ -211,7 +211,7 @@ NHN KCP 응답코드로 res\_cd = 8059, res\_msg = 포맷에러\(지불정보-�
 | 1 | res\_cd | String | 4 | Y | 결과코드 |
 | 2 | res\_msg | String | 100 | Y | 결과 메시지 |
 
-#### \[결제 성\]
+#### \[결제 성공\]
 
 <table>
   <thead>
