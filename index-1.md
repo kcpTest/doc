@@ -18,9 +18,9 @@ description: 이 장은 공통통보 및 영수증 처리에 대한  안내 페�
 
 | 설명 | IP ADDRESS |
 | :--- | :--- |
-| NHN KCP 통보 테스트 서버 IP ADDRESS | [http://210.122.73.58/](http://210.122.73.58/) |
-| NHN KCP 통보 실 서버 IP ADDRESS 1 | 203.238.36.173 / 103.215.144.173 |
-| NHN KCP 통보 실 서버 IP ADDRESS 2 | 203.238.36.178 / 103.215.144.174 |
+| NHN KCP 통보 테스트 서버 IP ADDRESS | shyoon2372.gitbook.io/test/ |
+| NHN KCP 통보 실 서버 IP ADDRESS 1 | shyoon2372.gitbook.io/test/ |
+| NHN KCP 통보 실 서버 IP ADDRESS 2 | shyoon2372.gitbook.io/test/ |
 
 ### 1.전달 파라미터\(공통정보\)
 
@@ -309,21 +309,12 @@ NHN KCP는 테스트 가상계좌 발급 건에 한하여 \[모의 입금 페이
 
 ### 3.매출전표 링크 URL
 
-* 신용카드 매출전표 한글 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card\_bill&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card_bill&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
-* 신용카드 매출전표 영문 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card\_bill&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card_bill&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
-* 계좌이체 거래명세표 한글 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=acnt\_bill&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=acnt_bill&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
-* 계좌이체 거래명세표 영문 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=acnt\_bill\_eng&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=acnt_bill_eng&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
-* 가상계좌 거래명세표 한글 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt\_bill&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt_bill&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
-* 가상계좌 거래명세표 영문 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt\_bill\_eng&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt_bill_eng&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
-* 휴대폰 거래명세표 한글 : [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=mcash\_bill&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=mcash_bill&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
-* 휴대폰 거래명세표 영문 :  [https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=mcash\_bill\_eng&tno=](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=mcash_bill_eng&tno=%20[NHN%20KCP%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_no=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])= \[NHN KCP거래번호\]&order\_no=\[주문번호\]&trade\_mony=\[거래금액\]
-* 현금 영수증 URL : [http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=cash\_bill&cash\_no=](http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=cash_bill&cash_no=[%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D%EA%B1%B0%EB%9E%98%EB%B2%88%ED%98%B8]&order_id=[%EC%A3%BC%EB%AC%B8%EB%B2%88%ED%98%B8]&trade_mony=[%EA%B1%B0%EB%9E%98%EA%B8%88%EC%95%A1])\[현금영수증거래번호\]&order\_id=\[주문번호\]&trade\_mony=\[거래금액\]
+* 신용카드 매출전표 한글 :shyoon2372.gitbook.io/test/
+* 신용카드 매출전표 영문 : shyoon2372.gitbook.io/test/
 
 예시\)
 
-* 신용카드 매출전표 : [http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card\_bill&tno=16123456789123&order\_no=TEST2014031013944143&trade\_mony=1004](http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=card_bill&tno=16123456789123&order_no=TEST2014031013944143&trade_mony=1004) 창 크기는 WIDTH=”470”, HEIGHT=”815”가 적당합니다.
-* 신용카드외 거래명세표 : [http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt\_bill&tno=16123456789123&&order\_no=TEST2014031013944406&trade\_mony=1004](https://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=vcnt_bill&tno=16123456789123&&order_no=TEST2014031013944406&trade_mony=1004) 창 크기는 WIDTH="470",HEIGHT="695" 가 적당합니다.
-* 현금영수증 : [http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=cash\_bill&cash\_no=20140304459620&order\_id=TEST201403041393906311710&trade\_mony=1004](http://admin8.kcp.co.kr/assist/bill.BillActionNew.do?cmd=cash_bill&cash_no=20140304459620&order_id=TEST201403041393906311710&trade_mony=1004) 영수증을 팝업으로 호출하는 경우, 창 크기는 WIDTH=”420”,HEIGHT=”670”가 적당합니다.
+* 신용카드 매출전표 : shyoon2372.gitbook.io/test/ 창 크기는 WIDTH=”470”, HEIGHT=”815”가 적당합니다.
 
 **\[매출전표 호출 화면\]**
 
