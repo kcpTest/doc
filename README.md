@@ -188,8 +188,8 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
       <td style="text-align:left">Y</td>
       <td style="text-align:left">
         <p>NHN KCP &#xACB0;&#xC81C;&#xC11C;&#xBC84; URL</p>
-        <p>Test : testpaygw.kcp.co.kr</p>
-        <p>Real : paygw.kcp.co.kr</p>
+        <p>Test : shyoon2372.gitbook.io/test/</p>
+        <p>Real : shyoon2372.gitbook.io/test/</p>
       </td>
     </tr>
     <tr>
@@ -199,9 +199,8 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
       <td style="text-align:left"></td>
       <td style="text-align:left">Y</td>
       <td style="text-align:left">
-        <p>Test : <a href="https://testpay.kcp.co.kr/plugin/payplus_web.jsp">https://testpay.kcp.co.kr/plugin/payplus_web.jsp</a> Real
-          : <a href="https://pay.kcp.co.kr/plugin/payplus_web.jsp">https://pay.kcp.co.kr/plugin/payplus_web.jsp</a> 
-        </p>
+        <p>Test : shyoon2372.gitbook.io/test/</p>
+        <p>Real : shyoon2372.gitbook.io/test/</p>
         <p>&#x203B; ASP.NET&#xC758; &#xACBD;&#xC6B0; sample/STANDARD/orderl.aspx
           &#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C; &#xC9C1;&#xC811; &#xC124;&#xC815;</p>
       </td>
