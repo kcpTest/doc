@@ -58,7 +58,7 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
   <thead>
     <tr>
       <th style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; PORT</th>
-      <th style="text-align:left"><b>8090</b>
+      <th style="text-align:left"><b>8888</b>
       </th>
     </tr>
   </thead>
@@ -66,8 +66,9 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
     <tr>
       <td style="text-align:left">&#xC5F0;&#xACB0;&#xB300;&#xC0C1; &#xB3C4;&#xBA54;&#xC778;</td>
       <td style="text-align:left">
-        <p>paygw.kcp.co.kr (&#xC2E4; &#xACB0;&#xC81C;)</p>
-        <p>testpaygw.kcp.co.kr (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</p>
+        <p>shyoon2372.gitbook.io/test/<a href="https://shyoon2372.gitbook.io/test"> (&#xC2E4; &#xACB0;&#xC81C;)</a>
+        </p>
+        <p>shyoon2372.gitbook.io/test/ (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</p>
       </td>
     </tr>
   </tbody>
@@ -81,8 +82,8 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
       <th style="text-align:left"><b>&#xC5F0;&#xACB0;&#xB300;&#xC0C1; PORT/&#xB3C4;&#xBA54;</b>
       </th>
       <th style="text-align:left">
-        <p>smpay.kcp.co.kr 443/80 (&#xC2E4; &#xACB0;&#xC81C;)</p>
-        <p>testsmpay.kcp.co.kr 443 (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</p>
+        <p>shyoon2372.gitbook.io/test/ (&#xC2E4; &#xACB0;&#xC81C;)</p>
+        <p>shyoon2372.gitbook.io/test/ (&#xD14C;&#xC2A4;&#xD2B8; &#xACB0;&#xC81C;)</p>
       </th>
     </tr>
   </thead>
@@ -281,11 +282,11 @@ description: 이 문서는 가맹점 사이트에서 연동 가이드에 따라 
 String g_conf_home_dir = "C:/APM_Setup/htdocs/ax_hub_windows_php";            // 절대경로 입력
 String g_conf_key_dir = "C:/APM_Setup/htdocs/ax_hub_windows_php/bin/pub.key";  //pub.key 파일 경로(파일명까지 )
 String g_conf_log_dir = "C:/APM_Setup/htdocs/ax_hub_windows_php/log";          // log 절대경로 입력
-String g_conf_gw_url = “testpaygw.kcp.co.kr”
-String g_conf_js_url = "https://testpay.kcp.co.kr/plugin/payplus_web.jsp";
+String g_conf_gw_url = “”
+String g_conf_js_url = "";
 String g_wsdl = "KCPPaymentService.wsdl";
-String g_conf_site_cd = "T0000";
-String g_conf_site_key = "3grptw1.zW0GSo4PQdaGvsF__";
+String g_conf_site_cd = "";
+String g_conf_site_key = "";
 String g_conf_site_name = "KCP TEST SHOP";
 String g_conf_log_level = "3";
 String g_conf_gw_port  = "8090";    // 포트번호(변경불가)
@@ -295,8 +296,8 @@ String module_type = "01";          // 변경불가
 #### 리얼 전환 시 체크사항
 
 ```text
-String g_conf_gw_url = “paygw.kcp.co.kr”;
-String g_conf_js_url = “ https://pay.kcp.co.kr/plugin/payplus_web.jsp”;
+String g_conf_gw_url = “co.kr”;
+String g_conf_js_url = “ .jsp”;
 String g_conf_site_cd = "실제 부여 받은 사이트코드";
 String g_conf_site_key = "실제 부여 받은 사이트키";
 ```
@@ -306,7 +307,7 @@ String g_conf_site_key = "실제 부여 받은 사이트키";
 ※ 스크립트 언어에 따른 추가 수정사항  
 ① ASP : g\_conf\_server = “REAL”   
 ② Windows ASP.NET : /mobile\_sample/STANDARD/order\_approval.aspx.cs   
-103번째줄 this.Url = “[https://smpay.kcp.co.kr”](https://smpay.kcp.co.kr”)   
+103번째줄 this.Url = “[https://111”](https://smpay.kcp.co.kr”)   
 ③ JSP : g\_conf\_server = “TRUE”   
 ④ PHP : $g\_wsdl = “real\_KCPPaymentService.wsdl”
 
